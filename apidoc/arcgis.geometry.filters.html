@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.geometry.filters module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.geometry.filters module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -147,38 +144,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geometry.html#union">union</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="arcgis.geometry.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geometry.filters module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#intersects">intersects</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.intersects"><code class="docutils literal notranslate"><span class="pre">intersects()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#contains">contains</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.contains"><code class="docutils literal notranslate"><span class="pre">contains()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#crosses">crosses</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.crosses"><code class="docutils literal notranslate"><span class="pre">crosses()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#envelope-intersects">envelope_intersects</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.envelope_intersects"><code class="docutils literal notranslate"><span class="pre">envelope_intersects()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#index-intersects">index_intersects</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.index_intersects"><code class="docutils literal notranslate"><span class="pre">index_intersects()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#overlaps">overlaps</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.overlaps"><code class="docutils literal notranslate"><span class="pre">overlaps()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#touches">touches</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.touches"><code class="docutils literal notranslate"><span class="pre">touches()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#within">within</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geometry.filters.within"><code class="docutils literal notranslate"><span class="pre">within()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#intersects">intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contains">contains</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#crosses">crosses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#envelope-intersects">envelope_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-intersects">index_intersects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#overlaps">overlaps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#touches">touches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#within">within</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geometry.functions.html">arcgis.geometry.functions module</a></li>
@@ -268,15 +241,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.geometry.filters">
-<span id="arcgis-geometry-filters-module"></span><h1>arcgis.geometry.filters module<a class="headerlink" href="#module-arcgis.geometry.filters" title="Permalink to this heading">¶</a></h1>
+<span id="arcgis-geometry-filters-module"></span><h1>arcgis.geometry.filters module<a class="headerlink" href="#module-arcgis.geometry.filters" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">Filters</span></code> modules contain functions to filter query results by a spatial relationship with another
 <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Geometry" title="arcgis.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></a> object. The <code class="docutils literal notranslate"><span class="pre">Filters</span></code> module is used when querying feature layers and imagery
 layers.</p>
 <div class="section" id="intersects">
-<h2>intersects<a class="headerlink" href="#intersects" title="Permalink to this heading">¶</a></h2>
+<h2>intersects<a class="headerlink" href="#intersects" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.intersects">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">intersects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.intersects" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.intersects">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">intersects</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.intersects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">intersects</span></code> method filters results whose geometry intersects with the specified
 <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Geometry" title="arcgis.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></a> object.</p>
 <table class="docutils align-default">
@@ -310,6 +283,13 @@ syntax is not supported.</p></td>
 <span class="kn">from</span> <span class="nn">arcgis.geometry</span> <span class="kn">import</span> <span class="n">Geometry</span>
 <span class="kn">from</span> <span class="nn">arcgis.geometry.filters</span> <span class="kn">import</span> <span class="n">intersects</span>
 
+<span class="c1"># get a feature layer item from the gis</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">flyr_item</span> <span class="o">=</span> <span class="n">gis</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;Freeways*&quot;</span><span class="p">,</span> <span class="s2">&quot;Feature Layer&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">freeway_lyr</span> <span class="o">=</span> <span class="n">flyr_item</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># assign a variable to the spatial reference</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">freeway_sr</span> <span class="o">=</span> <span class="n">freeway_lyr</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">extent</span><span class="p">[</span><span class="s2">&quot;spatialReference&quot;</span><span class="p">]</span>
+
 <span class="c1"># select a filter feature to construct its geometry</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">rte15_fset</span> <span class="o">=</span> <span class="n">freeway_lyr</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">where</span><span class="o">=</span><span class="s2">&quot;ROUTE_NUM = &#39;I15&#39;&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">rte15_geom_dict</span> <span class="o">=</span> <span class="n">rte15_fset</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">geometry</span>
@@ -327,10 +307,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="contains">
-<h2>contains<a class="headerlink" href="#contains" title="Permalink to this heading">¶</a></h2>
+<h2>contains<a class="headerlink" href="#contains" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.contains">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.contains" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.contains">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">contains</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.contains" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">contains</span></code> method returns a feature if its shape is wholly contained within the search
 <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Geometry" title="arcgis.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></a> object.</p>
 <div class="admonition note">
@@ -366,10 +346,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="crosses">
-<h2>crosses<a class="headerlink" href="#crosses" title="Permalink to this heading">¶</a></h2>
+<h2>crosses<a class="headerlink" href="#crosses" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.crosses">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">crosses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.crosses" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.crosses">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">crosses</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.crosses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">crosses</span></code> method retrieves a feature if the intersection of the interiors of the two shapes is not empty
 <strong>and</strong> has a lower dimension than the maximum dimension of the two shapes. Two lines that share an endpoint in
 common do not cross.</p>
@@ -407,10 +387,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="envelope-intersects">
-<h2>envelope_intersects<a class="headerlink" href="#envelope-intersects" title="Permalink to this heading">¶</a></h2>
+<h2>envelope_intersects<a class="headerlink" href="#envelope-intersects" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.envelope_intersects">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">envelope_intersects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.envelope_intersects" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.envelope_intersects">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">envelope_intersects</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.envelope_intersects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">envelope_intersects</span></code> retrieves features if the <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Envelope" title="arcgis.geometry.Envelope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Envelope</span></code></a> of the two shapes
 intersects.</p>
 <table class="docutils align-default">
@@ -442,10 +422,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="index-intersects">
-<h2>index_intersects<a class="headerlink" href="#index-intersects" title="Permalink to this heading">¶</a></h2>
+<h2>index_intersects<a class="headerlink" href="#index-intersects" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.index_intersects">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">index_intersects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.index_intersects" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.index_intersects">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">index_intersects</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.index_intersects" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">index_intersects</span></code> method retrieves a feature if the <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Envelope" title="arcgis.geometry.Envelope"><code class="xref py py-class docutils literal notranslate"><span class="pre">Envelope</span></code></a> of the query
 <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Geometry" title="arcgis.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></a> intersects the index entry for the target geometry.</p>
 <table class="docutils align-default">
@@ -477,10 +457,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="overlaps">
-<h2>overlaps<a class="headerlink" href="#overlaps" title="Permalink to this heading">¶</a></h2>
+<h2>overlaps<a class="headerlink" href="#overlaps" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.overlaps">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">overlaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.overlaps" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.overlaps">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">overlaps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.overlaps" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">overlaps</span></code> method retrieves a feature if the intersection of the two shapes results in an object of the same
 dimension, but different from both of the shapes.</p>
 <div class="admonition note">
@@ -516,10 +496,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="touches">
-<h2>touches<a class="headerlink" href="#touches" title="Permalink to this heading">¶</a></h2>
+<h2>touches<a class="headerlink" href="#touches" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.touches">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">touches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.touches" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.touches">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">touches</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.touches" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">touches</span></code> method retrieves a feature if the two shapes share a common boundary. However, the intersection of
 the interiors of the two shapes must be empty.</p>
 <div class="admonition note">
@@ -556,10 +536,10 @@ syntax is not supported.</p></td>
 
 </div>
 <div class="section" id="within">
-<h2>within<a class="headerlink" href="#within" title="Permalink to this heading">¶</a></h2>
+<h2>within<a class="headerlink" href="#within" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geometry.filters.within">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></span><span class="sig-name descname"><span class="pre">within</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.within" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geometry.filters.within">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geometry.filters.</span></code><code class="sig-name descname"><span class="pre">within</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geometry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geometry.filters.within" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>The <code class="docutils literal notranslate"><span class="pre">within</span></code> method retrieves a feature if its shape wholly contains the search
 <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Geometry" title="arcgis.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></a>.</p>
@@ -634,12 +614,12 @@ syntax is not supported.</p></td>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -647,6 +627,10 @@ syntax is not supported.</p></td>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>

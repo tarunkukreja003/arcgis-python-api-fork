@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.geoprocessing module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.geoprocessing module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -118,81 +115,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.geoprocessing module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#import-toolbox">import_toolbox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.import_toolbox"><code class="docutils literal notranslate"><span class="pre">import_toolbox()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#datafile">DataFile</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.DataFile"><code class="docutils literal notranslate"><span class="pre">DataFile</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.DataFile.download"><code class="docutils literal notranslate"><span class="pre">DataFile.download()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.DataFile.from_dict"><code class="docutils literal notranslate"><span class="pre">DataFile.from_dict()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.DataFile.from_str"><code class="docutils literal notranslate"><span class="pre">DataFile.from_str()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.DataFile.to_dict"><code class="docutils literal notranslate"><span class="pre">DataFile.to_dict()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#linearunit">LinearUnit</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.LinearUnit"><code class="docutils literal notranslate"><span class="pre">LinearUnit</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.LinearUnit.from_dict"><code class="docutils literal notranslate"><span class="pre">LinearUnit.from_dict()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.LinearUnit.from_str"><code class="docutils literal notranslate"><span class="pre">LinearUnit.from_str()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.LinearUnit.to_dict"><code class="docutils literal notranslate"><span class="pre">LinearUnit.to_dict()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#rasterdata">RasterData</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.RasterData"><code class="docutils literal notranslate"><span class="pre">RasterData</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.RasterData.from_dict"><code class="docutils literal notranslate"><span class="pre">RasterData.from_dict()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.RasterData.to_dict"><code class="docutils literal notranslate"><span class="pre">RasterData.to_dict()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#gpservice">GPService</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.GPService"><code class="docutils literal notranslate"><span class="pre">GPService</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPService.info"><code class="docutils literal notranslate"><span class="pre">GPService.info</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPService.properties"><code class="docutils literal notranslate"><span class="pre">GPService.properties</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPService.refresh"><code class="docutils literal notranslate"><span class="pre">GPService.refresh()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPService.tasks"><code class="docutils literal notranslate"><span class="pre">GPService.tasks</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#gptask">GPTask</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.GPTask"><code class="docutils literal notranslate"><span class="pre">GPTask</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPTask.choice_list"><code class="docutils literal notranslate"><span class="pre">GPTask.choice_list</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPTask.default_value"><code class="docutils literal notranslate"><span class="pre">GPTask.default_value()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPTask.help_url"><code class="docutils literal notranslate"><span class="pre">GPTask.help_url</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPTask.name"><code class="docutils literal notranslate"><span class="pre">GPTask.name</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPTask.properties"><code class="docutils literal notranslate"><span class="pre">GPTask.properties</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#import-toolbox">import_toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datafile">DataFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linearunit">LinearUnit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rasterdata">RasterData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpservice">GPService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gptask">GPTask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#gpinfo">GPInfo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gpjob">GPJob</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing.GPJob"><code class="docutils literal notranslate"><span class="pre">GPJob</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.cancel"><code class="docutils literal notranslate"><span class="pre">GPJob.cancel()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.cancelled"><code class="docutils literal notranslate"><span class="pre">GPJob.cancelled()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.done"><code class="docutils literal notranslate"><span class="pre">GPJob.done()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.ellapse_time"><code class="docutils literal notranslate"><span class="pre">GPJob.ellapse_time</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.messages"><code class="docutils literal notranslate"><span class="pre">GPJob.messages</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.result"><code class="docutils literal notranslate"><span class="pre">GPJob.result()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.running"><code class="docutils literal notranslate"><span class="pre">GPJob.running()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.status"><code class="docutils literal notranslate"><span class="pre">GPJob.status</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing.GPJob.task"><code class="docutils literal notranslate"><span class="pre">GPJob.task</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#toolbox">Toolbox</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoprocessing._tool.Toolbox"><code class="docutils literal notranslate"><span class="pre">Toolbox</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoprocessing._tool.Toolbox.tools"><code class="docutils literal notranslate"><span class="pre">Toolbox.tools</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#gpjob">GPJob</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbox">Toolbox</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.graph.html">arcgis.graph module</a></li>
@@ -274,22 +205,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.geoprocessing">
-<span id="arcgis-geoprocessing-module"></span><h1>arcgis.geoprocessing module<a class="headerlink" href="#module-arcgis.geoprocessing" title="Permalink to this heading">¶</a></h1>
+<span id="arcgis-geoprocessing-module"></span><h1>arcgis.geoprocessing module<a class="headerlink" href="#module-arcgis.geoprocessing" title="Permalink to this headline">¶</a></h1>
 <p>Users can create and share geoprocessing tools in the GIS. The arcgis.geoprocessing module lets you import geoprocessing
 toolboxes as native Python modules. You can call the functions available in the imported module to invoke these tools.
 The module also provides simple types that can be used as parameters for these tools along with native Python types.</p>
 <div class="section" id="import-toolbox">
-<h2>import_toolbox<a class="headerlink" href="#import-toolbox" title="Permalink to this heading">¶</a></h2>
+<h2>import_toolbox<a class="headerlink" href="#import-toolbox" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.import_toolbox">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">import_toolbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_or_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.import_toolbox" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.import_toolbox">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">import_toolbox</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url_or_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.import_toolbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Imports geoprocessing toolboxes as native Python modules.
 You can call the functions available in the imported module to invoke these tools.</p>
-<blockquote>
-<div><table class="docutils align-default">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
+<col style="width: 20%" />
+<col style="width: 80%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -300,30 +230,28 @@ You can call the functions available in the imported module to invoke these tool
 or Item of type: Geoprocessing Service</p></td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>optional GIS, the GIS used for running the tool.
-arcgis.env.active_gis is used if not specified</p></td>
+<td><p>Optional the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> used for running the tool.
+<a class="reference internal" href="arcgis.env.html#arcgis.env.active_gis" title="arcgis.env.active_gis"><code class="xref py py-attr docutils literal notranslate"><span class="pre">active_gis</span></code></a> is used if not specified</p></td>
 </tr>
 <tr class="row-even"><td><p>verbose</p></td>
 <td><p>optional bool, set to True to print the generated module</p></td>
 </tr>
 </tbody>
 </table>
-</div></blockquote>
 <p>Returns module with functions for the various tools in the toolbox</p>
 </dd></dl>
 
 </div>
 <div class="section" id="datafile">
-<h2>DataFile<a class="headerlink" href="#datafile" title="Permalink to this heading">¶</a></h2>
+<h2>DataFile<a class="headerlink" href="#datafile" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.DataFile">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">DataFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portal_item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.DataFile">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">DataFile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">portal_item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A data object containing a data source, used as input/output by some Geoprocessing tools</p>
-<blockquote>
-<div><table class="docutils align-default">
+<table class="docutils align-default">
 <colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
+<col style="width: 19%" />
+<col style="width: 81%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -337,32 +265,31 @@ arcgis.env.active_gis is used if not specified</p></td>
 as a result of the upload operation.</p></td>
 </tr>
 <tr class="row-even"><td><p>portal_item</p></td>
-<td><p>optional Item. A data type item used for GP tool.</p></td>
+<td><p>optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.Item" title="arcgis.gis.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a>. A data type item used for GP tool.</p></td>
 </tr>
 </tbody>
 </table>
-</div></blockquote>
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.DataFile.download">
-<span class="sig-name descname"><span class="pre">download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.download" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.DataFile.download">
+<code class="sig-name descname"><span class="pre">download</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">save_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.download" title="Permalink to this definition">¶</a></dt>
 <dd><p>Downloads the data to the specified folder or a temporary folder if a folder isn’t provided</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.DataFile.from_dict">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.from_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.DataFile.from_dict">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.from_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of this class from its dict representation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.DataFile.from_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.from_str" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.DataFile.from_str">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.from_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a data file from a url.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.DataFile.to_dict">
-<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.to_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.DataFile.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.DataFile.to_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an instance of this class to its dict representation.</p>
 </dd></dl>
 
@@ -370,13 +297,12 @@ as a result of the upload operation.</p></td>
 
 </div>
 <div class="section" id="linearunit">
-<h2>LinearUnit<a class="headerlink" href="#linearunit" title="Permalink to this heading">¶</a></h2>
+<h2>LinearUnit<a class="headerlink" href="#linearunit" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.LinearUnit">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">LinearUnit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.LinearUnit">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">LinearUnit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit" title="Permalink to this definition">¶</a></dt>
 <dd><p>A data object containing a linear distance, used as input to some Geoprocessing tools</p>
-<blockquote>
-<div><table class="docutils align-default">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 78%" />
@@ -397,22 +323,21 @@ such as “Meters”, “Miles”, “Kilometers”, “Inches”,
 </tr>
 </tbody>
 </table>
-</div></blockquote>
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.LinearUnit.from_dict">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit.from_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.LinearUnit.from_dict">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit.from_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of this class from its dict representation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.LinearUnit.from_str">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">how_far</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit.from_str" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.LinearUnit.from_str">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_str</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">how_far</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit.from_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a linear unit from a string like ‘5 miles’.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.LinearUnit.to_dict">
-<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit.to_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.LinearUnit.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.LinearUnit.to_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an instance of this class to its dict representation.</p>
 </dd></dl>
 
@@ -420,14 +345,13 @@ such as “Meters”, “Miles”, “Kilometers”, “Inches”,
 
 </div>
 <div class="section" id="rasterdata">
-<h2>RasterData<a class="headerlink" href="#rasterdata" title="Permalink to this heading">¶</a></h2>
+<h2>RasterData<a class="headerlink" href="#rasterdata" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.RasterData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">RasterData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.RasterData" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.RasterData">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">RasterData</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.RasterData" title="Permalink to this definition">¶</a></dt>
 <dd><p>A data object containing a raster data source,
 used as input/output by some Geoprocessing tools</p>
-<blockquote>
-<div><table class="docutils align-default">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 22%" />
 <col style="width: 78%" />
@@ -450,16 +374,15 @@ data, such as “jpg”, “tif”, etc.</p></td>
 </tr>
 </tbody>
 </table>
-</div></blockquote>
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.RasterData.from_dict">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.RasterData.from_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.RasterData.from_dict">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_dict</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datadict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.RasterData.from_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of this class from its dict representation.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.RasterData.to_dict">
-<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.RasterData.to_dict" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.RasterData.to_dict">
+<code class="sig-name descname"><span class="pre">to_dict</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.RasterData.to_dict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Converts an instance of this class to its dict representation.</p>
 </dd></dl>
 
@@ -467,71 +390,76 @@ data, such as “jpg”, “tif”, etc.</p></td>
 
 </div>
 <div class="section" id="gpservice">
-<h2>GPService<a class="headerlink" href="#gpservice" title="Permalink to this heading">¶</a></h2>
+<h2>GPService<a class="headerlink" href="#gpservice" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPService">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">GPService</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPService" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPService">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">GPService</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPService" title="Permalink to this definition">¶</a></dt>
 <dd><p>A geoprocessing service can contain one or more tools that use input
 data from a client application, process it, and return output in the
 form of features, maps, reports, files, or services. These tools are
 first authored and run in ArcGIS Pro or ArcGIS Desktop, typically as
 a custom model or script tools, before being shared to an ArcGIS
 Server.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPService.info">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPService.info" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPService.properties">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPService.properties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the Service’s Properties</p>
-<dl class="field-list simple">
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPService.info">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">info</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPService.info" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p><a class="reference internal" href="#arcgis.geoprocessing.GPInfo" title="arcgis.geoprocessing.GPInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">GPInfo</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPService.refresh">
-<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPService.refresh" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPService.properties">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPService.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Service’s Properties</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPService.refresh">
+<code class="sig-name descname"><span class="pre">refresh</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPService.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reloads the Service Information</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPService.tasks">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tasks</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPService.tasks" title="Permalink to this definition">¶</a></dt>
-<dd><p>returns the GP Tasks</p>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPService.tasks">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">tasks</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPService.tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns the <a class="reference internal" href="#arcgis.geoprocessing.GPTask" title="arcgis.geoprocessing.GPTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">GP</span> <span class="pre">Tasks</span></code></a></p>
 </dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="gptask">
-<h2>GPTask<a class="headerlink" href="#gptask" title="Permalink to this heading">¶</a></h2>
+<h2>GPTask<a class="headerlink" href="#gptask" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPTask">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">GPTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPTask" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPTask">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">GPTask</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPTask" title="Permalink to this definition">¶</a></dt>
 <dd><p>The GP Task resource represents a single task in a geoprocessing
 service published using ArcGIS Server. It provides basic information
 about the task including its name and display name. It also provides
 detailed information about the various input and output parameters
 exposed by the task.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPTask.choice_list">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">choice_list</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPTask.choice_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPTask.choice_list">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">choice_list</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPTask.choice_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Map of Parameters with Choice Lists.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>Dictionary</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPTask.default_value">
-<span class="sig-name descname"><span class="pre">default_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPTask.default_value" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPTask.default_value">
+<code class="sig-name descname"><span class="pre">default_value</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPTask.default_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets a parameter’s default value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -540,35 +468,35 @@ exposed by the task.</p>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPTask.help_url">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">help_url</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPTask.help_url" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPTask.help_url">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">help_url</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPTask.help_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the URL to the documentation for the GP Task.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p>string</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPTask.name">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPTask.name" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPTask.name">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">name</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPTask.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the geoprocessing tasks</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>str</p>
+<dd class="field-odd"><p>string</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPTask.properties">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPTask.properties" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPTask.properties">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPTask.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the Service’s Properties</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>dict</p>
+<dd class="field-odd"><p>Dictionary</p>
 </dd>
 </dl>
 </dd></dl>
@@ -577,28 +505,64 @@ exposed by the task.</p>
 
 </div>
 <div class="section" id="gpinfo">
-<h2>GPInfo<a class="headerlink" href="#gpinfo" title="Permalink to this heading">¶</a></h2>
+<h2>GPInfo<a class="headerlink" href="#gpinfo" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="arcgis.geoprocessing.GPInfo">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">GPInfo</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides access to additional information about the GP Service.</p>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPInfo.item_info">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">item_info</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPInfo.item_info" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the service’s item information</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPInfo.metadata">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">metadata</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPInfo.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the service’s metadata</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPInfo.thumbnail">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">thumbnail</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPInfo.thumbnail" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the service’s thumbnail</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="gpjob">
-<h2>GPJob<a class="headerlink" href="#gpjob" title="Permalink to this heading">¶</a></h2>
+<h2>GPJob<a class="headerlink" href="#gpjob" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></span><span class="sig-name descname"><span class="pre">GPJob</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">future</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gptool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPJob">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing.</span></code><code class="sig-name descname"><span class="pre">GPJob</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">future</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gptool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">jobid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">notify</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a Single Geoprocessing Job.  The <cite>GPJob</cite> class allows for the asynchronous operation
 of any geoprocessing task.  To request a GPJob task, the code must be called with <cite>future=True</cite>
 or else the operation will occur synchronously.  This class is not intended for users to call
 directly.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 12%" />
+<col style="width: 88%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Required ccurrent.futures.Future.  The async object created by
+<td><p>Required <a class="reference external" href="https://docs.python.org/3/library/concurrent.futures.html">Future</a> object.  The async object created by
 the geoprocessing (GP) task.</p></td>
 </tr>
 <tr class="row-odd"><td><p>gptool</p></td>
@@ -608,10 +572,10 @@ the geoprocessing (GP) task.</p></td>
 <td><p>Required String. The unique ID of the GP Job.</p></td>
 </tr>
 <tr class="row-odd"><td><p>task_url</p></td>
-<td><p>Required String. The URL to the GP Task.</p></td>
+<td><p>Required String. The URL to the <a class="reference internal" href="#arcgis.geoprocessing.GPTask" title="arcgis.geoprocessing.GPTask"><code class="xref py py-class docutils literal notranslate"><span class="pre">GPTask</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Required GIS. The GIS connection object</p></td>
+<td><p>Required <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS connection object</p></td>
 </tr>
 <tr class="row-odd"><td><p>notify</p></td>
 <td><p>Optional Boolean.  When set to True, a message will inform the
@@ -621,50 +585,50 @@ False.</p></td>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.cancel">
-<span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.cancel" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPJob.cancel">
+<code class="sig-name descname"><span class="pre">cancel</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.cancel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempt to cancel the call. If the call is currently being executed
 or finished running and cannot be cancelled then the method will
 return False, otherwise the call will be cancelled and the method
 will return True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>boolean</p>
+<dd class="field-odd"><p>Boolean</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.cancelled">
-<span class="sig-name descname"><span class="pre">cancelled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.cancelled" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPJob.cancelled">
+<code class="sig-name descname"><span class="pre">cancelled</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.cancelled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return True if the call was successfully cancelled.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>boolean</p>
+<dd class="field-odd"><p>Boolean</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.done">
-<span class="sig-name descname"><span class="pre">done</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.done" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPJob.done">
+<code class="sig-name descname"><span class="pre">done</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.done" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return True if the call was successfully cancelled or finished running.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>boolean</p>
+<dd class="field-odd"><p>Boolean</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.ellapse_time">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ellapse_time</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.ellapse_time" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPJob.ellapse_time">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">ellapse_time</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPJob.ellapse_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the Ellapse Time for the Job</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.messages">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">messages</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.messages" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPJob.messages">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">messages</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPJob.messages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the service’s messages</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -674,8 +638,8 @@ will return True.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.result">
-<span class="sig-name descname"><span class="pre">result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.result" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPJob.result">
+<code class="sig-name descname"><span class="pre">result</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.result" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the value returned by the call. If the call hasn’t yet completed
 then this method will wait.</p>
 <dl class="field-list simple">
@@ -686,19 +650,19 @@ then this method will wait.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.running">
-<span class="sig-name descname"><span class="pre">running</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.running" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing.GPJob.running">
+<code class="sig-name descname"><span class="pre">running</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.running" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return True if the call is currently being executed and cannot be cancelled.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>boolean</p>
+<dd class="field-odd"><p>Boolean</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.status">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">status</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.status" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPJob.status">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">status</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPJob.status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the GP status</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -707,25 +671,29 @@ then this method will wait.</p>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing.GPJob.task">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">task</span></span><a class="headerlink" href="#arcgis.geoprocessing.GPJob.task" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the task name.
-:return: string</p>
+<dl class="py method">
+<dt id="arcgis.geoprocessing.GPJob.task">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">task</span></code><a class="headerlink" href="#arcgis.geoprocessing.GPJob.task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the task name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>String</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 </div>
 <div class="section" id="toolbox">
-<h2>Toolbox<a class="headerlink" href="#toolbox" title="Permalink to this heading">¶</a></h2>
+<h2>Toolbox<a class="headerlink" href="#toolbox" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoprocessing._tool.Toolbox">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing._tool.</span></span><span class="sig-name descname"><span class="pre">Toolbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing._tool.Toolbox" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoprocessing._tool.Toolbox">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoprocessing._tool.</span></code><code class="sig-name descname"><span class="pre">Toolbox</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoprocessing._tool.Toolbox" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of geoprocessing tools.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoprocessing._tool.Toolbox.tools">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tools</span></span><a class="headerlink" href="#arcgis.geoprocessing._tool.Toolbox.tools" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoprocessing._tool.Toolbox.tools">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">tools</span></code><a class="headerlink" href="#arcgis.geoprocessing._tool.Toolbox.tools" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of tools in this toolbox</p>
 </dd></dl>
 
@@ -770,12 +738,12 @@ then this method will wait.</p>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -783,6 +751,10 @@ then this method will wait.</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>
