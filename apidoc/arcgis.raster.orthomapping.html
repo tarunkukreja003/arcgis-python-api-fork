@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.raster.orthomapping module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.raster.orthomapping module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -125,70 +122,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.gbl.html">arcgis.raster.functions.gbl module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.raster.orthomapping module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#is-supported">is_supported</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.is_supported"><code class="docutils literal notranslate"><span class="pre">is_supported()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#compute-sensor-model">compute_sensor_model</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.compute_sensor_model"><code class="docutils literal notranslate"><span class="pre">compute_sensor_model()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#alter-processing-states">alter_processing_states</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.alter_processing_states"><code class="docutils literal notranslate"><span class="pre">alter_processing_states()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#get-processing-states">get_processing_states</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.get_processing_states"><code class="docutils literal notranslate"><span class="pre">get_processing_states()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#match-control-points">match_control_points</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.match_control_points"><code class="docutils literal notranslate"><span class="pre">match_control_points()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#color-correction">color_correction</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.color_correction"><code class="docutils literal notranslate"><span class="pre">color_correction()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#compute-control-points">compute_control_points</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.compute_control_points"><code class="docutils literal notranslate"><span class="pre">compute_control_points()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#compute-seamlines">compute_seamlines</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.compute_seamlines"><code class="docutils literal notranslate"><span class="pre">compute_seamlines()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#edit-control-points">edit_control_points</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.edit_control_points"><code class="docutils literal notranslate"><span class="pre">edit_control_points()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-dem">generate_dem</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.generate_dem"><code class="docutils literal notranslate"><span class="pre">generate_dem()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-orthomosaic">generate_orthomosaic</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.generate_orthomosaic"><code class="docutils literal notranslate"><span class="pre">generate_orthomosaic()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#generate-report">generate_report</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.generate_report"><code class="docutils literal notranslate"><span class="pre">generate_report()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#query-camera-info">query_camera_info</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.query_camera_info"><code class="docutils literal notranslate"><span class="pre">query_camera_info()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#query-control-points">query_control_points</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.query_control_points"><code class="docutils literal notranslate"><span class="pre">query_control_points()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#reset-image-collection">reset_image_collection</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.reset_image_collection"><code class="docutils literal notranslate"><span class="pre">reset_image_collection()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#compute-spatial-reference-factory-code">compute_spatial_reference_factory_code</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.raster.orthomapping.compute_spatial_reference_factory_code"><code class="docutils literal notranslate"><span class="pre">compute_spatial_reference_factory_code()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#is-supported">is_supported</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-sensor-model">compute_sensor_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alter-processing-states">alter_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-processing-states">get_processing_states</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#match-control-points">match_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#color-correction">color_correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-control-points">compute_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-seamlines">compute_seamlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-control-points">edit_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-dem">generate_dem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-orthomosaic">generate_orthomosaic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-report">generate_report</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#query-camera-info">query_camera_info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#query-control-points">query_control_points</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reset-image-collection">reset_image_collection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-spatial-reference-factory-code">compute_spatial_reference_factory_code</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.RFT.html">arcgis.raster.functions.RFT</a></li>
@@ -284,33 +233,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="arcgis-raster-orthomapping-module">
-<h1>arcgis.raster.orthomapping module<a class="headerlink" href="#arcgis-raster-orthomapping-module" title="Permalink to this heading">¶</a></h1>
+<h1>arcgis.raster.orthomapping module<a class="headerlink" href="#arcgis-raster-orthomapping-module" title="Permalink to this headline">¶</a></h1>
 <span class="target" id="module-arcgis.raster.orthomapping"></span><p>The orthomapping python API allows automating orthomapping tasks in the server environment.</p>
-<p>For more information about orthomapping workflows in ArcGIS, please visit the help documentation at 
-<a class="reference external" href="http://desktop.arcgis.com/en/arcmap/10.4/manage-data/raster-and-images/block-adjustment-for-mosaic-datasets.htm">http://desktop.arcgis.com/en/arcmap/10.4/manage-data/raster-and-images/block-adjustment-for-mosaic-datasets.htm</a>.</p>
+<p>For more information about orthomapping workflows in ArcGIS, please visit the help documentation at
+<a class="reference external" href="https://desktop.arcgis.com/en/arcmap/10.4/manage-data/raster-and-images/block-adjustment-for-mosaic-datasets.htm">Block adjustment for mosaic datasets</a></p>
 <div class="section" id="is-supported">
-<h2>is_supported<a class="headerlink" href="#is-supported" title="Permalink to this heading">¶</a></h2>
+<h2>is_supported<a class="headerlink" href="#is-supported" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.is_supported">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.is_supported" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.is_supported">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">is_supported</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.is_supported" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if the GIS supports orthomapping. If a gis isn’t specified,
-checks if arcgis.env.active_gis supports raster analytics</p>
+checks if <a class="reference internal" href="arcgis.env.html#arcgis.env.active_gis" title="arcgis.env.active_gis"><code class="xref py py-meth docutils literal notranslate"><span class="pre">active_gis()</span></code></a> supports raster analytics</p>
 </dd></dl>
 
 </div>
 <div class="section" id="compute-sensor-model">
-<h2>compute_sensor_model<a class="headerlink" href="#compute-sensor-model" title="Permalink to this heading">¶</a></h2>
+<h2>compute_sensor_model<a class="headerlink" href="#compute-sensor-model" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.compute_sensor_model">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">compute_sensor_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Quick'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_accuracy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'High'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_sensor_model" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.compute_sensor_model">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">compute_sensor_model</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Quick'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location_accuracy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'High'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_sensor_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute_sensor_model computes the bundle block adjustment for the image collection
 and applies the frame xform to the images. It will also generate the control point
 table, solution table, solution points table and flight path table.
 These tables will not be published as Portal items.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -352,16 +301,18 @@ matching images, then calculate tie points and compute adjustments.</p>
 <td><p>Optional dictionary. The context parameter is used to configure additional client settings
 for block adjustment. The supported configurable parameters are for compute mosaic dataset
 candidates after the adjustment.</p>
-<p>Example:
-{
+<p>Example:</p>
+<blockquote>
+<div><p>{
 “computeCandidate”: False,
 “maxoverlap”: 0.6,
 “maxloss”: 0.05,
 }</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -374,10 +325,10 @@ candidates after the adjustment.</p>
 
 </div>
 <div class="section" id="alter-processing-states">
-<h2>alter_processing_states<a class="headerlink" href="#alter-processing-states" title="Permalink to this heading">¶</a></h2>
+<h2>alter_processing_states<a class="headerlink" href="#alter-processing-states" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.alter_processing_states">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">alter_processing_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_states</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.alter_processing_states" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.alter_processing_states">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">alter_processing_states</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_states</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.alter_processing_states" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alter the processing states of the image collection.
 The states are stored as key property “Orthomapping”.
 The content of the state is a dictionary including
@@ -385,8 +336,8 @@ several properties which can be set based on the process
 done on the image collection.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -403,8 +354,9 @@ done on the image collection.</p>
 <p>This a dictionary of states that should be set on the image collection
 The new states that can be set on the image collection are:
 blockadjustment, dem, gcp, seamlines, colorcorrection, adjust_index, imagetype</p>
-<dl>
-<dt>Example:</dt><dd><div class="line-block">
+<p>Example:</p>
+<blockquote>
+<div><div class="line-block">
 <div class="line">{“blockadjustment”: “raw”,</div>
 <div class="line-block">
 <div class="line">“dem”: “Dense_Natual_Neighbor”,</div>
@@ -414,12 +366,11 @@ blockadjustment, dem, gcp, seamlines, colorcorrection, adjust_index, imagetype</
 <div class="line">“adjust_index”: 0}</div>
 </div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -432,15 +383,15 @@ blockadjustment, dem, gcp, seamlines, colorcorrection, adjust_index, imagetype</
 
 </div>
 <div class="section" id="get-processing-states">
-<h2>get_processing_states<a class="headerlink" href="#get-processing-states" title="Permalink to this heading">¶</a></h2>
+<h2>get_processing_states<a class="headerlink" href="#get-processing-states" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.get_processing_states">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">get_processing_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.get_processing_states" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.get_processing_states">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">get_processing_states</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.get_processing_states" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the processing states of the image collection</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -453,7 +404,7 @@ blockadjustment, dem, gcp, seamlines, colorcorrection, adjust_index, imagetype</
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -466,10 +417,10 @@ blockadjustment, dem, gcp, seamlines, colorcorrection, adjust_index, imagetype</
 
 </div>
 <div class="section" id="match-control-points">
-<h2>match_control_points<a class="headerlink" href="#match-control-points" title="Permalink to this heading">¶</a></h2>
+<h2>match_control_points<a class="headerlink" href="#match-control-points" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.match_control_points">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">match_control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'High'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.match_control_points" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.match_control_points">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">match_control_points</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'High'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.match_control_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>The match_control_points is a function that takes a collection of ground control points
 as input (control points to be specified as a list of dictionary objects), and each of the 
 ground control points needs at least one matching tie point in the control point sets. 
@@ -504,8 +455,9 @@ imagePoints. (the imagePoints attribute inside the control points object lists t
 </div></blockquote>
 <p>– status (int)  - The status of the point. A value of 0 indicates that the point will not be used in computation. A non-zero value indicates otherwise.</p>
 <p>– imageID (int) - Image identification using the ObjectID from the mosaic dataset footprint table.</p>
-<dl>
-<dt>Example:</dt><dd><div class="line-block">
+<p>Example:</p>
+<blockquote>
+<div><div class="line-block">
 <div class="line">[{</div>
 <div class="line">“status”: 1,</div>
 <div class="line">“type”: 2,</div>
@@ -562,8 +514,7 @@ imagePoints. (the imagePoints attribute inside the control points object lists t
 <div class="line">…</div>
 <div class="line">]</div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>similarity</p></td>
@@ -578,8 +529,10 @@ imagePoints. (the imagePoints attribute inside the control points object lists t
 <tr class="row-odd"><td><p>context</p></td>
 <td><p>Optional dictionary.Additional settings such as the input control points
 spatial reference can be specified here.</p>
-<p>For example:
-{“groundControlPointsSpatialReference”: {“wkid”: 3459}, “imagePointSpatialReference”: {“wkid”: 3459}}</p>
+<p>For Example:</p>
+<blockquote>
+<div><p>{“groundControlPointsSpatialReference”: {“wkid”: 3459}, “imagePointSpatialReference”: {“wkid”: 3459}}</p>
+</div></blockquote>
 <p>Note: The ground control points spatial reference and image point spatial reference
 spatial reference set in the context parameter is to decide the returned point set’s
 ground control points spatial reference and image point spatial reference.
@@ -590,7 +543,7 @@ coordinates are in image coordinate system.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -603,14 +556,13 @@ coordinates are in image coordinate system.</p>
 
 </div>
 <div class="section" id="color-correction">
-<h2>color_correction<a class="headerlink" href="#color-correction" title="Permalink to this heading">¶</a></h2>
+<h2>color_correction<a class="headerlink" href="#color-correction" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.color_correction">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">color_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_correction_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dodging_surface_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.color_correction" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.color_correction">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">color_correction</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_correction_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dodging_surface_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.color_correction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Color balance the image collection. 
-Refer to the “Color Balance Mosaic Dataset” GP tool for 
-documentation on color balancing mosaic datasets.
-<a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/color-balance-mosaic-dataset.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/color-balance-mosaic-dataset.htm</a></p>
+Refer to the <a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/color-balance-mosaic-dataset.htm">Color Balance Mosaic Dataset</a> GP tool for
+documentation on color balancing mosaic datasets.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 5%" />
@@ -657,12 +609,14 @@ It can be a portal Item or an image service URL or a URI</p></td>
 <tr class="row-even"><td><p>context</p></td>
 <td><p>Optional dictionary. It contains additional settings that allows
 users to customize the statistics computation settings.</p>
-<p>Example:
-{“skipRows”: 10, “skipCols”: 10, “reCalculateStats”: “OVERWRITE”}</p>
+<p>Example:</p>
+<blockquote>
+<div><p>{“skipRows”: 10, “skipCols”: 10, “reCalculateStats”: “OVERWRITE”}</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -675,18 +629,18 @@ users to customize the statistics computation settings.</p>
 
 </div>
 <div class="section" id="compute-control-points">
-<h2>compute_control_points<a class="headerlink" href="#compute-control-points" title="Permalink to this heading">¶</a></h2>
+<h2>compute_control_points<a class="headerlink" href="#compute-control-points" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.compute_control_points">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">compute_control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_location_accuracy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'High'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_control_points" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.compute_control_points">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">compute_control_points</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_location_accuracy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'High'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_control_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>This service tool is used for computing matching control points between images
 within an image collection and/or matching control points between the image 
 collection images and the reference image.
-<a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/compute-control-points.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/compute-control-points.htm</a></p>
+<a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/compute-control-points.htm">Compute Control Points</a></p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col style="width: 17%" />
+<col style="width: 83%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -724,38 +678,34 @@ to use RPC adjustment mode. In this case, the mode need not be explicitly set by
 output control points generation.</p>
 <p>Possible keys and their possible values are:</p>
 <p>pointSimilarity- Sets LOW, MEDIUM, or HIGH tolerance for computing control points with varying levels of potential error.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>LOW tolerance will produce the most control point, but may have a higher                                                              level of error.</p></li>
-<li><p>HIGH tolerance will produce the least number of control point,                                                              but each matching pair will have a lower level of error.</p></li>
+<ul class="simple">
+<li><p>LOW tolerance will produce the most control point, but may have a higher                                               level of error.</p></li>
+<li><p>HIGH tolerance will produce the least number of control point,                                               but each matching pair will have a lower level of error.</p></li>
 <li><p>MEDIUM tolerance will set the similarity tolerance to medium.</p></li>
 </ul>
-</div></blockquote>
 <p>pointDensity- Sets the number of tie points (LOW, MEDIUM, or HIGH), to be created.</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>LOW point density will create the fewest number of tie points.</p></li>
 <li><p>MEDIUM point density will create a moderate number of tie points.</p></li>
 <li><p>HIGH point density will create the highest number of tie points.</p></li>
 </ul>
-</div></blockquote>
 <p>pointDistribution- Randomly generates points that are better for overlapping areas with irregular shapes.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>RANDOM- will generate points that are better for overlapping areas                                                                with irregular shapes.</p></li>
-<li><p>REGULAR- will generate points based on a                                                                fixed pattern and uses the point density to determine how frequently to create points.</p></li>
+<ul class="simple">
+<li><p>RANDOM- will generate points that are better for overlapping areas                                               with irregular shapes.</p></li>
+<li><p>REGULAR- will generate points based on a                                               fixed pattern and uses the point density to determine how frequently to create points.</p></li>
 </ul>
-</div></blockquote>
 <p>Example:</p>
-<p>{
+<blockquote>
+<div><p>{
 “pointSimilarity”:”MEDIUM”,
 “pointDensity”: “MEDIUM”,
 “pointDistribution”: “RANDOM”
 }</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -768,17 +718,17 @@ output control points generation.</p>
 
 </div>
 <div class="section" id="compute-seamlines">
-<h2>compute_seamlines<a class="headerlink" href="#compute-seamlines" title="Permalink to this heading">¶</a></h2>
+<h2>compute_seamlines<a class="headerlink" href="#compute-seamlines" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.compute_seamlines">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">compute_seamlines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seamlines_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_seamlines" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.compute_seamlines">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">compute_seamlines</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seamlines_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_seamlines" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute seamlines on the image collection. This service tool is used to compute
 seamlines for the image collection, usually after the image collection has been
 block adjusted. Seamlines are helpful for generating the seamless mosaicked 
 display of overlapped images in image collection. The seamlines are computed
 only for candidates that will eventually be used for generating the result
-ortho-mosaicked image.  
-<a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/build-seamlines.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/build-seamlines.htm</a></p>
+ortho-mosaicked image.</p>
+<p><a class="reference external" href="https://pro.arcgis.com/en/pro-app/tool-reference/data-management/build-seamlines.htm">Build Seamlines</a></p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 9%" />
@@ -795,23 +745,23 @@ The image_collection must exist.</p></td>
 </tr>
 <tr class="row-odd"><td><p>seamlines_method</p></td>
 <td><p>Required string. These are supported methods for generated seamlines for the image collection.</p>
-<blockquote>
-<div><ul class="simple">
+<ul>
 <li><p>VORONOI-Generate seamlines using the area Voronoi diagram.</p></li>
 <li><p>DISPARITY-Generate seamlines based on the disparity images of stereo pairs.</p></li>
-<li><p>GEOMETRY - Generate seamlines for overlapping areas based on the intersection                             of footprints. Areas with no overlapping imagery will merge the footprints.</p></li>
-<li><p>RADIOMETRY - Generate seamlines based on the spectral patterns of features                             within the imagery.</p></li>
-<li><p>EDGE_DETECTION - Generate seamlines over intersecting areas based on the                             edges of features in the area.</p></li>
-</ul>
+<li><p>GEOMETRY - Generate seamlines for overlapping areas based on the intersection                              of footprints. Areas with no overlapping imagery will merge the footprints.</p></li>
+<li><p>RADIOMETRY - Generate seamlines based on the spectral patterns of features                              within the imagery.</p></li>
+<li><p>EDGE_DETECTION - Generate seamlines over intersecting areas based on the                              edges of features in the area.</p>
 <p>This method can avoid seamlines cutting through buildings.</p>
-</div></blockquote>
+</li>
+</ul>
 </td>
 </tr>
 <tr class="row-even"><td><p>context</p></td>
 <td><p>Optional dictionary. Context contains additional settings that allows users to customize
 the seamlines generation.
-Example:
-{“minRegionSize”: 100,
+Example:</p>
+<blockquote>
+<div><p>{“minRegionSize”: 100,
 “pixelSize”: “”,
 “blendType”: “Both”,
 “blendWidth”: null,
@@ -821,6 +771,7 @@ Example:
 “minThinnessRatio”: 0.05,
 “maxSilverSize”: 20
 }</p>
+</div></blockquote>
 <p>Allowed keys are:
 “minRegionSize”, “pixelSize”, “blendType”, “blendWidth”,
 “blendUnit”, “requestSizeType”, “requestSize”,
@@ -828,7 +779,7 @@ Example:
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -841,10 +792,10 @@ Example:
 
 </div>
 <div class="section" id="edit-control-points">
-<h2>edit_control_points<a class="headerlink" href="#edit-control-points" title="Permalink to this heading">¶</a></h2>
+<h2>edit_control_points<a class="headerlink" href="#edit-control-points" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.edit_control_points">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">edit_control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_points</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.edit_control_points" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.edit_control_points">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">edit_control_points</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_points</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.edit_control_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>This service can be used to append additional ground control point sets to
 the image collection’s control points. It is recommended that a ground control point (GCP) set
 should contain one ground control point and multiple tie points.
@@ -880,8 +831,9 @@ imagePoints. (the imagePoints attribute inside the control points object lists t
 </div></blockquote>
 <p>– status (int)  - The status of the point. A value of 0 indicates that the point will not be used in computation. A non-zero value indicates otherwise.</p>
 <p>– imageID (int) - Image identification using the ObjectID from the mosaic dataset footprint table.</p>
-<dl>
-<dt>Example:</dt><dd><div class="line-block">
+<p>Example:</p>
+<blockquote>
+<div><div class="line-block">
 <div class="line">[{</div>
 <div class="line">“status”: 1,</div>
 <div class="line">“type”: 2,</div>
@@ -938,12 +890,11 @@ imagePoints. (the imagePoints attribute inside the control points object lists t
 <div class="line">…</div>
 <div class="line">]</div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -956,13 +907,12 @@ imagePoints. (the imagePoints attribute inside the control points object lists t
 
 </div>
 <div class="section" id="generate-dem">
-<h2>generate_dem<a class="headerlink" href="#generate-dem" title="Permalink to this heading">¶</a></h2>
+<h2>generate_dem<a class="headerlink" href="#generate-dem" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.generate_dem">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">generate_dem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matching_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_dem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a DEM from the image collection. Refer to “Interpolate From Point Cloud”
-GP tool for more documentation
-<a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/interpolate-from-point-cloud.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/interpolate-from-point-cloud.htm</a></p>
+<dt id="arcgis.raster.orthomapping.generate_dem">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">generate_dem</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_dem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cell_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matching_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_dem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a DEM from the image collection. Refer to <a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/interpolate-from-point-cloud.htm">Interpolate From Point Cloud</a>
+GP tool for more documentation</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 6%" />
@@ -1011,15 +961,16 @@ Heiko Hirschmuller et al., “Memory Efficient Semi-Global Matching,”
 ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial
 Information Sciences, Volume 1-3, (2012): 371-376.</p>
 <p>Refer to the documentation
-of “matching_method” parameter of the “Generate Point Cloud”
-GP tool &#64; <a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/generate-point-cloud.htm">http://pro.arcgis.com/en/pro-app/tool-reference/data-management/generate-point-cloud.htm</a></p>
+of “matching_method” parameter of the <a class="reference external" href="http://pro.arcgis.com/en/pro-app/tool-reference/data-management/generate-point-cloud.htm">Generate Point Cloud</a>
+GP tool</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>context</p></td>
 <td><p>Optional dictionary. Additional allowed point cloud generation parameter and DEM
 interpolation parameter can be assigned here.</p>
-<dl>
-<dt>For example:</dt><dd><div class="line-block">
+<p>For Example:</p>
+<blockquote>
+<div><div class="line-block">
 <div class="line">Point cloud generation parameters -</div>
 <div class="line">{“maxObjectSize”: 50,</div>
 <div class="line">“groundSpacing”: None,</div>
@@ -1037,11 +988,10 @@ interpolation parameter can be assigned here.</p>
 <div class="line">{“method”: “TRIANGULATION”,</div>
 <div class="line">“smoothingMethod”: “GAUSS5x5”,</div>
 <div class="line">“applyToOrtho”: True,</div>
-<div class="line">“fillDEM”: “<a class="reference external" href="https://">https://</a>….”</div>
+<div class="line">“fillDEM”: “<code class="docutils literal notranslate"><span class="pre">https://....</span></code>”</div>
 <div class="line">}</div>
 </div>
-</dd>
-</dl>
+</div></blockquote>
 <p>Note:
 The “applyToOrtho” flag can apply the generated DEM back into the
 mosaic dataset’s geometric function to achieve more accurate
@@ -1052,7 +1002,7 @@ interpolated from the point cloud.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1065,10 +1015,10 @@ interpolated from the point cloud.</p>
 
 </div>
 <div class="section" id="generate-orthomosaic">
-<h2>generate_orthomosaic<a class="headerlink" href="#generate-orthomosaic" title="Permalink to this heading">¶</a></h2>
+<h2>generate_orthomosaic<a class="headerlink" href="#generate-orthomosaic" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.generate_orthomosaic">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">generate_orthomosaic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_ortho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regen_seamlines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute_color_correction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_orthomosaic" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.generate_orthomosaic">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">generate_orthomosaic</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_ortho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regen_seamlines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute_color_correction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_orthomosaic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function can be used for generating single ortho-rectified mosaicked image from image collection after
 the block adjustment.</p>
 <table class="docutils align-default">
@@ -1152,7 +1102,7 @@ interest defined by the geometry.</p></li>
 <div class="line">“maxSliverSize”: 20</div>
 <div class="line">“colorCorrectionMethod”: “DODGING”,</div>
 <div class="line">“dodgingSurface”: “Single_Color”,</div>
-<div class="line">“referenceImg”: {“url”: <a class="reference external" href="https://">https://</a>…”},</div>
+<div class="line">“referenceImg”: {“url”: “<code class="docutils literal notranslate"><span class="pre">https://...</span></code>”},</div>
 <div class="line">“skipRows”: 10,</div>
 <div class="line">“skipCols”: 10,</div>
 <div class="line">“reCalculateSats”: “OVERWRITE”</div>
@@ -1164,7 +1114,7 @@ interest defined by the geometry.</p></li>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1177,25 +1127,25 @@ interest defined by the geometry.</p></li>
 
 </div>
 <div class="section" id="generate-report">
-<h2>generate_report<a class="headerlink" href="#generate-report" title="Permalink to this heading">¶</a></h2>
+<h2>generate_report<a class="headerlink" href="#generate-report" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.generate_report">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">generate_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PDF'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_report" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.generate_report">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">generate_report</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PDF'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.generate_report" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function is used to generate orthomapping report with image collection
 that has been block adjusted. The report would contain information about
 the quality of the adjusted images, the distribution of the control points, etc.
 The output of this service tool is a downloadable html page.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>image_collection</p></td>
-<td><p>Required. the input image collection that should be
+<td><p>Required. The input image collection that should be
 used to generate a report from.
 The image_collection can be a portal Item or an image service URL or a URI
 The image_collection must exist.</p></td>
@@ -1204,7 +1154,7 @@ The image_collection must exist.</p></td>
 <td><p>Type of the format to be generated. Possible PDF, HTML. Default - PDF</p></td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1217,17 +1167,17 @@ The image_collection must exist.</p></td>
 
 </div>
 <div class="section" id="query-camera-info">
-<h2>query_camera_info<a class="headerlink" href="#query-camera-info" title="Permalink to this heading">¶</a></h2>
+<h2>query_camera_info<a class="headerlink" href="#query-camera-info" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.query_camera_info">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">query_camera_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera_query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.query_camera_info" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.query_camera_info">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">query_camera_info</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera_query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.query_camera_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>This service tool is used to query specific or the entire digital camera
 database. The digital camera database contains the specs
 of digital camera sensors that were used to capture drone images.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -1239,11 +1189,14 @@ be used to filter a portion of the digital camera
 database.
 Digital camera database can be queried using the fields Make, Model,
 Focallength, Columns, Rows, PixelSize.</p>
-<p>Eg. “Make=’Rollei’ and Model=’RCP-8325’”</p>
+<p>Example:</p>
+<blockquote>
+<div><p>“Make=’Rollei’ and Model=’RCP-8325’”</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1256,16 +1209,16 @@ Focallength, Columns, Rows, PixelSize.</p>
 
 </div>
 <div class="section" id="query-control-points">
-<h2>query_control_points<a class="headerlink" href="#query-control-points" title="Permalink to this heading">¶</a></h2>
+<h2>query_control_points<a class="headerlink" href="#query-control-points" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.query_control_points">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">query_control_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.query_control_points" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.query_control_points">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">query_control_points</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.query_control_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Query for control points in an image collection. It allows users to query
 among certain control point sets that has ground control points inside.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -1280,11 +1233,14 @@ the the control points.</p>
 </tr>
 <tr class="row-odd"><td><p>query</p></td>
 <td><p>Required string. a SQL statement used for querying the point;</p>
-<p>e.g. “pointID &gt; 100”</p>
+<p>Example:</p>
+<blockquote>
+<div><p>“pointID &gt; 100”</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1297,10 +1253,10 @@ the the control points.</p>
 
 </div>
 <div class="section" id="reset-image-collection">
-<h2>reset_image_collection<a class="headerlink" href="#reset-image-collection" title="Permalink to this heading">¶</a></h2>
+<h2>reset_image_collection<a class="headerlink" href="#reset-image-collection" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.reset_image_collection">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">reset_image_collection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.reset_image_collection" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.reset_image_collection">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">reset_image_collection</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_collection</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.reset_image_collection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the image collection. It is used to reset the image collection to its
 original state. The image collection could be adjusted during the orthomapping
 workflow and if the user is not satisfied with the result, they will be able
@@ -1308,8 +1264,8 @@ to clear any existing adjustment settings and revert the images back to
 un-adjusted state</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -1322,7 +1278,7 @@ The image_collection can be a portal Item or an image service URL or a URI.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . The GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1335,20 +1291,33 @@ The image_collection can be a portal Item or an image service URL or a URI.</p>
 
 </div>
 <div class="section" id="compute-spatial-reference-factory-code">
-<h2>compute_spatial_reference_factory_code<a class="headerlink" href="#compute-spatial-reference-factory-code" title="Permalink to this heading">¶</a></h2>
+<h2>compute_spatial_reference_factory_code<a class="headerlink" href="#compute-spatial-reference-factory-code" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.raster.orthomapping.compute_spatial_reference_factory_code">
-<span class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></span><span class="sig-name descname"><span class="pre">compute_spatial_reference_factory_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_spatial_reference_factory_code" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.raster.orthomapping.compute_spatial_reference_factory_code">
+<code class="sig-prename descclassname"><span class="pre">arcgis.raster.orthomapping.</span></code><code class="sig-name descname"><span class="pre">compute_spatial_reference_factory_code</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">longitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.raster.orthomapping.compute_spatial_reference_factory_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes spatial reference factory code. This value may be used as out_sr value in create image collection function</p>
-<div class="section" id="parameters">
-<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this heading">¶</a></h3>
-<p>latitude : latitude value in decimal degress that will be used to compute UTM zone
-longitude : longitude value in decimal degress that will be used to compute UTM zone</p>
-</div>
-<div class="section" id="returns">
-<h3>Returns<a class="headerlink" href="#returns" title="Permalink to this heading">¶</a></h3>
-<p>factory_code : spatial reference factory code</p>
-</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>latitude value in decimal degrees that will be used to compute UTM zone</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>longitude value in decimal degrees that will be used to compute UTM zone</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>factory_code : spatial reference factory code</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -1390,12 +1359,12 @@ longitude : longitude value in decimal degress that will be used to compute UTM 
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -1403,6 +1372,10 @@ longitude : longitude value in decimal degress that will be used to compute UTM 
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.graph module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.graph module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -119,17 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.graph module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#knowledgegraph">KnowledgeGraph</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.graph.KnowledgeGraph"><code class="docutils literal notranslate"><span class="pre">KnowledgeGraph</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.graph.KnowledgeGraph.datamodel"><code class="docutils literal notranslate"><span class="pre">KnowledgeGraph.datamodel</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.graph.KnowledgeGraph.fromitem"><code class="docutils literal notranslate"><span class="pre">KnowledgeGraph.fromitem()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.graph.KnowledgeGraph.properties"><code class="docutils literal notranslate"><span class="pre">KnowledgeGraph.properties</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.graph.KnowledgeGraph.query"><code class="docutils literal notranslate"><span class="pre">KnowledgeGraph.query()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.graph.KnowledgeGraph.search"><code class="docutils literal notranslate"><span class="pre">KnowledgeGraph.search()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#knowledgegraph">KnowledgeGraph</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.toc.html">arcgis.mapping module</a></li>
@@ -210,12 +197,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.graph">
-<span id="arcgis-graph-module"></span><h1>arcgis.graph module<a class="headerlink" href="#module-arcgis.graph" title="Permalink to this heading">¶</a></h1>
+<span id="arcgis-graph-module"></span><h1>arcgis.graph module<a class="headerlink" href="#module-arcgis.graph" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="knowledgegraph">
-<h2>KnowledgeGraph<a class="headerlink" href="#knowledgegraph" title="Permalink to this heading">¶</a></h2>
+<h2>KnowledgeGraph<a class="headerlink" href="#knowledgegraph" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.graph.KnowledgeGraph">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.graph.</span></span><span class="sig-name descname"><span class="pre">KnowledgeGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.graph.KnowledgeGraph">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.graph.</span></code><code class="sig-name descname"><span class="pre">KnowledgeGraph</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to a Knowledge Graph’s datamodel and properties, as well as
 methods to search and query the graph.</p>
 <table class="docutils align-default">
@@ -242,27 +229,27 @@ methods to search and query the graph.</p>
 <span class="n">knowledge_graph</span> <span class="o">=</span> <span class="n">KnowledgeGraph</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">gis</span><span class="o">=</span><span class="n">gis</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.graph.KnowledgeGraph.datamodel">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">datamodel</span></span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.datamodel" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.graph.KnowledgeGraph.datamodel">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">datamodel</span></code><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.datamodel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the datamodel for the Knowledge Graph Service</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.graph.KnowledgeGraph.fromitem">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromitem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.fromitem" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.graph.KnowledgeGraph.fromitem">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">fromitem</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.fromitem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the KnowledgeGraph Service from an Item</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.graph.KnowledgeGraph.properties">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.properties" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.graph.KnowledgeGraph.properties">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>returns the properties of the service</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.graph.KnowledgeGraph.query">
-<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.query" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.graph.KnowledgeGraph.query">
+<code class="sig-name descname"><span class="pre">query</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Queries the Knowledge Graph using openCypher</p>
 <p><a class="reference external" href="https://developers.arcgis.com/rest/services-reference/enterprise/kgs-graph-query.htm">Learn more about querying a knowledge graph</a></p>
 <table class="docutils align-default">
@@ -289,8 +276,8 @@ entities and relationships, by providing an openCypher query.</p></td>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.graph.KnowledgeGraph.search">
-<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.search" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.graph.KnowledgeGraph.search">
+<code class="sig-name descname"><span class="pre">search</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'both'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.graph.KnowledgeGraph.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for the searching of the properties of entities,
 relationships, or both in the graph using a full-text index.</p>
 <p><a class="reference external" href="https://developers.arcgis.com/rest/services-reference/enterprise/kgs-graph-search.htm">Learn more about searching a knowledge graph</a></p>
@@ -363,12 +350,12 @@ the <cite>relationships</cite>.  The default is to look in <cite>both</cite>.</p
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -376,6 +363,10 @@ the <cite>relationships</cite>.  The default is to look in <cite>both</cite>.</p
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>

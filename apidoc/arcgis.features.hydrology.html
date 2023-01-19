@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.features.hydrology module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.features.hydrology module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -127,14 +124,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.find_locations.html">arcgis.features.find_locations module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.hydrology module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#trace-downstream">trace_downstream</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.features.hydrology.trace_downstream"><code class="docutils literal notranslate"><span class="pre">trace_downstream()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#watershed">watershed</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.features.hydrology.watershed"><code class="docutils literal notranslate"><span class="pre">watershed()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#trace-downstream">trace_downstream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#watershed">watershed</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.manage_data.html">arcgis.features.manage_data module</a></li>
@@ -233,13 +224,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.features.hydrology">
-<span id="arcgis-features-hydrology-module"></span><h1>arcgis.features.hydrology module<a class="headerlink" href="#module-arcgis.features.hydrology" title="Permalink to this heading">¶</a></h1>
+<span id="arcgis-features-hydrology-module"></span><h1>arcgis.features.hydrology module<a class="headerlink" href="#module-arcgis.features.hydrology" title="Permalink to this headline">¶</a></h1>
 <p>These functions help you use hydrology analysis.</p>
 <div class="section" id="trace-downstream">
-<h2>trace_downstream<a class="headerlink" href="#trace-downstream" title="Permalink to this heading">¶</a></h2>
+<h2>trace_downstream<a class="headerlink" href="#trace-downstream" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.features.hydrology.trace_downstream">
-<span class="sig-prename descclassname"><span class="pre">arcgis.features.hydrology.</span></span><span class="sig-name descname"><span class="pre">trace_downstream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Finest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.trace_downstream" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.hydrology.trace_downstream">
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.hydrology.</span></code><code class="sig-name descname"><span class="pre">trace_downstream</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Finest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.trace_downstream" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/trace_downstream.png" src="_images/trace_downstream.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">trace_downstream</span></code> method delineates the downstream path from a specified location.
 Esri-curated elevation data is used to create an output polyline delineating the flow path
@@ -248,8 +239,8 @@ source databases which are available for different geographic areas and at diffe
 spatial scales.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -291,13 +282,14 @@ into simpler lines.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS Object instance. If not provided as input, a GIS object instance logged into an
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> Object instance. If not provided as input, a GIS object instance logged into an
 active portal with elevation helper services defined must already
 be created in the active Python session. A GIS object instance can
 also be optionally explicitly passed in through this parameter.</p></td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a <cite>GPJob</cite> and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -316,10 +308,10 @@ also be optionally explicitly passed in through this parameter.</p></td>
 
 </div>
 <div class="section" id="watershed">
-<h2>watershed<a class="headerlink" href="#watershed" title="Permalink to this heading">¶</a></h2>
+<h2>watershed<a class="headerlink" href="#watershed" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.features.hydrology.watershed">
-<span class="sig-prename descclassname"><span class="pre">arcgis.features.hydrology.</span></span><span class="sig-name descname"><span class="pre">watershed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snap_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snap_distance_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Finest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_snapped_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.watershed" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.hydrology.watershed">
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.hydrology.</span></code><code class="sig-name descname"><span class="pre">watershed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snap_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snap_distance_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_database</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Finest'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_snapped_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.hydrology.watershed" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/create_watersheds.png" src="_images/create_watersheds.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">watershed</span></code> is used to identify catchment areas based on a particular location you
 provide and ArcGIS Online Elevation data.</p>
@@ -378,7 +370,7 @@ into simpler lines.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS Object instance. If not provided as input, a GIS object instance logged into an
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> Object instance. If not provided as input, a GIS object instance logged into an
 active portal with elevation helper services defined must already
 be created in the active Python session. A GIS object instance can
 also be optionally explicitly passed in through this parameter.</p></td>
@@ -390,7 +382,8 @@ If snapping is enabled, this might not be the same as the input point.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a <cite>GPJob</cite> and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -448,12 +441,12 @@ If snapping is enabled, this might not be the same as the input point.</p>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -461,6 +454,10 @@ If snapping is enabled, this might not be the same as the input point.</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>
