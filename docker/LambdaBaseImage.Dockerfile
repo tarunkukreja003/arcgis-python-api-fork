@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.source=https://github.com/esri/arcgis-python-api
 # install dependencies, then clean yum cache
 RUN yum -y install gcc krb5-devel krb5-server krb5-libs && yum clean all && rm -rf /var/cache/yum
 # install arcgis
-ARG ARCGIS_PYTHON_VERSION=2.1.0
+ARG ARCGIS_PYTHON_VERSION=2.1.0.3
 RUN  pip3 install arcgis==${ARCGIS_PYTHON_VERSION} --target "${LAMBDA_TASK_ROOT}"
 # set entrypoint to app.py handler method
 # (note that app.py is missing from this base image)
