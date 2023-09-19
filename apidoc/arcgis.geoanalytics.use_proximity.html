@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.geoanalytics.use_proximity module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.geoanalytics.use_proximity module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -124,18 +121,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.summarize_data.html">arcgis.geoanalytics.summarize_data module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.use_proximity module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#create-buffers">create_buffers</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.use_proximity.create_buffers"><code class="docutils literal notranslate"><span class="pre">create_buffers()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#trace-proximity-events">trace_proximity_events</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.use_proximity.trace_proximity_events"><code class="docutils literal notranslate"><span class="pre">trace_proximity_events()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#group-by-proximity">group_by_proximity</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.use_proximity.group_by_proximity"><code class="docutils literal notranslate"><span class="pre">group_by_proximity()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#create-buffers">create_buffers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trace-proximity-events">trace_proximity_events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#group-by-proximity">group_by_proximity</a></li>
 </ul>
 </li>
 </ul>
@@ -227,14 +215,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="arcgis-geoanalytics-use-proximity-module">
-<h1>arcgis.geoanalytics.use_proximity module<a class="headerlink" href="#arcgis-geoanalytics-use-proximity-module" title="Permalink to this heading">¶</a></h1>
+<h1>arcgis.geoanalytics.use_proximity module<a class="headerlink" href="#arcgis-geoanalytics-use-proximity-module" title="Permalink to this headline">¶</a></h1>
 <span class="target" id="module-arcgis.geoanalytics.use_proximity"></span><p>These tools help answer one of the most common questions posed in spatial analysis: What is near what?</p>
 <p><code class="docutils literal notranslate"><span class="pre">`create_buffers()`</span></code> creates areas of a specified distance from features.</p>
 <div class="section" id="create-buffers">
-<h2>create_buffers<a class="headerlink" href="#create-buffers" title="Permalink to this heading">¶</a></h2>
+<h2>create_buffers<a class="headerlink" href="#create-buffers" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.use_proximity.create_buffers">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.use_proximity.</span></span><span class="sig-name descname"><span class="pre">create_buffers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Planar'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dissolve_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'None'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dissolve_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multipart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.create_buffers" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.use_proximity.create_buffers">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.use_proximity.</span></code><code class="sig-name descname"><span class="pre">create_buffers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Planar'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dissolve_option</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'None'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dissolve_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multipart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.create_buffers" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/create_buffers_geo.png" src="_images/create_buffers_geo.png" />
 <p>Buffers are typically used to create areas that can be further analyzed
 using other tools such as <code class="docutils literal notranslate"><span class="pre">aggregate_points</span></code>. For example, ask the question,
@@ -311,10 +299,10 @@ will be dissolve together.</p></td>
 </table>
 </td>
 </tr>
-<tr class="row-even"><td><p>dissolve_fields</p></td>
+<tr class="row-odd"><td><p>dissolve_fields</p></td>
 <td><p>Specifies the fields to dissolve on. Multiple fields may be provided.</p></td>
 </tr>
-<tr class="row-odd"><td><p>summary_fields</p></td>
+<tr class="row-even"><td><p>summary_fields</p></td>
 <td><p>Optional string. A list of field names and statistical summary types
 that you want to calculate for resulting polygons. Summary statistics
 are only available if dissolveOption = List or All. By default, all
@@ -343,17 +331,17 @@ statistics are returned.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="row-even"><td><p>multipart</p></td>
+<tr class="row-odd"><td><p>multipart</p></td>
 <td><p>Optional boolean. Determines if output features are multipart or single part.
 This option is only available if a <code class="docutils literal notranslate"><span class="pre">dissolve_option</span></code> is applied.</p></td>
 </tr>
-<tr class="row-odd"><td><p>output_name</p></td>
+<tr class="row-even"><td><p>output_name</p></td>
 <td><p>Optional string. The task will create a feature service of the results. You define the name of the service.</p></td>
 </tr>
-<tr class="row-even"><td><p>gis</p></td>
+<tr class="row-odd"><td><p>gis</p></td>
 <td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
-<tr class="row-odd"><td><p>context</p></td>
+<tr class="row-even"><td><p>context</p></td>
 <td><p>Optional dict. The context parameter contains additional settings that affect task execution. For this task, there are four settings:</p>
 <ol class="arabic simple">
 <li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
@@ -363,7 +351,7 @@ This option is only available if a <code class="docutils literal notranslate"><s
 </ol>
 </td>
 </tr>
-<tr class="row-even"><td><p>future</p></td>
+<tr class="row-odd"><td><p>future</p></td>
 <td><p>Optional boolean. If ‘True’, the value is returned as a GPJob.</p>
 <p>The default value is ‘False’</p>
 </td>
@@ -388,10 +376,10 @@ This option is only available if a <code class="docutils literal notranslate"><s
 
 </div>
 <div class="section" id="trace-proximity-events">
-<h2>trace_proximity_events<a class="headerlink" href="#trace-proximity-events" title="Permalink to this heading">¶</a></h2>
+<h2>trace_proximity_events<a class="headerlink" href="#trace-proximity-events" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.use_proximity.trace_proximity_events">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.use_proximity.</span></span><span class="sig-name descname"><span class="pre">trace_proximity_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_search_distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_search_distance_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_search_distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_search_distance_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities_of_interest_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities_of_interest_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Planar'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tracks_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_trace_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_match_criteria</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.trace_proximity_events" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.use_proximity.trace_proximity_events">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.use_proximity.</span></code><code class="sig-name descname"><span class="pre">trace_proximity_events</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_search_distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_search_distance_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_search_distance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_search_distance_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities_of_interest_ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entities_of_interest_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Planar'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_tracks_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_trace_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_match_criteria</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.trace_proximity_events" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Trace Proximity Events task analyzes time-enabled point features representing moving entities.
 The task will follow entities of interest in space (location) and time to see which other entities
 the entities of interest have interacted with. The trace will continue from entity to entity to a
@@ -488,10 +476,10 @@ equal values of the attributes specified.</p></td>
 
 </div>
 <div class="section" id="group-by-proximity">
-<h2>group_by_proximity<a class="headerlink" href="#group-by-proximity" title="Permalink to this heading">¶</a></h2>
+<h2>group_by_proximity<a class="headerlink" href="#group-by-proximity" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.use_proximity.group_by_proximity">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.use_proximity.</span></span><span class="sig-name descname"><span class="pre">group_by_proximity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_relationship</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_near_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_near_distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_relationship</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_near_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_near_distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.group_by_proximity" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.use_proximity.group_by_proximity">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.use_proximity.</span></code><code class="sig-name descname"><span class="pre">group_by_proximity</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_relationship</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_near_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spatial_near_distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_relationship</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_near_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temporal_near_distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.use_proximity.group_by_proximity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Group By Proximity tool groups features that are within spatial
 proximity or spatiotemporal proximity of each other.</p>
 <table class="docutils align-default">
@@ -603,12 +591,12 @@ in <cite>spatial_near_distance</cite>. The default value is Meters.</p>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -616,6 +604,10 @@ in <cite>spatial_near_distance</cite>. The default value is Meters.</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.features.elevation module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.features.elevation module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -124,18 +121,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analysis.html">arcgis.features.analysis module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.analyze_patterns.html">arcgis.features.analyze_patterns module</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.features.elevation module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#profile">profile</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.features.elevation.profile"><code class="docutils literal notranslate"><span class="pre">profile()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#viewshed">viewshed</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.features.elevation.viewshed"><code class="docutils literal notranslate"><span class="pre">viewshed()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#summarize-elevation">summarize_elevation</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.features.elevation.summarize_elevation"><code class="docutils literal notranslate"><span class="pre">summarize_elevation()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#profile">profile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#viewshed">viewshed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summarize-elevation">summarize_elevation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.enrich_data.html">arcgis.features.enrich_data module</a></li>
@@ -237,13 +225,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.features.elevation">
-<span id="arcgis-features-elevation-module"></span><h1>arcgis.features.elevation module<a class="headerlink" href="#module-arcgis.features.elevation" title="Permalink to this heading">¶</a></h1>
+<span id="arcgis-features-elevation-module"></span><h1>arcgis.features.elevation module<a class="headerlink" href="#module-arcgis.features.elevation" title="Permalink to this headline">¶</a></h1>
 <p>These functions help you use elevation analysis</p>
 <div class="section" id="profile">
-<h2>profile<a class="headerlink" href="#profile" title="Permalink to this heading">¶</a></h2>
+<h2>profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.features.elevation.profile">
-<span class="sig-prename descclassname"><span class="pre">arcgis.features.elevation.</span></span><span class="sig-name descname"><span class="pre">profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_line_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'displayFieldName':</span> <span class="pre">'',</span> <span class="pre">'exceededTransferLimit':</span> <span class="pre">False,</span> <span class="pre">'features':</span> <span class="pre">[],</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'OID',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeOID',</span> <span class="pre">'alias':</span> <span class="pre">'OID'},</span> <span class="pre">{'name':</span> <span class="pre">'Shape_Length',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeDouble',</span> <span class="pre">'alias':</span> <span class="pre">'Shape_Length'}],</span> <span class="pre">'geometryType':</span> <span class="pre">'esriGeometryPolyline',</span> <span class="pre">'spatialReference':</span> <span class="pre">{'latestWkid':</span> <span class="pre">3857,</span> <span class="pre">'wkid':</span> <span class="pre">102100}}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_sample_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_sample_distance_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.elevation.profile" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.elevation.profile">
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.elevation.</span></code><code class="sig-name descname"><span class="pre">profile</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_line_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'displayFieldName':</span> <span class="pre">'',</span> <span class="pre">'exceededTransferLimit':</span> <span class="pre">False,</span> <span class="pre">'features':</span> <span class="pre">[],</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'OID',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeOID',</span> <span class="pre">'alias':</span> <span class="pre">'OID'},</span> <span class="pre">{'name':</span> <span class="pre">'Shape_Length',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeDouble',</span> <span class="pre">'alias':</span> <span class="pre">'Shape_Length'}],</span> <span class="pre">'geometryType':</span> <span class="pre">'esriGeometryPolyline',</span> <span class="pre">'spatialReference':</span> <span class="pre">{'latestWkid':</span> <span class="pre">3857,</span> <span class="pre">'wkid':</span> <span class="pre">102100}}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_sample_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_sample_distance_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.elevation.profile" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/elevation_profile.png" src="_images/elevation_profile.png" />
 <p>The profile method is used to create profiles along input lines from which a profile graph can be created.</p>
 <p>In asynchronous mode, the maximum number of input line features that can be accepted by the task for each request is 1000.</p>
@@ -295,10 +283,10 @@ The resolution values are an approximation of the spatial resolution of the digi
 
 </div>
 <div class="section" id="viewshed">
-<h2>viewshed<a class="headerlink" href="#viewshed" title="Permalink to this heading">¶</a></h2>
+<h2>viewshed<a class="headerlink" href="#viewshed" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.features.elevation.viewshed">
-<span class="sig-prename descclassname"><span class="pre">arcgis.features.elevation.</span></span><span class="sig-name descname"><span class="pre">viewshed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'displayFieldName':</span> <span class="pre">'',</span> <span class="pre">'exceededTransferLimit':</span> <span class="pre">False,</span> <span class="pre">'features':</span> <span class="pre">[],</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'OID',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeOID',</span> <span class="pre">'alias':</span> <span class="pre">'OID'},</span> <span class="pre">{'name':</span> <span class="pre">'offseta',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeDouble',</span> <span class="pre">'alias':</span> <span class="pre">'offseta'},</span> <span class="pre">{'name':</span> <span class="pre">'offsetb',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeDouble',</span> <span class="pre">'alias':</span> <span class="pre">'offsetb'}],</span> <span class="pre">'geometryType':</span> <span class="pre">'esriGeometryPoint',</span> <span class="pre">'spatialReference':</span> <span class="pre">{'latestWkid':</span> <span class="pre">3857,</span> <span class="pre">'wkid':</span> <span class="pre">102100}}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_distance_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_height_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_offset_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalize_viewshed_polygons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.elevation.viewshed" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.elevation.viewshed">
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.elevation.</span></code><code class="sig-name descname"><span class="pre">viewshed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'displayFieldName':</span> <span class="pre">'',</span> <span class="pre">'exceededTransferLimit':</span> <span class="pre">False,</span> <span class="pre">'features':</span> <span class="pre">[],</span> <span class="pre">'fields':</span> <span class="pre">[{'name':</span> <span class="pre">'OID',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeOID',</span> <span class="pre">'alias':</span> <span class="pre">'OID'},</span> <span class="pre">{'name':</span> <span class="pre">'offseta',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeDouble',</span> <span class="pre">'alias':</span> <span class="pre">'offseta'},</span> <span class="pre">{'name':</span> <span class="pre">'offsetb',</span> <span class="pre">'type':</span> <span class="pre">'esriFieldTypeDouble',</span> <span class="pre">'alias':</span> <span class="pre">'offsetb'}],</span> <span class="pre">'geometryType':</span> <span class="pre">'esriGeometryPoint',</span> <span class="pre">'spatialReference':</span> <span class="pre">{'latestWkid':</span> <span class="pre">3857,</span> <span class="pre">'wkid':</span> <span class="pre">102100}}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximum_distance_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observer_height_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_offset_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Meters'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalize_viewshed_polygons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.elevation.viewshed" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/elevation_viewshed.png" src="_images/elevation_viewshed.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">viewshed</span></code> method is used to identify visible areas based on observer locations you provide as well as ArcGIS Online Elevation data.</p>
 <table class="docutils align-default">
@@ -307,7 +295,7 @@ The resolution values are an approximation of the spatial resolution of the digi
 <col style="width: 84%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>input_points</p></td>
@@ -391,10 +379,10 @@ boundary of the visible areas and may remove some single-cell visible areas.</p>
 
 </div>
 <div class="section" id="summarize-elevation">
-<h2>summarize_elevation<a class="headerlink" href="#summarize-elevation" title="Permalink to this heading">¶</a></h2>
+<h2>summarize_elevation<a class="headerlink" href="#summarize-elevation" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.features.elevation.summarize_elevation">
-<span class="sig-prename descclassname"><span class="pre">arcgis.features.elevation.</span></span><span class="sig-name descname"><span class="pre">summarize_elevation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_slope_aspect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.elevation.summarize_elevation" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.features.elevation.summarize_elevation">
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.elevation.</span></code><code class="sig-name descname"><span class="pre">summarize_elevation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_id_field</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dem_resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_slope_aspect</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.elevation.summarize_elevation" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/summarize_elevation.png" src="_images/summarize_elevation.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">summarize_elevation</span></code> method calculates summary statistics for features you provide based
 on ArcGIS Online Elevation data. It accepts point, line, or polygon input and returns statistics
@@ -405,7 +393,7 @@ for the elevation, slope, and aspect of the features.</p>
 <col style="width: 87%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>input_features</p></td>
@@ -482,12 +470,12 @@ for the elevation, slope, and aspect of the features.</p>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -495,6 +483,10 @@ for the elevation, slope, and aspect of the features.</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>
