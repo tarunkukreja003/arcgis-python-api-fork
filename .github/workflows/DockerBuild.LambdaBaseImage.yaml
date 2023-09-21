@@ -31,7 +31,7 @@ jobs:
           images: |
             ghcr.io/esri/arcgis-python-api-lambda
           tags: |
-            type=raw,value=2.1.0,enable={{is_default_branch}}
+            type=raw,value=2.2.0,enable={{is_default_branch}}
             type=raw,value=latest,enable={{is_default_branch}}
             type=schedule,pattern={{date 'YY.MM'}},enable={{is_default_branch}}
             type=sha,format=long
