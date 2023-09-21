@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.geoenrichment module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.geoenrichment module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,54 +103,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.toc.html">arcgis.raster module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.notebook.html">arcgis.notebook module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">arcgis.geoenrichment module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#country">Country</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoenrichment.Country"><code class="docutils literal notranslate"><span class="pre">Country</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.data_collections"><code class="docutils literal notranslate"><span class="pre">Country.data_collections</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.dataset"><code class="docutils literal notranslate"><span class="pre">Country.dataset</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.enrich"><code class="docutils literal notranslate"><span class="pre">Country.enrich()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.enrich_variables"><code class="docutils literal notranslate"><span class="pre">Country.enrich_variables</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.geometry"><code class="docutils literal notranslate"><span class="pre">Country.geometry</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.get"><code class="docutils literal notranslate"><span class="pre">Country.get()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.levels"><code class="docutils literal notranslate"><span class="pre">Country.levels</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.properties"><code class="docutils literal notranslate"><span class="pre">Country.properties</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.reports"><code class="docutils literal notranslate"><span class="pre">Country.reports</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.search"><code class="docutils literal notranslate"><span class="pre">Country.search()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.subgeographies"><code class="docutils literal notranslate"><span class="pre">Country.subgeographies</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#arcgis.geoenrichment.Country.travel_modes"><code class="docutils literal notranslate"><span class="pre">Country.travel_modes</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#get-countries">get_countries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoenrichment.get_countries"><code class="docutils literal notranslate"><span class="pre">get_countries()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#create-report">create_report</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoenrichment.create_report"><code class="docutils literal notranslate"><span class="pre">create_report()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#enrich">enrich</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoenrichment.enrich"><code class="docutils literal notranslate"><span class="pre">enrich()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#standard-geography-query">standard_geography_query</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoenrichment.standard_geography_query"><code class="docutils literal notranslate"><span class="pre">standard_geography_query()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#service-limits">service_limits</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#arcgis.geoenrichment.service_limits"><code class="docutils literal notranslate"><span class="pre">service_limits()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#country">Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bufferstudyarea">BufferStudyArea</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#get-countries">get_countries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-report">create_report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enrich">enrich</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#standard-geography-query">standard_geography_query</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#service-limits">service_limits</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
@@ -237,7 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="module-arcgis.geoenrichment">
-<span id="arcgis-geoenrichment-module"></span><h1>arcgis.geoenrichment module<a class="headerlink" href="#module-arcgis.geoenrichment" title="Permalink to this heading">¶</a></h1>
+<span id="arcgis-geoenrichment-module"></span><h1>arcgis.geoenrichment module<a class="headerlink" href="#module-arcgis.geoenrichment" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">arcgis.geoenrichment</span></code> module provides access to Business Analyst’s 
 demographic and jurisdictional areas data through enrichment, standard 
 geography queries and reporting. The source for analysis can be either 
@@ -247,10 +214,10 @@ installed. A remote source requires access to a property configured Web
 GIS. A Web GIS can either be ArcGIS Online or an instance of ArcGIS 
 Enterprise with Business Analyst.</p>
 <div class="section" id="country">
-<h2>Country<a class="headerlink" href="#country" title="Permalink to this heading">¶</a></h2>
+<h2>Country<a class="headerlink" href="#country" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></span><span class="sig-name descname"><span class="pre">Country</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iso3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.Country">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">Country</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iso3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables access to data and methods for a specific country. This
 class can reference country data and methods available using data accessed through
 both a Web GIS and a local installation of <cite>ArcGIS Pro with the Business Analyst
@@ -259,17 +226,17 @@ using the <code class="docutils literal notranslate"><span class="pre">gis</span
 <a class="reference internal" href="#arcgis.geoenrichment.Country" title="arcgis.geoenrichment.Country"><code class="xref py py-class docutils literal notranslate"><span class="pre">Country</span></code></a> will use ArcGIS Pro with Business Analyst
 and will error if the specified country is not available locally. Available
 countries can be discovered using <a class="reference internal" href="#arcgis.geoenrichment.get_countries" title="arcgis.geoenrichment.get_countries"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_countries()</span></code></a>.</p>
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.data_collections">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_collections</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.data_collections" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.data_collections">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_collections</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.data_collections" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the supported data collections and analysis variables as a Pandas dataframe.</p>
 <p>The dataframe is indexed by the data collection id(<code class="docutils literal notranslate"><span class="pre">dataCollectionID</span></code>) and
 contains columns for analysis variables(<code class="docutils literal notranslate"><span class="pre">analysisVariable</span></code>).</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.dataset">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dataset</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.dataset" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.dataset">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">dataset</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.dataset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the currently used dataset for this country.json.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -279,8 +246,8 @@ or ArcGIS Enterprise as the <code class="docutils literal notranslate"><span cla
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.enrich">
-<span class="sig-name descname"><span class="pre">enrich</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_areas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enrich_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standard_geography_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standard_geography_id_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_spatial_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country.enrich" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.Country.enrich">
+<code class="sig-name descname"><span class="pre">enrich</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_areas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enrich_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standard_geography_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standard_geography_id_column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_spatial_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country.enrich" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enrich provides access to a massive dataset describing exactly who people are
 in a geographic location. The most common way to delineate study_areas for
 enrichment is using polygons delineated areas, although points and lines can
@@ -303,22 +270,22 @@ points-of-interest names may be provided, it is recommended to retrieve these
 locations in your workflow before performing enrichment.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>study_areas</p></td>
-<td><p>Required list, FeatureSet or SpatiallyEnabledDataFrame containing
-the input areas to be enriched.</p></td>
+<td><p>Required list, dictionary, <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureSet" title="arcgis.features.FeatureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureSet</span></code></a>
+or SpatiallyEnabledDataFrame containing the input areas to be enriched.</p></td>
 </tr>
 <tr class="row-odd"><td><p>enrich_variables</p></td>
 <td><p>Enrich variables can be specified using either a list of strings or
-the Pandas DataFrame returned from the ‘Country.enrich_variables`
+the Pandas DataFrame returned from the <a class="reference internal" href="#arcgis.geoenrichment.Country.enrich_variables" title="arcgis.geoenrichment.Country.enrich_variables"><code class="xref py py-func docutils literal notranslate"><span class="pre">enrich_variables()</span></code></a>
 property. If using a list of strings, the values are mached against
-the <a class="reference internal" href="#arcgis.geoenrichment.Country.enrich_variables" title="arcgis.geoenrichment.Country.enrich_variables"><code class="xref py py-func docutils literal notranslate"><span class="pre">arcgis.geoenrichment.Country.enrich_variables()</span></code></a> dataframe
+the <a class="reference internal" href="#arcgis.geoenrichment.Country.enrich_variables" title="arcgis.geoenrichment.Country.enrich_variables"><code class="xref py py-func docutils literal notranslate"><span class="pre">enrich_variables()</span></code></a> dataframe
 columns for <cite>name</cite>, ‘enrich_name’, or ‘enrich_field_name’. All the
 values must match to one of these columns.</p></td>
 </tr>
@@ -330,7 +297,7 @@ output. The default is <code class="docutils literal notranslate"><span class="p
 <td><p>If using a list of standard geography identifiers, the geography
 level must be specified here. This value is the <code class="docutils literal notranslate"><span class="pre">level_name</span></code>
 column retrieved in the
-<a class="reference internal" href="#arcgis.geoenrichment.Country.levels" title="arcgis.geoenrichment.Country.levels"><code class="xref py py-func docutils literal notranslate"><span class="pre">arcgis.geoenrichment.Country.levels()</span></code></a> property.</p></td>
+<a class="reference internal" href="#arcgis.geoenrichment.Country.levels" title="arcgis.geoenrichment.Country.levels"><code class="xref py py-func docutils literal notranslate"><span class="pre">levels()</span></code></a> property.</p></td>
 </tr>
 <tr class="row-even"><td><p>standard_geography_id_column</p></td>
 <td><p>If providing a Pandas DataFrame as input, and the DataFrame contains
@@ -342,7 +309,7 @@ column as a string in this parameter.</p></td>
 <td><p>If providing point geometries as input study_areas, you have the
 option to provide the method used to create the proximity around the
 point based on the available travel modes. These travel modes can
-be discovered using the <code class="docutils literal notranslate"><span class="pre">Country.travel_modes</span></code> property. Valid
+be discovered using the <a class="reference internal" href="#arcgis.geoenrichment.Country.travel_modes" title="arcgis.geoenrichment.Country.travel_modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">travel_modes</span></code></a> property. Valid
 values are from the <code class="docutils literal notranslate"><span class="pre">name</span></code> column in this returned DataFrame.
 Also, in addition to the transportation network travel modes, you
 also have the option of using <code class="docutils literal notranslate"><span class="pre">straight_line</span></code>, just using a
@@ -363,7 +330,12 @@ in getting a five minute drive time, this value will be <code class="docutils li
 <tr class="row-even"><td><p>output_spatial_reference</p></td>
 <td><p>The default output will be WGS84 (WKID 4326). If a different output
 spatial reference is desired, please provide it here as a WKID or
-<code class="docutils literal notranslate"><span class="pre">arcgis.features.SpatialReference</span></code> object instance.</p></td>
+<a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.SpatialReference" title="arcgis.geometry.SpatialReference"><code class="xref py py-class docutils literal notranslate"><span class="pre">SpatialReference</span></code></a> object instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p>hierarchy</p></td>
+<td><p>The hierarchy of the datasets to use. The hierarchy is the “ID” that
+can be found in the <cite>hierarchies</cite> property. If none is provided, the
+default hierarchy will be used.</p></td>
 </tr>
 </tbody>
 </table>
@@ -490,11 +462,11 @@ a couple of point geometries and using five-minute drive times around the locati
 </div>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.enrich_variables">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enrich_variables</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.enrich_variables" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.enrich_variables">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">enrich_variables</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.enrich_variables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pandas Dataframe of available geoenrichment variables.</p>
-<p>For instance, the following code, if run in Jupter, will render the table below.</p>
+<p>For instance, the following code, if run in Jupyter, will render the table below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">arcgis.gis</span> <span class="kn">import</span> <span class="n">GIS</span>
 <span class="kn">from</span> <span class="nn">arcgis.geoenrichment</span> <span class="kn">import</span> <span class="n">Country</span>
 
@@ -570,9 +542,9 @@ enables you to, with a little scripting, identify variables used in previous
 analysis.</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.geometry">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">geometry</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.geometry" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.geometry">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">geometry</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a <a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Polygon" title="arcgis.geometry.Polygon"><code class="xref py py-class docutils literal notranslate"><span class="pre">Polygon</span></code></a> object delineating the country’s area.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -582,8 +554,8 @@ or ArcGIS Enterprise) as the <code class="docutils literal notranslate"><span cl
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.get">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country.get" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.Country.get">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a reference to a particular country, given its name, or its
 two letter abbreviation or three letter ISO3 code.</p>
 <table class="docutils align-default">
@@ -592,7 +564,7 @@ two letter abbreviation or three letter ISO3 code.</p>
 <col style="width: 78%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>name</p></td>
@@ -629,21 +601,33 @@ ignored if used with a Web GIS source.</p></td>
 </dl>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.levels">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">levels</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.levels" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.hierarchies">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hierarchies</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.hierarchies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the available hierarchies and information for them as a dataframe.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.hierarchy">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">hierarchy</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.hierarchy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the current hierarchy used. This will affect the enrichment variables</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.levels">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">levels</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.levels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns levels of geography in this country, for the current dataset.</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.properties">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.properties" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.properties">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">namedtuple</span></code> of relevant properties based on the gis source.</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.reports">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reports</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.reports" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.reports">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">reports</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.reports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the available reports for this country as a Pandas dataframe.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -653,8 +637,8 @@ or ArcGIS Enterprise as the <code class="docutils literal notranslate"><span cla
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.search">
-<span class="sig-name descname"><span class="pre">search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['*']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country.search" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.Country.search">
+<code class="sig-name descname"><span class="pre">search</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['*']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.Country.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches this country for places that have the specified query string in their name.</p>
 <p>Returns a list of named areas matching the specified query</p>
 <table class="docutils align-default">
@@ -663,7 +647,7 @@ or ArcGIS Enterprise as the <code class="docutils literal notranslate"><span cla
 <col style="width: 78%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>query</p></td>
@@ -688,9 +672,9 @@ or ArcGIS Enterprise as the <code class="docutils literal notranslate"><span cla
 </div>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.subgeographies">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subgeographies</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.subgeographies" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.subgeographies">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">subgeographies</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.subgeographies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the named geographical places in this country, as NamedArea objects. Each named area has attributes for
 the supported subgeography levels within it, and the value of those attributes are dictionaries containing the
 named places within that level of geography. This allows for interactive selection of places using intellisense
@@ -713,9 +697,9 @@ or ArcGIS Enterprise as the <code class="docutils literal notranslate"><span cla
 </div>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.Country.travel_modes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">travel_modes</span></span><a class="headerlink" href="#arcgis.geoenrichment.Country.travel_modes" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.Country.travel_modes">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">travel_modes</span></code><a class="headerlink" href="#arcgis.geoenrichment.Country.travel_modes" title="Permalink to this definition">¶</a></dt>
 <dd><p>DataFrame of available travel modes for the country. This is determined by what
 transportation networks are available for the given country.</p>
 <p>For instance, running the following code in Jupyter will return the table below.</p>
@@ -815,11 +799,100 @@ transportation networks are available for the given country.</p>
 </dd></dl>
 
 </div>
+<div class="section" id="bufferstudyarea">
+<h2>BufferStudyArea<a class="headerlink" href="#bufferstudyarea" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="arcgis.geoenrichment.BufferStudyArea">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">BufferStudyArea</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">travel_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea" title="Permalink to this definition">¶</a></dt>
+<dd><p>BufferStudyArea allows you to buffer point and street address study areas.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>area</p></td>
+<td><p><a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Point" title="arcgis.geometry.Point"><code class="xref py py-class docutils literal notranslate"><span class="pre">Point</span></code></a> object or street address
+(string) study area to be buffered</p></td>
+</tr>
+<tr class="row-odd"><td><p>radii</p></td>
+<td><p>List of distances by which to buffer the study area</p>
+<p>Example: [1, 2, 3]</p>
+</td>
+</tr>
+<tr class="row-even"><td><p>units</p></td>
+<td><p>String, distance unit.</p>
+<p>Example: Miles, Kilometers, Minutes (when using drive times/travel_mode)</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>overlap</p></td>
+<td><p>Boolean. Uses overlapping rings when <code class="docutils literal notranslate"><span class="pre">True</span></code>,
+or non-overlapping disks when <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>travel_mode</p></td>
+<td><p>None or string, one of the supported travel modes when
+using network service areas.</p>
+<p>To see a list of travel modes use the <cite>travel_modes</cite> property
+in the Country or Business Analyst class.</p>
+<p>Example: Country.travel_modes[“alias”]</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.area">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">area</span></code><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.count">
+<code class="sig-name descname"><span class="pre">count</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value</span></em>, <em class="sig-param"><span class="pre">/</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of occurrences of value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.index">
+<code class="sig-name descname"><span class="pre">index</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">value</span></em>, <em class="sig-param"><span class="pre">start=0</span></em>, <em class="sig-param"><span class="pre">stop=9223372036854775807</span></em>, <em class="sig-param"><span class="pre">/</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return first index of value.</p>
+<p>Raises ValueError if the value is not present.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.overlap">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">overlap</span></code><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.overlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 3</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.radii">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">radii</span></code><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.radii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.travel_mode">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">travel_mode</span></code><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.travel_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 4</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.geoenrichment.BufferStudyArea.units">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">units</span></code><a class="headerlink" href="#arcgis.geoenrichment.BufferStudyArea.units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias for field number 2</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="get-countries">
-<h2>get_countries<a class="headerlink" href="#get-countries" title="Permalink to this heading">¶</a></h2>
+<h2>get_countries<a class="headerlink" href="#get-countries" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.get_countries">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></span><span class="sig-name descname"><span class="pre">get_countries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.get_countries" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.get_countries">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">get_countries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_df</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.get_countries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve available countries based on the GIS source being used.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -827,7 +900,7 @@ transportation networks are available for the given country.</p>
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
@@ -860,10 +933,10 @@ Pandas DataFrame of available countries.</p>
 
 </div>
 <div class="section" id="create-report">
-<h2>create_report<a class="headerlink" href="#create-report" title="Permalink to this heading">¶</a></h2>
+<h2>create_report<a class="headerlink" href="#create-report" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.create_report">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></span><span class="sig-name descname"><span class="pre">create_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_areas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pdf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.create_report" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.create_report">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">create_report</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_areas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">export_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pdf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">report_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.create_report" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Create Report method allows you to create many types of high quality reports for a
 variety of use cases describing the input area. If a point is used as a study area, the
 service will create a 1-mile ring buffer around the point to collect and append enrichment
@@ -878,7 +951,7 @@ about the market, customers / clients and competition associated with an area of
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>study_areas</p></td>
@@ -920,14 +993,16 @@ an item is stored. Parameter attributes include: user, folder,
 title, item_properties, URL, token, and referrer.
 Example</p>
 <p>Creating a new output in a Portal for ArcGIS Instance:</p>
-<dl class="simple">
-<dt>return_type = {‘user’<span class="classifier">‘testUser’,</span></dt><dd><p>‘folder’ : ‘FolderName’,
-‘title’ : ‘Report Title’,
-‘item_properties’ : ‘&lt;properties&gt;’,
-‘url’ : ‘<a class="reference external" href="https://hostname.domain.com/webadaptor">https://hostname.domain.com/webadaptor</a>’,
-‘token’ : ‘token’, ‘referrer’ : ‘referrer’}</p>
-</dd>
-</dl>
+<div class="line-block">
+<div class="line">return_type = {‘user’ : ‘testUser’,</div>
+<div class="line-block">
+<div class="line">‘folder’ : ‘FolderName’,</div>
+<div class="line">‘title’ : ‘Report Title’,</div>
+<div class="line">‘item_properties’ : ‘&lt;properties&gt;’,</div>
+<div class="line">‘url’ : ‘<code class="docutils literal notranslate"><span class="pre">https://hostname.domain.com/webadaptor</span></code>’,</div>
+<div class="line">‘token’ : ‘token’, ‘referrer’ : ‘referrer’}</div>
+</div>
+</div>
 </td>
 </tr>
 <tr class="row-even"><td><p>use_data</p></td>
@@ -970,10 +1045,10 @@ The default is 4326</p></td>
 
 </div>
 <div class="section" id="enrich">
-<h2>enrich<a class="headerlink" href="#enrich" title="Permalink to this heading">¶</a></h2>
+<h2>enrich<a class="headerlink" href="#enrich" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.enrich">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></span><span class="sig-name descname"><span class="pre">enrich</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_areas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_collections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comparison_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_derivative_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intersecting_geographies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.enrich" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.enrich">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">enrich</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">study_areas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_collections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analysis_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comparison_levels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_derivative_variables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intersecting_geographies</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_metric</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.enrich" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enrich provides access to a massive dataset describing exactly who people are
 in a geographic location. The most common way to delineate study_areas for
 enrichment is using polygons delineated areas, although points and lines can
@@ -982,7 +1057,7 @@ be used as well.</p>
 for enrichment. This area can be defined using additional parameters, but by
 default is one kilometer around the geometry. Also, only straight-line distance
 is supported with line geometries, but points can use available transportation
-network methods – typically drive distance or drive time.</p>
+network methods - typically drive distance or drive time.</p>
 <p>While already popular for site analysis, forecast modeling for a store or
 facility location, enrich provides access to a massive amount of data for any
 analysis of people and their relationship and interaction with the surrounding
@@ -990,33 +1065,44 @@ community, culture, economy and even the natural environment. Succinctly,
 enrich is how to access data for human geography analysis.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
+<col style="width: 14%" />
+<col style="width: 86%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>study_areas</p></td>
-<td><p>Required list, FeatureSet or SpatiallyEnabledDataFrame containing
-the input areas to be enriched.</p>
-<p>study_areas can be a SpatiallyEnabledDataFrame, FeatureSet or a
-lists of the following types:
-* addresses, points of interest, place names or other
-supported locations as strings.
-* dicts such as [{“address”:{“Address”:”380 New York St.”,
-“Admin1”:”Redlands”,”Admin2”:”CA”,”Postal”:”92373”,
-“CountryCode”:”USA”}}] for multiple field addresses
-* arcgis.gis.Geometry instances
-* BufferStudyArea instances. By default, one-mile ring
-buffers are created around the points to collect and append
+<td><p>Required list, dictionary, <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureSet" title="arcgis.features.FeatureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureSet</span></code></a>
+or SpatiallyEnabledDataFrame containing the input areas to be enriched.</p>
+<p>study_areas can be a SpatiallyEnabledDataFrame, <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureSet" title="arcgis.features.FeatureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureSet</span></code></a> or a
+lists of the following types:</p>
+<ul class="simple">
+<li><p>addresses, points of interest, place names or other</p></li>
+</ul>
+<p>supported locations as strings.</p>
+<ul class="simple">
+<li><p>dicts such as [{“address”:{“Address”:”380 New York St.”,</p></li>
+</ul>
+<p>“Admin1”:”Redlands”,”Admin2”:”CA”,”Postal”:”92373”,
+“CountryCode”:”USA”}}] for multiple field addresses</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="arcgis.geometry.html#arcgis.geometry.Geometry" title="arcgis.geometry.Geometry"><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></a> instances</p></li>
+<li><p>BufferStudyArea instances. By default, one-mile ring</p></li>
+</ul>
+<p>buffers are created around the points to collect and append
 enrichment data. You can use BufferStudyArea to change the ring
-buffer size or create drive-time service areas around the points.
-* NamedArea instances to support standard geography. They are
-obtained using Country.subgeographies()/search(). When
+buffer size or create drive-time service areas around the points.</p>
+<ul class="simple">
+<li><p>NamedArea instances to support standard geography. They are</p></li>
+</ul>
+<p>obtained using Country.subgeographies()/search(). When
 the NamedArea instances should be combined together (union), a list
 of such NamedArea instances should constitute a study area in the
-list of requested study areas.</p>
+list of requested study areas. Otherwise, pass in the result of subgeographies
+as a dictionary.</p>
+<blockquote>
+<div></div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>data_collections</p></td>
@@ -1024,7 +1110,15 @@ list of requested study areas.</p>
 attributes that will be used to enrich the input features.
 Enrichment attributes can describe various types of information such
 as demographic characteristics and geographic context of the
-locations or areas submitted as input features in study_areas.</p></td>
+locations or areas submitted as input features in study_areas.</p>
+<p>If none are specified then ‘KeyGlobalFacts’ is used. To see a list of
+the data collections available for a country you can use the Country class:
+<cite>Country.enrich_variables.data_collection.unique()</cite></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Data Collections are case sensitive.</p>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p>analysis_variables</p></td>
 <td><p>Optional list. A Data Collection is a preassembled list of
@@ -1038,11 +1132,13 @@ locations or areas submitted as input features in study_areas.</p></td>
 <td><p>Optional list. This parameter is used to specify an array of string
 values that describe what derivative variables to include in the
 output. The list of accepted values includes:
-[‘percent’,’index’,’average’,’all’,’*’]</p></td>
+[‘percent’,’index’,’average’,’all’,’*’]
+* Deprecated *</p></td>
 </tr>
 <tr class="row-even"><td><p>comparison_levels</p></td>
 <td><p>Optional list of layer IDs for which the intersecting
-study_areas should be geoenriched.</p></td>
+study_areas should be geoenriched.
+* Deprecated *</p></td>
 </tr>
 <tr class="row-odd"><td><p>intersecting_geographies</p></td>
 <td><p>Optional parameter to explicitly define the geographic layers used
@@ -1052,14 +1148,18 @@ county and ZIP Code that each input study area intersects.
 You can intersect input features defined in the study_areas
 parameter with standard geography layers that are provided by the
 GeoEnrichment class for each country. You can also intersect
-features from a publicly available feature service.</p></td>
+features from a publicly available feature service.</p>
+<p>See <a class="reference external" href="https://developers.arcgis.com/rest/geoenrichment/api-reference/enrich.htm#ESRI_SECTION2_6A987CF67F914FA39B61BE14BE115F27">intersecting_geographies</a>
+for more details on formatting of this parameter.
+* Deprecated *</p>
+</td>
 </tr>
 <tr class="row-even"><td><p>return_geometry</p></td>
 <td><p>Optional boolean. A parameter to request the output geometries in
 the response.</p></td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS.  If None, the GIS object will be used from the
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> .  If None, the GIS object will be used from the
 arcgis.env.active_gis.  This GIS object must be authenticated and
 have the ability to consume credits</p></td>
 </tr>
@@ -1084,21 +1184,20 @@ kilometer, this value will be <code class="docutils literal notranslate"><span c
 </tr>
 </tbody>
 </table>
-<p>Refer to <a class="reference external" href="https://developers.arcgis.com/rest/geoenrichment/api-reference/street-address-locations.htm">https://developers.arcgis.com/rest/geoenrichment/api-reference/street-address-locations.htm</a> for
-the format of intersection_geographies parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Spatial DataFrame or Panda’s DataFrame with the requested variables for the study areas.</p>
+<dd class="field-odd"><p><a class="reference internal" href="arcgis.features.toc.html#arcgis.features.GeoAccessor" title="arcgis.features.GeoAccessor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Spatially</span> <span class="pre">Enabled</span> <span class="pre">DataFrame</span></code></a> or Panda’s DataFrame
+with the requested variables for the study areas.</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
 <div class="section" id="standard-geography-query">
-<h2>standard_geography_query<a class="headerlink" href="#standard-geography-query" title="Permalink to this heading">¶</a></h2>
+<h2>standard_geography_query<a class="headerlink" href="#standard-geography-query" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.standard_geography_query">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></span><span class="sig-name descname"><span class="pre">standard_geography_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_country</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country_dataset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geoquery</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_sub_geography</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_geography_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_geography_query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_centroids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalization_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_fuzzy_search</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_featureset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.standard_geography_query" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.standard_geography_query">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">standard_geography_query</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_country</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">country_dataset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">geoquery</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_sub_geography</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_geography_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_geography_query</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_sr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4326</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_geometry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_centroids</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generalization_level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_fuzzy_search</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_featureset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.standard_geography_query" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method allows you to search and query standard geography areas so that they can be used to
 obtain facts about the location using the enrich() method or create reports about.</p>
 <p>GeoEnrichment uses the concept of a study area to define the location of the point
@@ -1117,11 +1216,11 @@ area definition is passed as a parameter to the GeoEnrichment class to return da
 in the enrichment pack and optionally return geometry for the feature.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
+<col style="width: 21%" />
+<col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>source_country</p></td>
@@ -1223,11 +1322,11 @@ that are returned from the geoquery.</p></td>
 </tr>
 <tr class="row-even"><td><p>as_featureset</p></td>
 <td><p>Optional boolean.  The default is False. If True, the result will be
-a arcgis.features.FeatureSet object instead of a SpatailDataFrame or
+a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureSet" title="arcgis.features.FeatureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureSet</span></code></a> object instead of a SpatailDataFrame or
 Pandas’ DataFrame.</p></td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS.  If None, the GIS object will be used from the
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> .  If None, the GIS object will be used from the
 arcgis.env.active_gis.  This GIS object must be authenticated and
 have the ability to consume credits</p></td>
 </tr>
@@ -1235,17 +1334,17 @@ have the ability to consume credits</p></td>
 </table>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>Spatial or Pandas Dataframe on success, FeatureSet, or dictionary on failure.</p>
+<dd class="field-odd"><p>Spatial or Pandas Dataframe on success, <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureSet" title="arcgis.features.FeatureSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureSet</span></code></a>, or dictionary on failure.</p>
 </dd>
 </dl>
 </dd></dl>
 
 </div>
 <div class="section" id="service-limits">
-<h2>service_limits<a class="headerlink" href="#service-limits" title="Permalink to this heading">¶</a></h2>
+<h2>service_limits<a class="headerlink" href="#service-limits" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoenrichment.service_limits">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></span><span class="sig-name descname"><span class="pre">service_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.service_limits" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoenrichment.service_limits">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoenrichment.</span></code><code class="sig-name descname"><span class="pre">service_limits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoenrichment.service_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Pandas’ DataFrame describing limitations for each input parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1293,12 +1392,12 @@ have the ability to consume credits</p></td>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -1306,6 +1405,10 @@ have the ability to consume credits</p></td>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>

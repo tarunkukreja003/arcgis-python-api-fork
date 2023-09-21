@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.geoanalytics.analyze_patterns module &mdash; arcgis 2.0.1 documentation</title>
+  <title>arcgis.geoanalytics.analyze_patterns module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -32,12 +32,9 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -81,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.1
+                2.1.0
               </div>
             
           
@@ -106,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -119,34 +116,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#is-supported">is_supported</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="arcgis.geoanalytics.toc.html#submodules">Submodules</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">arcgis.geoanalytics.analyze_patterns module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#calculate-density">calculate_density</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.calculate_density"><code class="docutils literal notranslate"><span class="pre">calculate_density()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#create-space-time-cube">create_space_time_cube</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.create_space_time_cube"><code class="docutils literal notranslate"><span class="pre">create_space_time_cube()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#find-hot-spots">find_hot_spots</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.find_hot_spots"><code class="docutils literal notranslate"><span class="pre">find_hot_spots()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#find-point-clusters">find_point_clusters</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.find_point_clusters"><code class="docutils literal notranslate"><span class="pre">find_point_clusters()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#forest">forest</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.forest"><code class="docutils literal notranslate"><span class="pre">forest()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#glr">glr</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.glr"><code class="docutils literal notranslate"><span class="pre">glr()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#gwr">gwr</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#arcgis.geoanalytics.analyze_patterns.gwr"><code class="docutils literal notranslate"><span class="pre">gwr()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="#calculate-density">calculate_density</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-space-time-cube">create_space_time_cube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-hot-spots">find_hot_spots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#find-point-clusters">find_point_clusters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#forest">forest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#glr">glr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gwr">gwr</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.data_enrichment.html">arcgis.geoanalytics.data_enrichment module</a></li>
@@ -243,15 +219,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="section" id="arcgis-geoanalytics-analyze-patterns-module">
-<h1>arcgis.geoanalytics.analyze_patterns module<a class="headerlink" href="#arcgis-geoanalytics-analyze-patterns-module" title="Permalink to this heading">¶</a></h1>
+<h1>arcgis.geoanalytics.analyze_patterns module<a class="headerlink" href="#arcgis-geoanalytics-analyze-patterns-module" title="Permalink to this headline">¶</a></h1>
 <span class="target" id="module-arcgis.geoanalytics.analyze_patterns"></span><p>These tools help you identify, quantify, and visualize spatial patterns in your data.</p>
 <p>calculate_density takes known quantities of some phenomenon and spreads these quantities across the map.
 find_hot_spots identifies statistically significant clustering in the spatial pattern of your data.</p>
 <div class="section" id="calculate-density">
-<h2>calculate_density<a class="headerlink" href="#calculate-density" title="Permalink to this heading">¶</a></h2>
+<h2>calculate_density<a class="headerlink" href="#calculate-density" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.calculate_density">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">calculate_density</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Uniform'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Square'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_repeat_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_repeat_interval_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SquareKilometers'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.calculate_density" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.calculate_density">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">calculate_density</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Uniform'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Square'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_repeat_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_repeat_interval_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">area_units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SquareKilometers'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.calculate_density" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/calculate_density1.png" src="_images/calculate_density1.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">calculate_density</span></code> tool creates a density map from point features by spreading known quantities of some
 phenomenon (represented as attributes of the points) across the map. The result is a layer of areas classified
@@ -280,13 +256,18 @@ ospitals, and this information can be used to decide where new hospitals should 
 </tr>
 <tr class="row-even"><td><p>input_layer</p></td>
 <td><p>Required point feature layer. The point layer on which the density will be calculated.</p>
-<p>Analysis using <code class="docutils literal notranslate"><span class="pre">Square</span></code> or <code class="docutils literal notranslate"><span class="pre">Hexagon</span></code> bins requires a projected coordinate system.
-When aggregating layers into bins, the input layer or processing extent (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) must
-have a projected coordinate system. At 10.5.1, 10.6, and 10.6.1, if a projected coordinate
-system is not specified when running analysis, the World Cylindrical Equal
-Area (WKID 54034) projection will be used. At 10.7 or later, if a projected coordinate system
-is not specified when running analysis, a projection will be picked based on the extent of the data.
-See <a class="reference internal" href="arcgis.geoanalytics.toc.html#gaxfeatureinput"><span class="std std-ref">Feature Input</span></a>.</p>
+<p>See <a class="reference internal" href="arcgis.geoanalytics.toc.html#gaxfeatureinput"><span class="std std-ref">Feature Input</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Analysis using bins requires a projected coordinate system.
+When aggregating layers into bins, the input layer or processing
+extent (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) must have a projected coordinate system.
+At 10.5.1, 10.6, and 10.6.1, if a projected coordinate system is
+not specified when running analysis, the World Cylindrical Equal
+Area (WKID 54034) projection will be used. At 10.7 or later, if a
+projected coordinate system is not specified when running analysis,
+a projection will be picked based on the extent of the data.</p>
+</div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>fields</p></td>
@@ -306,7 +287,22 @@ You can calculate the density on multiple fields, and the count of points will a
 </tr>
 <tr class="row-odd"><td><p>bin_type</p></td>
 <td><p>Required string. The type of bin used to calculate density.</p>
-<p>Choice list: [‘Hexagon’, ‘Square’].</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Analysis using <code class="docutils literal notranslate"><span class="pre">Square</span></code> or <code class="docutils literal notranslate"><span class="pre">Hexagon</span></code> bins requires a projected coordinate system.
+When aggregating layers into bins, the input layer or processing extent (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) must
+have a projected coordinate system. At 10.5.1, 10.6, and 10.6.1, if a projected coordinate
+system is not specified when running analysis, the World Cylindrical Equal
+Area (WKID 54034) projection will be used. At 10.7 or later, if a projected coordinate system
+is not specified when running analysis, a projection will be picked based on the extent of the data.</p>
+</div>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Hexagon</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Square</span></code></p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>bin_size</p></td>
@@ -330,7 +326,19 @@ only available if the input points are time-enabled and represent an instant in 
 <tr class="row-odd"><td><p>time_step_interval_unit</p></td>
 <td><p>Optional string. A string that specifies units of the time step interval.
 This option is only available if the input points are time-enabled and represent an instant in time.</p>
-<p>Choice list: [‘Milliseconds’, ‘Seconds’, ‘Minutes’, ‘Hours’, ‘Days’, ‘Weeks’, ‘Months’, ‘Years’]</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Seconds</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Minutes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Days</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Weeks</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Months</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Years</span></code></p></li>
+</ul>
+</div></blockquote>
 <p>The default value is ‘None’.</p>
 </td>
 </tr>
@@ -341,7 +349,19 @@ This option is only available if the input points are time-enabled and of time t
 <tr class="row-odd"><td><p>time_step_repeat_interval_unit</p></td>
 <td><p>Optional string. A string that specifies the temporal unit of the step repeat.
 This option is only available if the input points are time-enabled and of time type instant.</p>
-<p>Choice list:[‘Years’, ‘Months’, ‘Weeks’, ‘Days’, ‘Hours’, ‘Minutes’, ‘Seconds’, ‘Milliseconds’]</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Years</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Months</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Weeks</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Days</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Minutes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Seconds</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p></li>
+</ul>
+</div></blockquote>
 <p>The default value is ‘None’.</p>
 </td>
 </tr>
@@ -360,7 +380,17 @@ The radius size must be larger than the <code class="docutils literal notranslat
 <tr class="row-even"><td><p>radius_unit</p></td>
 <td><p>Required string. The distance unit for the radius defining the neighborhood for which the density will be calculated.
 The linear unit to be used with the value specified in <code class="docutils literal notranslate"><span class="pre">bin_size</span></code>.</p>
-<p>Choice list:[‘Feet’, ‘Yards’, ‘Miles’, ‘Meters’, ‘Kilometers’, ‘NauticalMiles’]</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Feet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Yards</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Miles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Meters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kilometers</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NauticalMiles</span></code></p></li>
+</ul>
+</div></blockquote>
 <p>The default value is ‘Meters’.</p>
 </td>
 </tr>
@@ -368,8 +398,19 @@ The linear unit to be used with the value specified in <code class="docutils lit
 <td><p>Optional string. The desired output units of the density values. If density values are very small, you can increase the
 size of the area units (for example, square meters to square kilometers) to return larger values.
 This value only scales the result. Possible area units are:</p>
-<p>Choice list: [‘SquareMeters’, ‘SquareKilometers’, ‘Hectares’, ‘SquareFeet’, ‘SquareYards’, ‘SquareMiles’, ‘Acres’].</p>
-<p>The default value is “SquareKilometers”.</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SquareMeters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SquareKilometers</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hectares</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SquareFeet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SquareYards</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SquareMiles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Acres</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>The default value is <code class="docutils literal notranslate"><span class="pre">SquareKilometers</span></code>.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>output_name</p></td>
@@ -379,7 +420,9 @@ This value only scales the result. Possible area units are:</p>
 <td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>context</p></td>
-<td><p>Optional dict. The context parameter contains additional settings that affect task execution. For this task, there are four settings:</p>
+<td><p>Optional dict. The context parameter contains additional settings that
+affect task execution. For this task, there are four settings (keys in
+the dictionary):</p>
 <ol class="arabic simple">
 <li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
 <li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) - The features will be projected into this coordinate system for analysis.</p></li>
@@ -389,8 +432,8 @@ This value only scales the result. Possible area units are:</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If True, a GPJob is returned instead of
-results. The GPJob can be queried on the status of the execution.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -415,10 +458,10 @@ results. The GPJob can be queried on the status of the execution.</p></td>
 
 </div>
 <div class="section" id="create-space-time-cube">
-<h2>create_space_time_cube<a class="headerlink" href="#create-space-time-cube" title="Permalink to this heading">¶</a></h2>
+<h2>create_space_time_cube<a class="headerlink" href="#create-space-time-cube" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.create_space_time_cube">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">create_space_time_cube</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.create_space_time_cube" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.create_space_time_cube">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">create_space_time_cube</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval_unit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.create_space_time_cube" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/create_space_time_cube.png" src="_images/create_space_time_cube.png" />
 <p><code class="docutils literal notranslate"><span class="pre">create_space_time_cube</span></code> works with a layer of point features that are time enabled.
 It aggregates the data into a three-dimensional cube of space-time bins.
@@ -432,8 +475,8 @@ space-time cube for the dataset, and use the cube to further analyze trends
 such as emerging hot and cold spots.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
+<col style="width: 30%" />
+<col style="width: 70%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -444,36 +487,70 @@ such as emerging hot and cold spots.</p>
 aggregated into the bins specified in geographical size by the <code class="docutils literal notranslate"><span class="pre">bin_size</span></code>
 and <code class="docutils literal notranslate"><span class="pre">bin_size_unit</span></code> parameters and temporal size by
 the <code class="docutils literal notranslate"><span class="pre">time_step_interval</span></code> and <code class="docutils literal notranslate"><span class="pre">time_step_interval_unit</span></code> parameters.
-See <a class="reference internal" href="arcgis.geoanalytics.toc.html#gaxfeatureinput"><span class="std std-ref">Feature Input</span></a>.
-Analysis using bins requires a projected coordinate system.
+See <a class="reference internal" href="arcgis.geoanalytics.toc.html#gaxfeatureinput"><span class="std std-ref">Feature Input</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> must have a minimum of 60 features.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Analysis using bins requires a projected coordinate system.
 When aggregating layers into bins, the input layer or processing
 extent (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) must have a projected coordinate system.
 At 10.5.1, 10.6, and 10.6.1, if a projected coordinate system is
 not specified when running analysis, the World Cylindrical Equal
 Area (WKID 54034) projection will be used. At 10.7 or later, if a
 projected coordinate system is not specified when running analysis,
-a projection will be picked based on the extent of the data.
-.. Note: The <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> must have a minimum of 60 features.</p></td>
+a projection will be picked based on the extent of the data.</p>
+</div>
+</td>
 </tr>
 <tr class="row-odd"><td><p>bin_size</p></td>
-<td><p>Required float. The distance for the bins into which <code class="docutils literal notranslate"><span class="pre">point_layer</span></code> will be aggregated.
-.. Note: A <code class="docutils literal notranslate"><span class="pre">create_space_time_cube</span></code> must have at least 10 time slices.</p></td>
+<td><p>Required float. The distance for the bins into which <code class="docutils literal notranslate"><span class="pre">point_layer</span></code> will be aggregated.</p></td>
 </tr>
 <tr class="row-even"><td><p>bin_size_unit</p></td>
-<td><p>Required string. The distance unit for the bins into which <code class="docutils literal notranslate"><span class="pre">point_layer</span></code> will be aggregated.
-Choice list: [‘Feet’, ‘Yards’, ‘Miles’, ‘Meters’, ‘Kilometers’, ‘NauticalMiles’]</p></td>
+<td><p>Required string. The distance unit for the bins into which <code class="docutils literal notranslate"><span class="pre">point_layer</span></code> will be aggregated.</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Feet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Yards</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Miles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Meters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kilometers</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NauticalMiles</span></code></p></li>
+</ul>
+</div></blockquote>
+</td>
 </tr>
 <tr class="row-odd"><td><p>time_step_interval</p></td>
-<td><p>Required integer. A numeric value that specifies the duration of the time bin.
-.. Note:</p></td>
+<td><p>Required integer. A numeric value that specifies the duration of the time bin.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">create_space_time_cube</span></code> must have at least 10 time slices.</p>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p>time_step_interval_unit</p></td>
-<td><p>Required string. A numeric value that specifies the duration unit of the time bin.
-Choice list:[‘Years’, ‘Months’, ‘Weeks’, ‘Days’, ‘Hours’, ‘Minutes’, ‘Seconds’, ‘Milliseconds’]</p></td>
+<td><p>Required string. A numeric value that specifies the duration unit of the time bin.</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Years</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Months</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Weeks</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Days</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Minutes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Seconds</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p></li>
+</ul>
+</div></blockquote>
+</td>
 </tr>
 <tr class="row-odd"><td><p>time_step_alignment</p></td>
-<td><p>Optional string. Defines how aggregation will occur based on a given timeInterval. Options are as follows:
-Choice list: [‘EndTime’, ‘StartTime’, ‘ReferenceTime’]</p>
+<td><p>Optional string. Defines how aggregation will occur based on a given timeInterval. Options are as follows:</p>
+<p>Choice list:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">StartTime</span></code> - Time is aligned to the first feature in time</p></li>
@@ -488,43 +565,66 @@ Choice list: [‘EndTime’, ‘StartTime’, ‘ReferenceTime’]</p>
 time bins to if ReferenceTime is specified in <code class="docutils literal notranslate"><span class="pre">time_step_alignment</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>summary_fields</p></td>
-<td><p>Optional string. A list of field names, statistical summary types, and the
+<td><p>Optional list of dictiaries defining field names, statistical summary types, and the
 fill option for empty values that you want to calculate for all points
 within each space-time bin. Note that the count of points within each
-bin is always returned. By default, all statistics are returned.
-Example: [{“statisticType”: “statistic type”, “onStatisticField”: “field name”, “fillType”: “fill type”, “onStatisticField”: “fieldName2”}]</p>
-<p>fieldName is the name of the fields in the input point layer.
-statisticType is one of the following for numeric fields:
-* <code class="docutils literal notranslate"><span class="pre">Sum</span></code> - Adds the total value of all the points in each polygon.
-* <code class="docutils literal notranslate"><span class="pre">Mean</span></code> - Calculates the average of all the points in each polygon.
-* <code class="docutils literal notranslate"><span class="pre">Min</span></code> - Finds the smallest value of all the points in each polygon.
-* <code class="docutils literal notranslate"><span class="pre">Max</span></code> - Finds the largest value of all the points in each polygon.
-* <code class="docutils literal notranslate"><span class="pre">Stddev</span></code> - Finds the standard deviation of all the points in each polygon.
-statisticType is the following for string fields:
-* <code class="docutils literal notranslate"><span class="pre">Count</span></code> - Totals the number of strings for all the points in each polygon.</p>
-<p>fillType is one of the following:
-* <code class="docutils literal notranslate"><span class="pre">zeros</span></code> - Fills missing values with zeros. This is most appropriate for fields representing counts.
-* <code class="docutils literal notranslate"><span class="pre">spatialNeighbors</span></code> - Fills missing values by averaging the spatial neighbors. Neighbors are determined by a second degree queens contiguity.
-* <code class="docutils literal notranslate"><span class="pre">spaceTimeNeighbors</span></code> - Fills missing values by averaging the space-time neighbors. Neighbors are determined by a second degree queens contiguity in both space and time.
-* <code class="docutils literal notranslate"><span class="pre">temporalTrend</span></code> - Interpolates values using a univariate spline.</p>
+bin is always returned. By default, all statistics are returned.</p>
+<p>Format:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span><span class="s2">&quot;statisticType&quot;</span><span class="p">:</span> <span class="s2">&quot;statistic type&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;onStatisticField&quot;</span><span class="p">:</span> <span class="s2">&quot;field name&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;fillType&quot;</span><span class="p">:</span> <span class="s2">&quot;fill type&quot;</span><span class="p">},</span>
+ <span class="p">{</span><span class="s2">&quot;statisticType&quot;</span><span class="p">:</span> <span class="s2">&quot;statistic type&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;onStatisticField&quot;</span><span class="p">:</span> <span class="s2">&quot;fieldName2&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;fillType&quot;</span><span class="p">:</span> <span class="s2">&quot;fill type&quot;</span><span class="p">}]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">statisticType</span></code> is one of the following for numeric fields:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Sum</span></code> - Adds the total value of all the points in each polygon.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Mean</span></code> - Calculates the average of all the points in each polygon.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Min</span></code> - Finds the smallest value of all the points in each polygon.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Max</span></code> - Finds the largest value of all the points in each polygon.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Stddev</span></code> - Finds the standard deviation of all the points in each polygon.</p></li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">statisticType</span></code> is the following for string fields:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Count</span></code> - Totals the number of strings for all the points in each polygon.</p></li>
+</ul>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">onStatisticField</span></code> is the name of fields in the input point layer.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fillType</span></code> is one of the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">zeros</span></code> - Fills missing values with zeros. This is most appropriate for fields representing counts.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spatialNeighbors</span></code> - Fills missing values by averaging the spatial neighbors. Neighbors are determined by a second degree queens contiguity.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spaceTimeNeighbors</span></code> - Fills missing values by averaging the space-time neighbors. Neighbors are determined by a second degree queens contiguity in both space and time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">temporalTrend</span></code> - Interpolates values using a univariate spline.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>output_name</p></td>
 <td><p>Required string. The task will create a space time cube (netCDF) of the results. You define the name of the space time cube.</p></td>
 </tr>
 <tr class="row-odd"><td><p>context</p></td>
-<td><p>Optional string. Context contains additional settings that affect task execution. For this task, there are three settings:</p>
-<ol class="arabic simple">
-<li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
-<li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) - The features will be projected into this coordinate system for analysis.</p></li>
-</ol>
+<td><p>Optional string. Context contains additional settings that affect task execution. For this task, there are two settings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">processSR</span></code> - The features will be projected into this coordinate system for analysis.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If True, a GPJob is returned instead of results. The GPJob can be queried on the status of the execution.</p></td>
+<td><p>Optional boolean. If <code class="docutils literal notranslate"><span class="pre">true</span></code>, a future object will be returned and the process
+will not wait for the task to complete. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -550,10 +650,10 @@ When you browse to the output url, your netCDF will automatically download to yo
 
 </div>
 <div class="section" id="find-hot-spots">
-<h2>find_hot_spots<a class="headerlink" href="#find-hot-spots" title="Permalink to this heading">¶</a></h2>
+<h2>find_hot_spots<a class="headerlink" href="#find-hot-spots" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.find_hot_spots">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">find_hot_spots</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Miles'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Miles'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.find_hot_spots" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.find_hot_spots">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">find_hot_spots</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Miles'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Miles'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_interval_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_alignment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_step_reference</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.find_hot_spots" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/geo_find_hot_spots.png" src="_images/geo_find_hot_spots.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">find_hot_spots</span></code> tool analyzes point data (such as crime incidents, traffic accidents, trees, and so on)
 or field values associated with points. It finds statistically significant spatial clusters of high incidents (hot spots)
@@ -566,8 +666,8 @@ significant cluster; the spatial pattern associated with these features could ve
 processes and random chance.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 40%" />
-<col style="width: 60%" />
+<col style="width: 33%" />
+<col style="width: 67%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -594,7 +694,17 @@ picked based on the extent of the data.</p>
 <td><p>Optional string. The distance unit for the bins with which hot spots will be calculated.
 The linear unit to be used with the value specified in <code class="docutils literal notranslate"><span class="pre">bin_size</span></code>.
 When generating bins the number and units specified determine the height and length of the square.</p>
-<p>Choice list:[‘Feet’, ‘Yards’, ‘Miles’, ‘Meters’, ‘Kilometers’, ‘NauticalMiles’]</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Feet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Yards</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Miles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Meters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kilometers</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NauticalMiles</span></code></p></li>
+</ul>
+</div></blockquote>
 <p>The default value is <code class="docutils literal notranslate"><span class="pre">Miles</span></code>.</p>
 </td>
 </tr>
@@ -605,8 +715,18 @@ The radius size must be larger than <code class="docutils literal notranslate"><
 <tr class="row-even"><td><p>neighborhood_distance_unit</p></td>
 <td><p>Optional string. The distance unit for the radius defining the neighborhood where the hot spots
 will be calculated. The linear unit to be used with the value specified in <code class="docutils literal notranslate"><span class="pre">bin_size</span></code>.</p>
-<p>Choice list:[‘Feet’, ‘Yards’, ‘Miles’, ‘Meters’, ‘Kilometers’, ‘NauticalMiles’]</p>
-<p>The default value is ‘Miles’.</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Feet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Yards</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Miles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Meters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kilometers</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NauticalMiles</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>The default value is <code class="docutils literal notranslate"><span class="pre">Miles</span></code>.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>time_step_interval</p></td>
@@ -616,12 +736,24 @@ This option is only available if the input points are time-enabled and represent
 <tr class="row-even"><td><p>time_step_interval_unit</p></td>
 <td><p>Optional string. A string that specifies units of the time step interval.
 This option is only available if the input points are time-enabled and represent an instant in time.</p>
-<p>Choice list:[‘Years’, ‘Months’, ‘Weeks’, ‘Days’, ‘Hours’, ‘Minutes’, ‘Seconds’, ‘Milliseconds’]</p>
+<p>Choice list:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Years</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Months</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Weeks</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Days</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Hours</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Minutes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Seconds</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Milliseconds</span></code></p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>time_step_alignment</p></td>
 <td><p>Optional string. Defines how aggregation will occur based on a given <code class="docutils literal notranslate"><span class="pre">time_step_interval</span></code>. Options are as follows:</p>
-<p>Choice list:[‘EndTime’, ‘StartTime’, ‘ReferenceTime’]</p>
+<p>Choice list:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">StartTime</span></code> - Time is aligned to the first feature in time.</p></li>
@@ -639,21 +771,23 @@ This option is only available if the input points are time-enabled and of time t
 <td><p>Optional string. The task will create a feature service of the results. You define the name of the service.</p></td>
 </tr>
 <tr class="row-even"><td><p>context</p></td>
-<td><p>Optional string. Context contains additional settings that affect task execution. For this task, there are three settings:</p>
-<ol class="arabic simple">
-<li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - a bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
-<li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) The features will be projected into this coordinate system for analysis.</p></li>
-<li><p>Output Spatial Reference (<code class="docutils literal notranslate"><span class="pre">outSR</span></code>) - the features will be projected into this coordinate system after the analysis to be saved.
-The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
-<li><p>Data store (<code class="docutils literal notranslate"><span class="pre">dataStore</span></code>) Results will be saved to the specified data store. The default is the spatiotemporal big data store.</p></li>
-</ol>
+<td><p>Optional string. Context contains additional settings that affect task execution. For this task, there are four settings:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - a bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">processSR</span></code> The features will be projected into this coordinate system for analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - the features will be projected into this coordinate system after the analysis to be saved.The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataStore</span></code> - Results will be saved to the specified data store. The default is the spatiotemporal big data store.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Optional boolean. If True, a GPJob is returned instead of results. The GPJob can be queried on the status of the execution.</p></td>
+<td><p>Optional boolean. If <code class="docutils literal notranslate"><span class="pre">true</span></code>, a future object will be returned and the process
+will not wait for the task to complete. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -669,20 +803,27 @@ The output spatial reference for the spatiotemporal big data store is always WGS
                <span class="n">neighborhood_distance</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
                <span class="n">neighborhood_distance_unit</span><span class="o">=</span><span class="s1">&#39;Miles&#39;</span><span class="p">,</span>
                <span class="n">time_step_interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-               <span class="n">time_step_interval_unit</span><span class="o">=</span><span class="s2">&quot;Years&quot;</span><span class="p">,</span>
-               <span class="n">time_step_alignment</span><span class="o">=</span><span class="s2">&quot;StartTime&quot;</span><span class="p">,</span>
+               <span class="n">time_step_interval_unit</span><span class="o">=</span><span class="s1">&#39;Years&#39;</span><span class="p">,</span>
+               <span class="n">time_step_alignment</span><span class="o">=</span><span class="s1">&#39;StartTime&#39;</span><span class="p">,</span>
                <span class="n">time_step_reference</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-               <span class="n">output_name</span><span class="o">=</span><span class="s1">&#39;find hot spots&#39;</span><span class="p">)</span>
+               <span class="n">output_name</span><span class="o">=</span><span class="s1">&#39;find hot spots&#39;</span><span class="p">,</span>
+               <span class="n">context</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;extent&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;xmin&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.68</span><span class="p">,</span>
+                                   <span class="s1">&#39;ymin&#39;</span><span class="p">:</span> <span class="mf">45.5</span><span class="p">,</span>
+                                   <span class="s1">&#39;xmax&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">122.45</span><span class="p">,</span>
+                                   <span class="s1">&#39;ymax&#39;</span><span class="p">:</span> <span class="mf">45.6</span>
+                                   <span class="s1">&#39;spatialReference&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;wkid&#39;</span><span class="p">:</span> <span class="mi">4326</span><span class="p">}},</span>
+                        <span class="s1">&#39;outSR&#39;</span><span class="p">:{</span><span class="s1">&#39;wkid&#39;</span><span class="p">:</span> <span class="mi">3857</span><span class="p">}}</span>
+              <span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
 
 </div>
 <div class="section" id="find-point-clusters">
-<h2>find_point_clusters<a class="headerlink" href="#find-point-clusters" title="Permalink to this heading">¶</a></h2>
+<h2>find_point_clusters<a class="headerlink" href="#find-point-clusters" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.find_point_clusters">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">find_point_clusters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_feature_clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.find_point_clusters" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.find_point_clusters">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">find_point_clusters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_feature_clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_distance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.find_point_clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>This tool extracts clusters from your input point features and identifies any surrounding noise.</p>
 <p>For example, a nongovernmental organization is studying a particular pest-borne disease. It has
 a point dataset representing households in a study area, some of which are infested, and some of
@@ -690,73 +831,115 @@ which are not. By using the Find Point Clusters tool, an analyst can determine c
 infested households to help pinpoint an area to begin treatment and extermination of pests.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 23%" />
-<col style="width: 77%" />
+<col style="width: 16%" />
+<col style="width: 84%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>input_layer</p></td>
-<td><p>required FeatureSet, The table, point, line or polygon features
-containing potential incidents.</p></td>
+<td><p>The point features for which clusters will be found.</p>
+<p>See <a class="reference internal" href="arcgis.geoanalytics.toc.html#gaxfeatureinput"><span class="std std-ref">Feature Input</span></a> for options.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><p>method</p></td>
 <td><p>required String. The algorithm used for cluster analysis. This
-parameter must be specified as DBSCAN or HDBSCAN.</p></td>
+parameter must be specified as one of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DBSCAN</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HDBSCAN</span></code></p></li>
+</ul>
+</div></blockquote>
+</td>
 </tr>
 <tr class="row-even"><td><p>min_feature_clusters</p></td>
-<td><p>optional Integer. Minimum number of clusters to find in a dataset.</p></td>
+<td><p>optional Integer. Minimum number of points to consider a
+cluster.</p></td>
 </tr>
 <tr class="row-odd"><td><p>search_distance</p></td>
 <td><p>optional Float.  The distance to search between points to form
-a cluster.  This is required for DBSCAN.</p></td>
+a cluster.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is required for DBSCAN.</p>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p>distance_unit</p></td>
 <td><p>optional String. The <cite>search_distance</cite> units.</p></td>
 </tr>
 <tr class="row-odd"><td><p>output_name</p></td>
-<td><p>optional string, The task will create a feature service of the
-results. You define the name of the service.</p></td>
+<td><p>optional String. The task will create a feature service  with
+this service name.</p></td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>optional GIS, the GIS on which this tool runs. If not
-specified, the active GIS is used.</p></td>
+<td><p>optional GIS. The <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> on which this tool
+runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-odd"><td><p>context</p></td>
 <td><p>Optional dict. The context parameter contains additional settings
 that affect task execution. For this task, there are four settings:</p>
-<ol class="arabic simple">
-<li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area.
-Only those features that intersect the bounding box will be analyzed.</p></li>
-<li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) - The features will be
-projected into this coordinate system for analysis.</p></li>
-<li><p>Output spatial reference (<code class="docutils literal notranslate"><span class="pre">outSR</span></code>) - The features will be projected
-into this coordinate system after the analysis to be saved.
-The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
-<li><p>Data store (<code class="docutils literal notranslate"><span class="pre">dataStore</span></code>) - Results will be saved to the
-specified data store. The default is the spatiotemporal big data store.</p></li>
-</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">processSR</span></code> - The features will be projected into this coordinate system for analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - The features will be projected into this coordinate system after the analysis to be saved.</p></li>
+</ul>
+<blockquote>
+<div><p>The output spatial reference for the spatiotemporal big data store is always WGS84.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataStore</span></code> - Results will be saved to the specified data store. The default is the spatiotemporal big data store.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Optional boolean. If True, a GPJob is returned instead of
-results. The GPJob can be queried on the status of the execution.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 <tr class="row-odd"><td><p>time_method</p></td>
-<td><p>Optional String. When this parameter is set to Linear and <cite>method</cite>
-is <cite>DBSCAN</cite>, both space and time will be used to find point clusters.
-If <cite>method</cite> is <cite>HDBSCAN</cite>, this parameter will be ignored and clusters
-will be found in space only. This parameter can only be used if
-<cite>input_layer</cite> has time enabled and is of type instant. Temporal
-clustering is available at ArcGIS Enterprise 10.8.</p></td>
+<td><p>Optional String.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When this parameter is set to <code class="docutils literal notranslate"><span class="pre">Linear</span></code>:</p>
+<ul>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">method</span></code> is <cite>DBSCAN</cite>, both space and time will be used to find point clusters.</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">method</span></code> is <cite>HDBSCAN</cite>, this parameter will be ignored and clusters will be found in space only.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter can only be used if <cite>input_layer</cite> has time enabled and is of type instant.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Temporal clustering is available at ArcGIS Enterprise 10.8 and later.</p>
+</div>
+</td>
 </tr>
 <tr class="row-even"><td><p>search_duration</p></td>
-<td><p>Optional String. When using DBSCAN with timeMethod set as Linear,
-this parameter is the time duration within which
-<cite>min_feature_clusters</cite> must be found. This parameter is not used
-when HDBSCAN is chosen as the clustering method or when
-<cite>time_method</cite> is not used.</p></td>
+<td><p>Optional String.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When this parameter is set to <code class="docutils literal notranslate"><span class="pre">Linear</span></code>:</p>
+<ul>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">method</span></code> is <cite>DBSCAN</cite>  this parameter is the time duration within which
+<cite>min_feature_clusters</cite> must be found.</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">method</span></code> is <cite>HDBSCAN</cite>, this parameter is not used</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This parameter is not used if <code class="docutils literal notranslate"><span class="pre">time_method</span></code> is not used</p>
+</div>
+</td>
 </tr>
 <tr class="row-odd"><td><p>duration_unit</p></td>
 <td><p>Optional String. The units used for the <cite>search_duration</cite>
@@ -774,10 +957,10 @@ not be used with HDBSCAN or space-only DBSCAN.</p></td>
 
 </div>
 <div class="section" id="forest">
-<h2>forest<a class="headerlink" href="#forest" title="Permalink to this heading">¶</a></h2>
+<h2>forest<a class="headerlink" href="#forest" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.forest">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">forest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_prediction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_explanatory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trees</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tree_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_leaf_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'train'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_to_predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">importance_tbl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_var_matching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.forest" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.forest">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">forest</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_prediction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_explanatory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trees</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tree_depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_leaf_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prediction_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'train'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_to_predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">importance_tbl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_var_matching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.forest" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/forest.png" src="_images/forest.png" />
 <p>The ‘forest’ method is a forest-based classification and regression
 task that creates models and generates predictions using an adaptation of
@@ -812,8 +995,8 @@ can be used to predict sale prices of similar homes.</p></li>
 </div>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col style="width: 28%" />
+<col style="width: 72%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -830,7 +1013,7 @@ containing the values to be used to train the model, and a
 boolean denoting if it’s categorical. This field contains known
 (training) values of the variable that will be used to predict
 at unknown locations.</p>
-<p>Syntax: {“fieldName”:”&lt;field name&gt;”, “categorical”:bool}</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">{&quot;fieldName&quot;:&quot;&lt;field</span> <span class="pre">name&gt;&quot;,</span> <span class="pre">&quot;categorical&quot;:bool}</span></code></p>
 </td>
 </tr>
 <tr class="row-even"><td><p>var_explanatory</p></td>
@@ -843,7 +1026,7 @@ or categories (such as land cover or presence or absence).
 Specify the variable as ‘True’ for any that represent classes or
 categories such as land cover or presence or absence and ‘False’
 if the variable is continuous.</p>
-<p>Syntax: [{“fieldName”:”&lt;field name&gt;”, “categorical”:bool},…]</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">[{&quot;fieldName&quot;:&quot;&lt;field</span> <span class="pre">name&gt;&quot;,</span> <span class="pre">&quot;categorical&quot;:bool},...]</span></code></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>trees</p></td>
@@ -942,7 +1125,7 @@ landcover or presence or absence). Specify the variable as
 ‘True’ for any that represent classes or categories such as
 landcover or presence or absence and ‘False’ if the variable is
 continuous.</p>
-<p>Syntax: [{“fieldName”:”&lt;explanatory field name&gt;”, “categorical”:bool},</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">[{&quot;fieldName&quot;:&quot;&lt;explanatory</span> <span class="pre">field</span> <span class="pre">name&gt;&quot;,</span> <span class="pre">&quot;categorical&quot;:bool}]</span></code></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>fieldname is the name of the field in the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> used
@@ -958,17 +1141,19 @@ always be ‘True’, and a continue value should always be set as ‘False’.<
 results. You define the name of the service.</p></td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>. The GIS on which this tool runs. If not
 specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-odd"><td><p>context</p></td>
 <td><p>Optional dict. The context parameter contains additional settings that affect task execution. For this task, there are four settings:</p>
-<ol class="arabic simple">
-<li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
-<li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) - The features will be projected into this coordinate system for analysis.</p></li>
-<li><p>Output spatial reference (<code class="docutils literal notranslate"><span class="pre">outSR</span></code>) - The features will be projected into this coordinate system after the analysis to be saved. The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
-<li><p>Data store (<code class="docutils literal notranslate"><span class="pre">dataStore</span></code>) - Results will be saved to the specified data store. For ArcGIS Enterprise, the default is the spatiotemporal big data store.</p></li>
-</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">processSR</span></code> - The features will be projected into this coordinate system for analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - The features will be projected into this coordinate system after the analysis to be saved. The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataStore</span></code>- Results will be saved to the specified data store. For ArcGIS Enterprise, the default is the spatiotemporal big data store.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
@@ -986,12 +1171,17 @@ results. The GPJob can be queried on the status of the execution.</p>
 </table>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><p>a named tuple with the following keys if <code class="docutils literal notranslate"><span class="pre">return_tuple</span></code> is set to ‘True’:</p>
-<p>”output_trained” : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p>
-<p>”output_predicted” : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p>
-<p>”variable_of_importance” : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.Table" title="arcgis.features.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p>
-<p>”process_info” : list</p>
-<p>else returns a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> of the results.</p>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">return_tuple</span></code> is set to ‘True’, a tuple of results with the following keys:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">output</span></code> : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_predicted</span></code> : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coefficient_table</span></code> : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.Table" title="arcgis.features.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">process_info</span></code> : list</p></li>
+</ul>
+</li>
+<li><p>otherwise, a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p></li>
+</ul>
 </p>
 </dd>
 </dl>
@@ -1018,10 +1208,10 @@ results. The GPJob can be queried on the status of the execution.</p>
 
 </div>
 <div class="section" id="glr">
-<h2>glr<a class="headerlink" href="#glr" title="Permalink to this heading">¶</a></h2>
+<h2>glr<a class="headerlink" href="#glr" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.glr">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">glr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_dependent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_explanatory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regression_family</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Continuous'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_to_predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_coeff_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_var_matching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dep_mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.glr" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.glr">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">glr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_dependent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var_explanatory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">regression_family</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Continuous'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features_to_predict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gen_coeff_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exp_var_matching</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dep_mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_tuple</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.glr" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/glr.png" src="_images/glr.png" />
 <p>This tool performs Generalized Linear Regression (<code class="docutils literal notranslate"><span class="pre">glr</span></code>) to generate
 predictions or to model a dependent variable’s relationship to a set of
@@ -1038,8 +1228,8 @@ explanatory variables. This tool can be used to fit continuous
 </div></blockquote>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 11%" />
-<col style="width: 89%" />
+<col style="width: 12%" />
+<col style="width: 88%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -1101,7 +1291,7 @@ not mapped, it will match to a field with the same name in the
 <code class="docutils literal notranslate"><span class="pre">features_to_predict</span></code> input. You do not need to use it if the
 names and types of the fields match between your two input
 datasets.</p>
-<p>Syntax: [{“predictionLayerField”:”&lt;field name&gt;”,”trainingLayerField”: “&lt;field name&gt;”},…]</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">[{&quot;predictionLayerField&quot;:&quot;&lt;field</span> <span class="pre">name&gt;&quot;,&quot;trainingLayerField&quot;:</span> <span class="pre">&quot;&lt;field</span> <span class="pre">name&gt;&quot;},...]</span></code></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>predictionLayerField is the name of a field specified in the
@@ -1115,7 +1305,7 @@ in the var_explanatoryiables parameter.</p></li>
 <tr class="row-odd"><td><p>dep_mapping</p></td>
 <td><p>Optional list of dicts. A list representing the values used to map to 0
 (absence) and 1 (presence) for binary regression.</p>
-<p>Syntax: [{“value0”:”&lt;false value&gt;”},{“value1”:”&lt;true value&gt;”}]</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">[{&quot;value0&quot;:&quot;&lt;false</span> <span class="pre">value&gt;&quot;},{&quot;value1&quot;:&quot;&lt;true</span> <span class="pre">value&gt;&quot;}]</span></code></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>value0 is the string that will be used to represent 0
@@ -1131,27 +1321,30 @@ in the var_explanatoryiables parameter.</p></li>
 results. You define the name of the service.</p></td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>. The GIS on which this tool runs. If not
 specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>context</p></td>
 <td><p>Optional dict. The context parameter contains additional settings that affect task execution. For this task, there are four settings:</p>
-<ol class="arabic simple">
-<li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
-<li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) - The features will be projected into this coordinate system for analysis.</p></li>
-<li><p>Output spatial reference (<code class="docutils literal notranslate"><span class="pre">outSR</span></code>) - The features will be projected into this coordinate system after the analysis to be saved. The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
-<li><p>Data store (<code class="docutils literal notranslate"><span class="pre">dataStore</span></code>) - Results will be saved to the specified data store. For ArcGIS Enterprise, the default is the spatiotemporal big data store.</p></li>
-</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">processSR</span></code> - The features will be projected into this coordinate system for analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - The features will be projected into this coordinate system after the analysis to be saved. The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataStore</span></code> - Results will be saved to the specified data store. For ArcGIS Enterprise, the default is the spatiotemporal big data store.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If ‘True’, a GPJob is returned instead of
+<td><p>Optional boolean. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, a GPJob is returned instead of
 results. The GPJob can be queried on the status of the execution.</p>
-<p>The default value is ‘False’.</p>
+<p>The default value is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>return_tuple</p></td>
-<td><p>Optional boolean. If ‘True’, a named tuple with multiple output keys is returned.</p>
+<td><p>Optional boolean. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, a named tuple with multiple
+output keys is returned.</p>
 <p>The default value is ‘False’.</p>
 </td>
 </tr>
@@ -1159,15 +1352,20 @@ results. The GPJob can be queried on the status of the execution.</p>
 </table>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><p>a named tuple with the following keys if <code class="docutils literal notranslate"><span class="pre">return_tuple</span></code> is set to ‘True’:</p>
-<p>”output” : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p>
-<p>”output_predicted” : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p>
-<p>”coefficient_table” : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.Table" title="arcgis.features.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p>
-<p>”process_info” : list</p>
+<dd class="field-odd"><p><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">return_tuple</span></code> is set to ‘True’, a tuple of results with the following keys:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">output</span></code> : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_predicted</span></code> : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coefficient_table</span></code> : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.Table" title="arcgis.features.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">process_info</span></code> : list</p></li>
+</ul>
+</li>
+<li><p>otherwise, a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a></p></li>
+</ul>
 </p>
 </dd>
 </dl>
-<p>else returns a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> of the results.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example: To train a model for predicting 911 calls.</span>
 <span class="n">result_predicted</span> <span class="o">=</span> <span class="n">glr</span><span class="p">(</span><span class="n">input_layer</span><span class="o">=</span><span class="mi">911</span><span class="n">_calls_lyr</span><span class="p">,</span>
                        <span class="n">var_dependent</span><span class="o">=</span><span class="s1">&#39;Calls&#39;</span><span class="p">,</span>
@@ -1181,10 +1379,10 @@ results. The GPJob can be queried on the status of the execution.</p>
 
 </div>
 <div class="section" id="gwr">
-<h2>gwr<a class="headerlink" href="#gwr" title="Permalink to this heading">¶</a></h2>
+<h2>gwr<a class="headerlink" href="#gwr" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="arcgis.geoanalytics.analyze_patterns.gwr">
-<span class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></span><span class="sig-name descname"><span class="pre">gwr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explanatory_variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent_variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Continuous'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_selection_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'UserDefined'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NumberOfNeighbors'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_band</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_band_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_weighting_scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'BiSquare'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.gwr" title="Permalink to this definition">¶</a></dt>
+<dt id="arcgis.geoanalytics.analyze_patterns.gwr">
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.analyze_patterns.</span></code><code class="sig-name descname"><span class="pre">gwr</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">explanatory_variables</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependent_variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Continuous'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_selection_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'UserDefined'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'NumberOfNeighbors'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_band</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_band_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_neighbors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_weighting_scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'BiSquare'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.analyze_patterns.gwr" title="Permalink to this definition">¶</a></dt>
 <dd><p>This tool performs GeographicallyWeightedRegression (GWR), which is a
 local form of linear regression used to model spatially varying
 relationships.</p>
@@ -1214,27 +1412,23 @@ and the explanatory variables. See <a class="reference internal" href="arcgis.ge
 </tr>
 <tr class="row-odd"><td><p>dependent_variable</p></td>
 <td><p>Required list. The numeric field containing the observed values you want to model.</p>
-<p>Syntax: [‘arrests’]</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">['arrests']</span></code></p>
 </td>
 </tr>
 <tr class="row-even"><td><p>explanatory_variables</p></td>
-<td><p>Required list. One or more fields representing independent explanatory variables in your regression model.</p>
-<p>Syntax: [‘population’, ‘avg_income’, ‘avg_ed_lvl’]</p>
+<td><p>Required list. One or more fields representing independent explanatory variables
+in your regression model.</p>
+<p>Syntax: <code class="docutils literal notranslate"><span class="pre">['population',</span> <span class="pre">'avg_income',</span> <span class="pre">'avg_ed_lvl']</span></code></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>model_type</p></td>
 <td><p>Optional String.  The default is ‘Continuous’.  Specifies the type of data that will be modeled.</p></td>
 </tr>
 <tr class="row-even"><td><p>neighborhood_selection_method</p></td>
-<td><p>Optional String. The default value is ‘NumberOfNeighbors’. Specifies how the
+<td><p>Optional String. The default value is <code class="docutils literal notranslate"><span class="pre">number_of_neighbors</span></code>. Specifies how the
 neighborhood size will be determined.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>UserDefined - The neighborhood size will be specified by either the</dt><dd><p><cite>number_of_neighbors</cite> or <cite>distance_band</cite> parameter.</p>
-</dd>
-</dl>
-</li>
-</ul>
+<p>The neighborhood size will be specified by either the <code class="docutils literal notranslate"><span class="pre">number_of_neighbors</span></code>
+or  <code class="docutils literal notranslate"><span class="pre">distance_band</span></code> argument.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>neighborhood_type</p></td>
@@ -1250,14 +1444,25 @@ neighborhood size will be determined.</p>
 </tr>
 <tr class="row-odd"><td><p>distance_band_unit</p></td>
 <td><p>Optional String. The unit of the distance for the spatial extent of the neighborhood.</p>
-<p>Values: <cite>Meters, Kilometers, Feet, Miles, NauticalMiles, or Yards</cite></p>
+<dl class="simple">
+<dt>Values:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Meters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Kilometers</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Feet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Miles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NauticalMiles</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Yards</span></code></p></li>
+</ul>
+</dd>
+</dl>
 </td>
 </tr>
 <tr class="row-even"><td><p>number_of_neighbors</p></td>
 <td><p>Optional Integer. The closest number of neighbors to consider for each feature. The number should be an integer greater than or equal to <cite>2</cite>.</p></td>
 </tr>
 <tr class="row-odd"><td><p>local_weighting_scheme</p></td>
-<td><p>Optional String. Specifies the kernel type that will be used to provide the spatial weighting in the model. The kernel defines how each feature is related to other features within its neighborhood.</p>
+<td><p>Optional String. Specifies the kernel type that will be used to provide the spatial weighting in the model.
+The kernel defines how each feature is related to other features within its neighborhood.</p>
 <ul class="simple">
 <li><p>BiSquare - A weight of 0 will be assigned to any feature outside the neighborhood specified. This is the default.</p></li>
 <li><p>Gaussian - All features will receive weights, but weights become exponentially smaller the farther away from the target feature.</p></li>
@@ -1269,17 +1474,19 @@ neighborhood size will be determined.</p>
 results. You define the name of the service.</p></td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional GIS. The GIS on which this tool runs. If not
+<td><p>Optional <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>. The GIS on which this tool runs. If not
 specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>context</p></td>
 <td><p>Optional dict. The context parameter contains additional settings that affect task execution. For this task, there are four settings:</p>
-<ol class="arabic simple">
-<li><p>Extent (<code class="docutils literal notranslate"><span class="pre">extent</span></code>) - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
-<li><p>Processing spatial reference (<code class="docutils literal notranslate"><span class="pre">processSR</span></code>) - The features will be projected into this coordinate system for analysis.</p></li>
-<li><p>Output spatial reference (<code class="docutils literal notranslate"><span class="pre">outSR</span></code>) - The features will be projected into this coordinate system after the analysis to be saved. The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
-<li><p>Data store (<code class="docutils literal notranslate"><span class="pre">dataStore</span></code>) - Results will be saved to the specified data store. For ArcGIS Enterprise, the default is the spatiotemporal big data store.</p></li>
-</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - A bounding box that defines the analysis area. Only those features that intersect the bounding box will be analyzed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">processSR</span></code> - The features will be projected into this coordinate system for analysis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - The features will be projected into this coordinate system after the analysis to be saved. The output spatial reference for the spatiotemporal big data store is always WGS84.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataStore</span></code> - Results will be saved to the specified data store. For ArcGIS Enterprise, the default is the spatiotemporal big data store.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
@@ -1331,12 +1538,12 @@ results. The GPJob can be queried on the status of the execution.</p>
 
   </div>
   
-    Options v: 2.0.1
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.1
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -1344,6 +1551,10 @@ results. The GPJob can be queried on the status of the execution.</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
         
           
           <dd><a href="2.0.0/">2.0.0</a></dd>
