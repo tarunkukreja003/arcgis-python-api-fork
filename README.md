@@ -8,6 +8,7 @@ This SDK repository contains the following items:
 * API Reference Documentation. A hosted version of this can be found [here](https://developers.arcgis.com/python/api-reference/).
 * Samples as Jupyter Notebooks.
 * Guides chapters as Jupyter Notebooks.
+* API Reference Documentation can be found [here](https://developers.arcgis.com/python/api-reference/).  Downloads are available for current and previous versions [here](https://developers.arcgis.com/downloads/#python).
 
 You have multiple ways of executing these notebooks as listed below:
 
