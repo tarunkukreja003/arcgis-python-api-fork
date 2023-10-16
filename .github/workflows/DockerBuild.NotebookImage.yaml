@@ -52,7 +52,6 @@ jobs:
             type=raw,value=${{ inputs.version }},enable=${{ inputs.is_default_supported_python && github.ref_name == github.event.repository.default_branch }}
             type=raw,value=latest,enable=${{ inputs.is_latest_release && inputs.is_default_supported_python && github.ref_name == github.event.repository.default_branch }}
             type=schedule,pattern={{date 'YY.MM'}},enable=${{ inputs.is_latest_release && inputs.is_default_supported_python && github.ref_name == github.event.repository.default_branch }}
-            type=sha,format=long
 
       - id: docker_build
         name: Build image and push to GitHub Container Registry
