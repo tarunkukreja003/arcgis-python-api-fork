@@ -4,11 +4,10 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.apps.storymap module &mdash; arcgis 2.0.0 documentation</title>
+  <title>arcgis.apps.storymap module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -36,7 +35,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -80,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.0
+                2.1.0
               </div>
             
           
@@ -105,18 +103,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.toc.html">arcgis.raster module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.notebook.html">arcgis.notebook module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.graph.html">arcgis.graph module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.toc.html">arcgis.mapping module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.realtime.html">arcgis.realtime module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a></li>
@@ -146,7 +146,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l4"><a class="reference internal" href="#swipe">Swipe</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sidecar">Sidecar</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#timeline">Timeline</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-arcgis.apps.storymap.storymap">arcgis.apps.storymap.storymap module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scales">Scales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#maptour">MapTour</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.survey123.html">arcgis.apps.survey123 module</a></li>
@@ -229,15 +230,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section id="module-arcgis.apps.storymap">
+  <div class="section" id="module-arcgis.apps.storymap">
 <span id="arcgis-apps-storymap-module"></span><h1>arcgis.apps.storymap module<a class="headerlink" href="#module-arcgis.apps.storymap" title="Permalink to this headline">¶</a></h1>
 <p>StoryMap Implementation</p>
 <p>The <a class="reference internal" href="#arcgis.apps.storymap.story.StoryMap" title="arcgis.apps.storymap.story.StoryMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">StoryMap</span></code></a> is the main entry point into the Story Map module.</p>
-<section id="storymap">
+<div class="section" id="storymap">
 <h2>StoryMap<a class="headerlink" href="#storymap" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story.StoryMap">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story.</code><code class="sig-name descname">StoryMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span><a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.Item" title="arcgis.gis.Item">arcgis.gis.Item</a><span class="p">, </span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS">arcgis.gis.GIS</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story.</span></code><code class="sig-name descname"><span class="pre">StoryMap</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A Story Map is a web map that has been thoughtfully created, given context, and provided
 with supporting information so it becomes a stand-alone resource. It integrates maps, legends,
@@ -254,11 +255,11 @@ If you start to work on your Story that has unpublished changes and save from th
 unpublished changes on the GUI will be overwritten with your work from the API.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>item</p></td>
@@ -267,13 +268,13 @@ unpublished changes on the GUI will be overwritten with your work from the API.<
 your active portal.</p></td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional instance of GIS. If none provided the active gis is used.</p></td>
+<td><p>Optional instance of <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a> . If none provided the active gis is used.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.add">
-<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image">arcgis.apps.storymap.story_content.Image</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Video" title="arcgis.apps.storymap.story_content.Video">arcgis.apps.storymap.story_content.Video</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Audio" title="arcgis.apps.storymap.story_content.Audio">arcgis.apps.storymap.story_content.Audio</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Embed" title="arcgis.apps.storymap.story_content.Embed">arcgis.apps.storymap.story_content.Embed</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Map" title="arcgis.apps.storymap.story_content.Map">arcgis.apps.storymap.story_content.Map</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Button" title="arcgis.apps.storymap.story_content.Button">arcgis.apps.storymap.story_content.Button</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Text" title="arcgis.apps.storymap.story_content.Text">arcgis.apps.storymap.story_content.Text</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Gallery" title="arcgis.apps.storymap.story_content.Gallery">arcgis.apps.storymap.story_content.Gallery</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">caption</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">alt_text</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">position</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.add" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this method to add content to your StoryMap. Content can be of various class types and when
 you add this content you can specify a caption, alt_text, display style, and the position
 at which it will be in your story.
@@ -290,7 +291,7 @@ to the documentation for each.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>content</p></td>
@@ -314,14 +315,12 @@ to the documentation for each.</p>
 </tr>
 <tr class="row-odd"><td><p>display</p></td>
 <td><p>Optional String. How the item will be displayed in the story map.</p>
-<blockquote>
-<div><p>For Image, Video, Audio, or Map object.
+<p>For Image, Video, Audio, or Map object.
 Values: “small” | “wide” | “full” | “float”</p>
 <p>For Gallery:
 Values: “jigsaw” | “square-dynamic”</p>
 <p>For Embed:
 Values: “card” | “inline”</p>
-</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>position</p></td>
@@ -354,8 +353,51 @@ added. To see all node positions use the <code class="docutils literal notransla
 </dd></dl>
 
 <dl class="py method">
+<dt id="arcgis.apps.storymap.story.StoryMap.copy_content">
+<code class="sig-name descname"><span class="pre">copy_content</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_story</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.copy_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy the content from one story to another. This will copy the content
+indicated to the target story in the order they are provided. To change the
+order once the nodes are copied, use the <cite>move()</cite> method on the target story.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not forget to save the target story once you are done copying and making
+any further edits.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can take time depending on the number of resources. Each resource coming
+from a file must be copied over and heavy files, such as videos or audio, can be time
+consuming.</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>target_story</p></td>
+<td><p>Required StoryMap instance. The target story that the content will be
+copied to.</p></td>
+</tr>
+<tr class="row-odd"><td><p>node_list</p></td>
+<td><p>Required list of strings. The list of node ids indicating the content
+that will be copied to the target story.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if all nodes have been successfully copied over.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.cover">
-<code class="sig-name descname">cover</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">summary</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">by_line</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">image</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image">arcgis.apps.storymap.story_content.Image</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.cover" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">cover</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">by_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.cover" title="Permalink to this definition">¶</a></dt>
 <dd><p>A story’s cover is at the top of the story and always the first node.
 This method allows the cover to be edited by updating the title, byline, image, and more.
 Changing one part of the story cover will not change the rest of the story cover. If just the
@@ -366,11 +408,11 @@ image is passed in then only the image will change.</p>
 </div>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 13%" />
+<col style="width: 87%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>title</p></td>
@@ -388,7 +430,7 @@ image is passed in then only the image will change.</p>
 <td><p>Optional string. Crediting the author(s).</p></td>
 </tr>
 <tr class="row-even"><td><p>image</p></td>
-<td><p>Optional Image object. The cover image for the story cover.</p></td>
+<td><p>Optional <a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> object. The cover image for the story cover.</p></td>
 </tr>
 </tbody>
 </table>
@@ -406,7 +448,7 @@ image is passed in then only the image will change.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.cover_date">
-<em class="property">property </em><code class="sig-name descname">cover_date</code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.cover_date" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">cover_date</span></code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.cover_date" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the date type shown on the story cover.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -414,7 +456,7 @@ image is passed in then only the image will change.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>date_type</p></td>
@@ -428,7 +470,7 @@ image is passed in then only the image will change.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.credits">
-<code class="sig-name descname">credits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attribution</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">heading</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.credits" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">credits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heading</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.credits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Credits are found at the end of the story and thus are always the last node.</p>
 <p>To create a credit, add the text that should be shown on each side of the divider.
 Content represents the text seen on the left side and attribution is in line with content
@@ -442,7 +484,7 @@ credits.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>content</p></td>
@@ -479,13 +521,13 @@ Adds to the existing credits.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.delete_story">
-<code class="sig-name descname">delete_story</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.delete_story" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete_story</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.delete_story" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes the story item.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.duplicate">
-<code class="sig-name descname">duplicate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.duplicate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">duplicate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.duplicate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Duplicate the story. All items will be duplicated as they are. This allows you to create
 a story template and duplicate it when you want to work with it.</p>
 <p>It is highly recommended that once the duplicate is created, open it in Story Maps
@@ -500,7 +542,7 @@ builder to ensure the issue checker finds any issues before editing.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>title</p></td>
@@ -527,17 +569,17 @@ ArcGISOnline.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.get">
-<code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.get" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get node(s) by type or by their id. Using this function will help grab a specific node
 from the story if a node id is provided. Set this to a variable and this way edits can be
 made on the node in the story.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 18%" />
+<col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>node_id</p></td>
@@ -547,10 +589,8 @@ This will return the class of the node if of type story content.</p></td>
 <tr class="row-odd"><td><p>type</p></td>
 <td><p>Optional string. The type of nodes that user wants returned.
 If none specified, list of all nodes returned.</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;image&quot;</span> <span class="pre">|</span> <span class="pre">&quot;video&quot;</span> <span class="pre">|</span> <span class="pre">&quot;audio&quot;</span> <span class="pre">|</span> <span class="pre">&quot;embed&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webmap&quot;</span> <span class="pre">|</span> <span class="pre">&quot;text&quot;</span> <span class="pre">|</span>
-<span class="pre">&quot;button&quot;</span> <span class="pre">|</span> <span class="pre">&quot;separator&quot;</span> <span class="pre">|</span> <span class="pre">&quot;expressmap&quot;</span> <span class="pre">|</span> <span class="pre">&quot;webscene&quot;</span> <span class="pre">|</span> <span class="pre">&quot;immersive&quot;</span></code></p>
-</div></blockquote>
+<p>Values: <cite>image</cite> | <cite>video</cite> | <cite>audio</cite> | <cite>embed</cite> | <cite>webmap</cite> | <cite>text</cite> |
+<cite>button</cite> | <cite>separator</cite> | <cite>expressmap</cite> | <cite>webscene</cite> | <cite>immersive</cite></p>
 </td>
 </tr>
 </tbody>
@@ -578,7 +618,7 @@ If none specified, list of all nodes returned.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.move">
-<code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">node_id</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">position</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">delete_current</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.move" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">move</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_current</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.move" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move a node to another position. The node currently at that position will
 be moved down one space. The node at the current position can be deleted
 instead of moved if <cite>delete_current</cite> is set to True.</p>
@@ -588,7 +628,7 @@ instead of moved if <cite>delete_current</cite> is set to True.</p>
 <col style="width: 83%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>node_id</p></td>
@@ -619,7 +659,7 @@ be deleted instead of moved down one space. Default is False.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.navigation">
-<code class="sig-name descname">navigation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nodes</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>list<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hidden</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.navigation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">navigation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.navigation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Story navigation is a way for authors to add headings as
 links to allow readers to navigate between different sections
 of a story. The story navigation node takes <code class="docutils literal notranslate"><span class="pre">TextStyle.HEADING</span></code> text styles
@@ -634,7 +674,7 @@ text nodes to assign them to the navigation.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>nodes</p></td>
@@ -665,25 +705,25 @@ Include in order. This will override current list and order.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.navigation_list">
-<em class="property">property </em><code class="sig-name descname">navigation_list</code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.navigation_list" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">navigation_list</span></code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.navigation_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of the nodes that are linked in the navigation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.nodes">
-<em class="property">property </em><code class="sig-name descname">nodes</code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.nodes" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">nodes</span></code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get main nodes in order of appearance in the story.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>This property returns the storymap’s JSON.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>list<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">publish</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">publish</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method will save your Story Map to your active GIS. The story will be saved
 with unpublished changes unless <cite>publish</cite> parameter is specified to True.</p>
 <p>The title only needs to be specified if a change is wanted, otherwise exisiting title
@@ -706,7 +746,7 @@ other optimizations, such as updating the story’s social/SEO metadata.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>title</p></td>
@@ -719,7 +759,7 @@ other optimizations, such as updating the story’s social/SEO metadata.</p>
 <td><p>Optional string. The access of the StoryMap. If none is specified, the
 current access is kept. This is used when <cite>publish</cite> parameter is set
 to True.</p>
-<p><a href="#id1"><span class="problematic" id="id2">``</span></a>Values: “private” | “org” | “public” ``</p>
+<p>Values: <cite>private</cite> | <cite>org</cite> | <cite>public</cite></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>publish</p></td>
@@ -737,7 +777,7 @@ Default is false so story is saved with unpublished changes.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.show">
-<code class="sig-name descname">show</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">width</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">height</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.show" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">show</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.show" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show a preview of the story. The default is a width of 700 and height of 300.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -745,7 +785,7 @@ Default is false so story is saved with unpublished changes.</p></td>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>width</p></td>
@@ -766,29 +806,29 @@ clicked on.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.story_locale">
-<em class="property">property </em><code class="sig-name descname">story_locale</code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.story_locale" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">story_locale</span></code><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.story_locale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the locale and language of the story.</p>
 <p>If your story was created with the Python API then the default is “en-US”</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story.StoryMap.theme">
-<code class="sig-name descname">theme</code><span class="sig-paren">(</span><em class="sig-param">theme: Union[arcgis.apps.storymap.story.Themes</em>, <em class="sig-param">str] = &lt;Themes.SUMMIT: 'summit'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.theme" title="Permalink to this definition">¶</a></dt>
-<dd><p>Each story has a theme node in it’s resources. This method can be used to change the theme.
+<code class="sig-name descname"><span class="pre">theme</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">theme=&lt;Themes.SUMMIT:</span> <span class="pre">'summit'&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story.StoryMap.theme" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each story has a theme node in its resources. This method can be used to change the theme.
 To add a custom theme to your story, pass in the item_id for the item of type Story Map Theme.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 84%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>theme</p></td>
 <td><p>Required Themes Style or custom theme item id.
 The theme to set the story to.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">SUMMIT</span> <span class="pre">|</span> <span class="pre">TIDAL</span> <span class="pre">|</span> <span class="pre">MESA</span> <span class="pre">|</span> <span class="pre">RIDGELINE</span> <span class="pre">|</span> <span class="pre">SLATE</span> <span class="pre">|</span> <span class="pre">OBSIDIAN</span> <span class="pre">|</span> <span class="pre">&quot;&lt;item_id&gt;&quot;</span></code></p>
+<p>Values: <cite>SUMMIT</cite> | <cite>TIDAL</cite> | <cite>MESA</cite> | <cite>RIDGELINE</cite> | <cite>SLATE</cite> | <cite>OBSIDIAN</cite> | <cite>&lt;item_id&gt;</cite></p>
 </td>
 </tr>
 </tbody>
@@ -803,14 +843,14 @@ The theme to set the story to.</p>
 
 </dd></dl>
 
-</section>
-<section id="image">
+</div>
+<div class="section" id="image">
 <h2>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Image">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Image</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing an <code class="docutils literal notranslate"><span class="pre">image</span></code> from a url or file.</p>
+<p>Class representing an <cite>image</cite> from a url or file.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Image must be smaller than 10 MB to avoid having issues when saving or publishing.</p>
@@ -821,7 +861,7 @@ The theme to set the story to.</p>
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>path</p></td>
@@ -831,7 +871,7 @@ The theme to set the story to.</p>
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Image.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the image.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -839,7 +879,7 @@ The theme to set the story to.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -856,7 +896,7 @@ The theme to set the story to.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Image.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the image.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -864,7 +904,7 @@ The theme to set the story to.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -881,7 +921,7 @@ The theme to set the story to.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Image.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -892,14 +932,14 @@ The theme to set the story to.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Image.display">
-<em class="property">property </em><code class="sig-name descname">display</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.display" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set display for image.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;small&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wide&quot;</span> <span class="pre">|</span> <span class="pre">&quot;full&quot;</span> <span class="pre">|</span> <span class="pre">&quot;float&quot;</span></code></p>
+<p>Values: <cite>small</cite> | <cite>wide</cite> | <cite>full</cite> | <cite>float</cite></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Image.image">
-<em class="property">property </em><code class="sig-name descname">image</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.image" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">image</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the image property.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -907,7 +947,7 @@ The theme to set the story to.</p>
 <col style="width: 73%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>image</p></td>
@@ -924,7 +964,7 @@ The theme to set the story to.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Image.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Image.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties for the Image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -938,21 +978,21 @@ to the story.</p>
 
 </dd></dl>
 
-</section>
-<section id="video">
+</div>
+<div class="section" id="video">
 <h2>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Video">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Video</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Video</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing a <code class="docutils literal notranslate"><span class="pre">video</span></code> from a url or file</p>
+<p>Class representing a <cite>video</cite> from a url or file</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>path</p></td>
@@ -969,7 +1009,7 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Video.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the video.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -977,7 +1017,7 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -994,7 +1034,7 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Video.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the video.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1002,7 +1042,7 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -1019,7 +1059,7 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Video.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1030,9 +1070,9 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Video.display">
-<em class="property">property </em><code class="sig-name descname">display</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.display" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set display for the video.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;small&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wide&quot;</span> <span class="pre">|</span> <span class="pre">&quot;full&quot;</span> <span class="pre">|</span> <span class="pre">&quot;float&quot;</span></code></p>
+<p>Values: <cite>small</cite> | <cite>wide</cite> | <cite>full</cite> | <cite>float</cite></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Cannot change display when video is created from a url</p>
@@ -1041,7 +1081,7 @@ Example: “<a class="reference external" href="https://www.youtube.com/embed/G6
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Video.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties for the Video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1058,7 +1098,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Video.video">
-<em class="property">property </em><code class="sig-name descname">video</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.video" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">video</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Video.video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the video property.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1066,7 +1106,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>video</p></td>
@@ -1083,14 +1123,14 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 </dd></dl>
 
-</section>
-<section id="audio">
+</div>
+<div class="section" id="audio">
 <h2>Audio<a class="headerlink" href="#audio" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Audio">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Audio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Audio</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>This class represents content that is of type <code class="docutils literal notranslate"><span class="pre">audio</span></code>. It can be created from
+<p>This class represents content that is of type <cite>audio</cite>. It can be created from
 a file path and added to the story.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1098,7 +1138,7 @@ a file path and added to the story.</p>
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>path</p></td>
@@ -1108,7 +1148,7 @@ a file path and added to the story.</p>
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Audio.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the audio.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1116,7 +1156,7 @@ a file path and added to the story.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -1133,7 +1173,7 @@ a file path and added to the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Audio.audio">
-<em class="property">property </em><code class="sig-name descname">audio</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.audio" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">audio</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.audio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the audio path.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1141,7 +1181,7 @@ a file path and added to the story.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>audio</p></td>
@@ -1158,7 +1198,7 @@ a file path and added to the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Audio.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the audio.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1166,7 +1206,7 @@ a file path and added to the story.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -1183,7 +1223,7 @@ a file path and added to the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Audio.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1194,16 +1234,14 @@ a file path and added to the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Audio.display">
-<em class="property">property </em><code class="sig-name descname">display</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.display" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set display for audio.</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;small&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wide&quot;</span> <span class="pre">|</span> <span class="pre">&quot;float&quot;</span></code></p>
-</div></blockquote>
+<p>Values: <cite>small</cite> | <cite>wide</cite> | float`</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Audio.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Audio.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties for the Audio.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1217,14 +1255,14 @@ dictionary for the audio.</p>
 
 </dd></dl>
 
-</section>
-<section id="embed">
+</div>
+<div class="section" id="embed">
 <h2>Embed<a class="headerlink" href="#embed" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Embed">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Embed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Embed</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing a <code class="docutils literal notranslate"><span class="pre">webpage</span></code> or <code class="docutils literal notranslate"><span class="pre">embedded</span> <span class="pre">audio</span></code>.
+<p>Class representing a <cite>webpage</cite> or <cite>embedded audio</cite>.
 Embed will show as a card in the story.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1232,7 +1270,7 @@ Embed will show as a card in the story.</p>
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>path</p></td>
@@ -1243,7 +1281,7 @@ audio embed into the story.</p></td>
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Embed.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the embed.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1251,7 +1289,7 @@ audio embed into the story.</p></td>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -1268,7 +1306,7 @@ audio embed into the story.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Embed.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the webpage.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1276,7 +1314,7 @@ audio embed into the story.</p></td>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -1293,7 +1331,7 @@ audio embed into the story.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Embed.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1304,14 +1342,14 @@ audio embed into the story.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Embed.display">
-<em class="property">property </em><code class="sig-name descname">display</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.display" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set display for embed.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;card&quot;</span> <span class="pre">|</span> <span class="pre">&quot;inline&quot;</span></code></p>
+<p>Values: <cite>card</cite> | <cite>inline</cite></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Embed.link">
-<em class="property">property </em><code class="sig-name descname">link</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.link" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">link</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the link property.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1319,7 +1357,7 @@ audio embed into the story.</p></td>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>link</p></td>
@@ -1336,7 +1374,7 @@ audio embed into the story.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Embed.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Embed.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties for the Embed.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1352,21 +1390,21 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 </dd></dl>
 
-</section>
-<section id="map">
+</div>
+<div class="section" id="map">
 <h2>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Map">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Map</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.Item" title="arcgis.gis.Item">arcgis.gis.Item</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Map</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing a <code class="docutils literal notranslate"><span class="pre">webmap</span></code> or <code class="docutils literal notranslate"><span class="pre">webscene</span></code> for the story</p>
+<p>Class representing a <cite>webmap</cite> or <cite>webscene</cite> for the story</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 80%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>item</p></td>
@@ -1378,7 +1416,7 @@ id to add to the story map.</p></td>
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Map.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the map.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1386,7 +1424,7 @@ id to add to the story map.</p></td>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -1403,7 +1441,7 @@ id to add to the story map.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Map.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the map.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1411,7 +1449,7 @@ id to add to the story map.</p></td>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -1428,20 +1466,31 @@ id to add to the story map.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Map.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Map.display">
-<em class="property">property </em><code class="sig-name descname">display</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.display" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the display type of the map.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;standard&quot;</span> <span class="pre">|</span> <span class="pre">&quot;wide&quot;</span> <span class="pre">|</span> <span class="pre">&quot;full&quot;</span> <span class="pre">|</span> <span class="pre">&quot;float&quot;</span></code></p>
+<p>Values: <cite>standard</cite> | <cite>wide</cite> | <cite>full</cite> | <cite>float right</cite> | <cite>float left</cite></p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.Map.legend_pinned">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">legend_pinned</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.legend_pinned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the legend pinned toggle. True if enabled and False if disabled.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If set to True, make sure <cite>show_legend</cite> is also True. Otherwise, you will not
+see the legend pinned.</p>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Map.map">
-<em class="property">property </em><code class="sig-name descname">map</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.map" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">map</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.map" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the map property.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1449,7 +1498,7 @@ id to add to the story map.</p></td>
 <col style="width: 71%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>map</p></td>
@@ -1470,7 +1519,8 @@ or <a class="reference internal" href="arcgis.mapping.toc.html#arcgis.mapping.We
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Only replace Map with a new map of same type.</p>
+<p>Only replace a Map with a new map of same type. Cannot replace a
+2D map with 3D.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1481,12 +1531,13 @@ or <a class="reference internal" href="arcgis.mapping.toc.html#arcgis.mapping.We
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Map.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties for the Map.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A dictionary depicting the node dictionary and resource
-dictionary for the map.
+dictionary for the map. The resource dictionary depicts the
+original map settings. The node dictionary depicts the current map settings.
 If nothing it returned, make sure the content is part of the story.</p>
 </dd>
 </dl>
@@ -1496,42 +1547,117 @@ If nothing it returned, make sure the content is part of the story.</p>
 </div>
 </dd></dl>
 
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.Map.set_viewpoint">
+<code class="sig-name descname"><span class="pre">set_viewpoint</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.set_viewpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the extent and/or scale for the map in the story.</p>
+<p>If you have an extent to use from a bookmark,
+find this extent by using the <cite>bookmarks</cite> property in
+the <a class="reference internal" href="arcgis.mapping.toc.html#arcgis.mapping.WebMap" title="arcgis.mapping.WebMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebMap</span></code></a> Class.
+The <cite>map</cite> property on this class will return the Web Map
+Item being used. By passing this item into
+the <a class="reference internal" href="arcgis.mapping.toc.html#arcgis.mapping.WebMap" title="arcgis.mapping.WebMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebMap</span></code></a> Class you can retrieve a list of all
+bookmarks and their extents with the <cite>bookmarks</cite> property.</p>
+<p>To see the current viewpoint call the <cite>properties</cite> property on the Map
+node.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>extent</p></td>
+<td><p>Optional dictionary representing the extent of
+the map. This will update the extent, center and viewpoint
+accordingly.</p>
+<dl>
+<dt>Example:</dt><dd><div class="line-block">
+<div class="line">{‘spatialReference’: {‘latestWkid’: 3857, ‘wkid’: 102100},</div>
+<div class="line">‘xmin’: -609354.6306080809,</div>
+<div class="line">‘ymin’: 2885721.2797636474,</div>
+<div class="line">‘xmax’: 6068184.160383142,</div>
+<div class="line">‘ymax’: 6642754.094035632}</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><p>scale</p></td>
+<td><p>Optional Scales Value. Define the scale of the map.
+If none specified, current scale is kept.
+Find the available scales in the
+<a class="reference internal" href="#arcgis.apps.storymap.story_content.Scales" title="arcgis.apps.storymap.story_content.Scales"><code class="xref py py-class docutils literal notranslate"><span class="pre">Scales</span></code></a> Class.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current viewpoint dictionary</p>
+</dd>
+</dl>
 </dd></dl>
 
-</section>
-<section id="text">
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.Map.show_legend">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">show_legend</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.show_legend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the showing legend toggle. True if enabled and False if disabled</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.Map.show_search">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">show_search</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.show_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the search toggle. True if enabled and False if disabled</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.Map.time_slider">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">time_slider</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Map.time_slider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get/Set the time slider toggle. True if enabled and False if disabled</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="text">
 <h2>Text<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Text">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Text</code><span class="sig-paren">(</span><em class="sig-param">text: Optional[str] = None</em>, <em class="sig-param">style: arcgis.apps.storymap.story_content.TextStyles = &lt;TextStyles.PARAGRAPH: 'paragraph'&gt;</em>, <em class="sig-param">color: str = '000'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Text</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">text=None</span></em>, <em class="sig-param"><span class="pre">style=&lt;TextStyles.PARAGRAPH:</span> <span class="pre">'paragraph'&gt;</span></em>, <em class="sig-param"><span class="pre">color=None</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing a <code class="docutils literal notranslate"><span class="pre">text</span></code> and a style of text.</p>
+<p>Class representing a <cite>text</cite> and a style of text.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 18%" />
+<col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>text</p></td>
 <td><p>Required String. The text that will be shown in the story.</p>
-<blockquote>
-<div><p>Example:
-“Paragraph with &lt;strong&gt;bold&lt;/strong&gt;,
-&lt;em&gt;italic&lt;/em&gt; and
-&lt;a href=”<a class="reference external" href="https://www.google.com">https://www.google.com</a>” rel=”noopener noreferrer”
-target=”_blank”&gt;hyperlink&lt;/a&gt; and a
-&lt;span class=”sm-text-color-080”&gt;custom color&lt;/span&gt;”</p>
-</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usage Example for paragraph:</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;Paragraph with &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;</span>
+<span class="s1">                and &lt;a href=&quot;https://www.google.com&quot; rel=&quot;noopener noreferrer&quot;</span>
+<span class="s1">                target=&quot;_blank&quot;&gt;hyperlink&lt;/a&gt; and a &lt;span</span>
+<span class="s1">                class=&quot;sm-text-color-080&quot;&gt;custom color&lt;/span&gt;&#39;&#39;&#39;</span><span class="p">)</span>
+
+<span class="c1"># Usage Example for numbered list:</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="p">(</span><span class="s2">&quot;&lt;li&gt;List Item1&lt;/li&gt; &lt;li&gt;List Item2&lt;/li&gt; &lt;li&gt;List Item3&lt;/li&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </td>
 </tr>
 <tr class="row-odd"><td><p>style</p></td>
 <td><p>Optional TextStyles type. There are 7 different styles of text that can be
 added to a story.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">PARAGRAPH</span> <span class="pre">|</span> <span class="pre">LARGEPARAGRAPH</span> <span class="pre">|</span> <span class="pre">NUMBERLIST</span> <span class="pre">|</span> <span class="pre">BULLETLIST</span> <span class="pre">|</span>
-<span class="pre">HEADING</span> <span class="pre">|</span> <span class="pre">SUBHEADING</span> <span class="pre">|</span> <span class="pre">QUOTE</span></code></p>
+<p>Values: PARAGRAPH | LARGEPARAGRAPH | NUMBERLIST | BULLETLIST |
+HEADING | SUBHEADING | QUOTE</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>custom_color</p></td>
@@ -1558,7 +1684,7 @@ Only available when type is either ‘paragraph’, ‘bullet-list’, or
 &lt;strong&gt;, &lt;em&gt;, &lt;a href=”{link}” rel=”noopener noreferer” target=”_blank”
 and a class attribute to indicate color formatting:
 class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;a&gt; | &lt;span&gt; tags</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">themeColor1</span> <span class="pre">|</span> <span class="pre">themeColor2</span> <span class="pre">|</span> <span class="pre">themeColor3</span> <span class="pre">|</span> <span class="pre">customTextColors</span></code></p>
+<p>Values: <cite>themeColor1</cite> | <cite>themeColor2</cite> | <cite>themeColor3</cite> | <cite>customTextColors</cite></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>large-paragraph</p></td>
@@ -1566,7 +1692,7 @@ class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;
 &lt;strong&gt;, &lt;em&gt;, &lt;a href=”{link}” rel=”noopener noreferer” target=”_blank”
 and a class attribute to indicate color formatting:
 class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;a&gt; | &lt;span&gt; tags</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">themeColor1</span> <span class="pre">|</span> <span class="pre">themeColor2</span> <span class="pre">|</span> <span class="pre">themeColor3</span> <span class="pre">|</span> <span class="pre">customTextColors</span></code></p>
+<p>Values: <cite>themeColor1</cite> | <cite>themeColor2</cite> | <cite>themeColor3</cite> | <cite>customTextColors</cite></p>
 </td>
 </tr>
 <tr class="row-even"><td><p>heading</p></td>
@@ -1580,7 +1706,7 @@ class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;
 &lt;strong&gt;, &lt;em&gt;, &lt;a href=”{link}” rel=”noopener noreferer” target=”_blank”
 and a class attribute to indicate color formatting:
 class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;a&gt; | &lt;span&gt; tags</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">themeColor1</span> <span class="pre">|</span> <span class="pre">themeColor2</span> <span class="pre">|</span> <span class="pre">themeColor3</span> <span class="pre">|</span> <span class="pre">customTextColors</span></code></p>
+<p>Values: <cite>themeColor1</cite> | <cite>themeColor2</cite> | <cite>themeColor3</cite> | <cite>customTextColors</cite></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>numbered-list</p></td>
@@ -1588,7 +1714,7 @@ class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;
 &lt;strong&gt;, &lt;em&gt;, &lt;a href=”{link}” rel=”noopener noreferer” target=”_blank”
 and a class attribute to indicate color formatting:
 class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;a&gt; | &lt;span&gt; tags</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">themeColor1</span> <span class="pre">|</span> <span class="pre">themeColor2</span> <span class="pre">|</span> <span class="pre">themeColor3</span> <span class="pre">|</span> <span class="pre">customTextColors</span></code></p>
+<p>Values: <cite>themeColor1</cite> | <cite>themeColor2</cite> | <cite>themeColor3</cite> | <cite>customTextColors</cite></p>
 </td>
 </tr>
 <tr class="row-even"><td><p>quote</p></td>
@@ -1598,7 +1724,7 @@ class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Text.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1609,7 +1735,7 @@ class=sm-text-color-{values} attribute in the &lt;strong&gt; | &lt;em&gt; | &lt;
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Text.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the properties for the text.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1621,7 +1747,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Text.text">
-<em class="property">property </em><code class="sig-name descname">text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text.text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Text.text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the text itself for the text node.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1629,7 +1755,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 <col style="width: 74%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>text</p></td>
@@ -1647,21 +1773,21 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 </dd></dl>
 
-</section>
-<section id="button">
+</div>
+<div class="section" id="button">
 <h2>Button<a class="headerlink" href="#button" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Button">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Button</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">link</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">text</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Button</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing a <code class="docutils literal notranslate"><span class="pre">button</span></code>.</p>
+<p>Class representing a <cite>button</cite>.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>link</p></td>
@@ -1675,13 +1801,13 @@ the link.</p></td>
 </table>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Button.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Button.link">
-<em class="property">property </em><code class="sig-name descname">link</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.link" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">link</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.link" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the link for the button.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1689,7 +1815,7 @@ the link.</p></td>
 <col style="width: 74%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>link</p></td>
@@ -1707,7 +1833,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Button.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the properties for the button.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1719,7 +1845,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Button.text">
-<em class="property">property </em><code class="sig-name descname">text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Button.text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the text for the button.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1727,7 +1853,7 @@ If nothing is returned, make sure the content is part of the story.</p>
 <col style="width: 74%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>text</p></td>
@@ -1745,14 +1871,14 @@ If nothing is returned, make sure the content is part of the story.</p>
 
 </dd></dl>
 
-</section>
-<section id="gallery">
+</div>
+<div class="section" id="gallery">
 <h2>Gallery<a class="headerlink" href="#gallery" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Gallery">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Gallery</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Gallery</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Class representing an <code class="docutils literal notranslate"><span class="pre">image</span> <span class="pre">gallery</span></code></p>
+<p>Class representing an <cite>image gallery</cite></p>
 <p>To begin with a new gallery, simply call the class. Once added to the story,
 you can add up to 12 images.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Images to add to the gallery.</span>
@@ -1768,14 +1894,14 @@ you can add up to 12 images.</p>
 </div>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.add_images">
-<code class="sig-name descname">add_images</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">images</span><span class="p">:</span> <span class="n">list<span class="p">[</span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image">Image</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.add_images" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">add_images</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.add_images" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils align-default">
 <colgroup>
 <col style="width: 21%" />
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>images</p></td>
@@ -1787,7 +1913,7 @@ you can add up to 12 images.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the swipe.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1795,7 +1921,7 @@ you can add up to 12 images.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -1812,7 +1938,7 @@ you can add up to 12 images.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the swipe.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1820,7 +1946,7 @@ you can add up to 12 images.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -1837,14 +1963,16 @@ you can add up to 12 images.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.delete_image">
-<code class="sig-name descname">delete_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.delete_image" title="Permalink to this definition">¶</a></dt>
-<dd><table class="docutils align-default">
+<code class="sig-name descname"><span class="pre">delete_image</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.delete_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>The delete_image method is used to delete one image from the gallery. To see a list of images
+used in the gallery, use the <a class="reference internal" href="#arcgis.apps.storymap.story_content.Gallery.images" title="arcgis.apps.storymap.story_content.Gallery.images"><code class="xref py py-meth docutils literal notranslate"><span class="pre">images()</span></code></a> property.</p>
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 20%" />
 <col style="width: 80%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>image</p></td>
@@ -1852,18 +1980,23 @@ you can add up to 12 images.</p>
 </tr>
 </tbody>
 </table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The current list of images in the gallery.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.display">
-<em class="property">property </em><code class="sig-name descname">display</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.display" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">display</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.display" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the display type of the Gallery.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;jigsaw&quot;</span> <span class="pre">|</span> <span class="pre">&quot;square-dynamic&quot;</span></code></p>
+<p>Values: <cite>jigsaw</cite> | <cite>square-dynamic</cite></p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.images">
-<em class="property">property </em><code class="sig-name descname">images</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.images" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">images</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.images" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set list of image nodes in the image gallery. Setting the lists allows the images
 to be reordered.</p>
 <table class="docutils align-default">
@@ -1872,14 +2005,18 @@ to be reordered.</p>
 <col style="width: 79%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>node_list</p></td>
 <td><p>List of node ids for the images in the gallery. Nodes must already be
 in the gallery and this list will adjust the order of the images.</p>
-<p>To add new images to the gallery use: Gallery.add_images(images)
-To delete an image from a gallery use: Gallery.delete_image(node_id)</p>
+<dl class="simple">
+<dt>To add new images to the gallery use:</dt><dd><p>Gallery.add_images(images)</p>
+</dd>
+<dt>To delete an image from a gallery use:</dt><dd><p>Gallery.delete_image(node_id)</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1894,7 +2031,7 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Gallery.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Gallery.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties of the Gallery object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -1906,28 +2043,28 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 
 </dd></dl>
 
-</section>
-<section id="swipe">
+</div>
+<div class="section" id="swipe">
 <h2>Swipe<a class="headerlink" href="#swipe" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Swipe">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Swipe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">story</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Swipe</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">story</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Create an Swipe object from a pre-existing <code class="docutils literal notranslate"><span class="pre">swipe</span></code> node.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 16%" />
+<col style="width: 84%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>node</p></td>
 <td><p>Required String. The node id for the swipe type.</p></td>
 </tr>
 <tr class="row-odd"><td><p>story</p></td>
-<td><p>Required StoryMap that the swipe belongs to.</p></td>
+<td><p>Required <a class="reference internal" href="#arcgis.apps.storymap.story.StoryMap" title="arcgis.apps.storymap.story.StoryMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">StoryMap</span></code></a> that the swipe belongs to.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1942,7 +2079,7 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 </div>
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Swipe.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.alt_text" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">alt_text</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.alt_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the alternte text property for the swipe.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1950,7 +2087,7 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>alt_text</p></td>
@@ -1967,7 +2104,7 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Swipe.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.caption" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">caption</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.caption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the caption property for the swipe.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1975,7 +2112,7 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 <col style="width: 69%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>caption</p></td>
@@ -1992,7 +2129,7 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Swipe.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2003,19 +2140,21 @@ If nothing is returned, make sure the gallery is part of the story.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Swipe.edit">
-<code class="sig-name descname">edit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image">arcgis.apps.storymap.story_content.Image</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Map" title="arcgis.apps.storymap.story_content.Map">arcgis.apps.storymap.story_content.Map</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">position</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'right'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.edit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Edit the media content of a Swipe item.</p>
+<code class="sig-name descname"><span class="pre">edit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'right'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit the media content of a Swipe item. To save your edits and see them
+in the StoryMap’s builder, make sure to save the story.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 9%" />
+<col style="width: 91%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>content</p></td>
-<td><p>Required story content of type: Image or Map.</p></td>
+<td><p>Required story content of type: <a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> or <a class="reference internal" href="#arcgis.apps.storymap.story_content.Map" title="arcgis.apps.storymap.story_content.Map"><code class="xref py py-class docutils literal notranslate"><span class="pre">Map</span></code></a> . Must be the same media
+on both panels.</p></td>
 </tr>
 <tr class="row-odd"><td><p>position</p></td>
 <td><p>Optional String. Either “right” or “left”. Default is “right” so content
@@ -2027,7 +2166,7 @@ will be added to right panel.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Swipe.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Swipe.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get properties of the Swipe object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2038,29 +2177,31 @@ will be added to right panel.</p></td>
 
 </dd></dl>
 
-</section>
-<section id="sidecar">
+</div>
+<div class="section" id="sidecar">
 <h2>Sidecar<a class="headerlink" href="#sidecar" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Sidecar">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Sidecar</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">story</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Sidecar</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">story</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Create an Sidecar immersive object from a pre-existing <code class="docutils literal notranslate"><span class="pre">immersive</span></code> node.</p>
-<p>A sidecar is composed of slides. Slides are composed of two nodes: a narrative panel and a media node.</p>
+<p>A sidecar is composed of slides. Slides are composed of two nodes: a narrative panel and a media node.
+The media node can be a(n): Image, Video, Embed, Map, or Swipe.
+The narrative panel can contain mulitple types of content including Image, Video, Embed, Button, Text, Map, and more.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>node_id</p></td>
 <td><p>Required String. The node id for the sidecar type.</p></td>
 </tr>
 <tr class="row-odd"><td><p>story</p></td>
-<td><p>Required StoryMap that the sidecar belongs to.</p></td>
+<td><p>Required <a class="reference internal" href="#arcgis.apps.storymap.story.StoryMap" title="arcgis.apps.storymap.story.StoryMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">StoryMap</span></code></a> that the sidecar belongs to.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2074,58 +2215,40 @@ will be added to right panel.</p></td>
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="arcgis.apps.storymap.story_content.Sidecar.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.alt_text" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get/Set the alternte text property for the sidecar.</p>
+<dt id="arcgis.apps.storymap.story_content.Sidecar.add_slide">
+<code class="sig-name descname"><span class="pre">add_slide</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">media</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slide_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.add_slide" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a slide to the sidecar. You are able to specify the position of the slide, the
+content of the narrative panel and the media of the slide.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
-<tr class="row-even"><td><p>alt_text</p></td>
-<td><p>String. The new alt_text for the Sidecar.</p></td>
+<tr class="row-even"><td><p>contents</p></td>
+<td><p>Required list of story content item(s). The instances of story content that
+will be added to the narrative panel such as Text, Image, Embed, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>media</p></td>
+<td><p>Optional item that is a story content item.
+Item type for the media node can be: Image, Video, Map, Embed, or Swipe.</p></td>
+</tr>
+<tr class="row-even"><td><p>slide_number</p></td>
+<td><p>Optional Integer. The position at which the new slide will be.
+If none is provided then it will be added as the last slide.</p>
+<p>First slide is 1.</p>
+</td>
 </tr>
 </tbody>
 </table>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The alternate text that is being used.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="arcgis.apps.storymap.story_content.Sidecar.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.caption" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get/Set the caption property for the sidecar.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
-<td><p><strong>Description</strong></p></td>
-</tr>
-<tr class="row-even"><td><p>caption</p></td>
-<td><p>String. The new caption for the Sidecar.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The caption that is being used.</p>
-</dd>
-</dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Sidecar.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2136,20 +2259,31 @@ will be added to right panel.</p></td>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Sidecar.edit">
-<code class="sig-name descname">edit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image">arcgis.apps.storymap.story_content.Image</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Video" title="arcgis.apps.storymap.story_content.Video">arcgis.apps.storymap.story_content.Video</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Map" title="arcgis.apps.storymap.story_content.Map">arcgis.apps.storymap.story_content.Map</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Text" title="arcgis.apps.storymap.story_content.Text">arcgis.apps.storymap.story_content.Text</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Embed" title="arcgis.apps.storymap.story_content.Embed">arcgis.apps.storymap.story_content.Embed</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">slide_number</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.edit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Edit slide text or media content. Media Content can be of type Image, Video, Map, or Embed.</p>
+<code class="sig-name descname"><span class="pre">edit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slide_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Edit method can be used to edit the type of media in a slide of the Sidecar.
+This is done by specifying the slide number and the media content to be added.
+The media can only be of type: Image, Video, Map, or Embed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method should not be used to edit the narrative panel of the Sidecar. To better edit both
+the media and the narrative panel, it is recommended to use the <a class="reference internal" href="#arcgis.apps.storymap.story_content.Sidecar.get" title="arcgis.apps.storymap.story_content.Sidecar.get"><code class="xref py py-func docutils literal notranslate"><span class="pre">get()</span></code></a> method
+in the Sidecar class. The <cite>get</cite> method can be used to change media if the content is of the same
+type as what is currently present and preserve the node_id.</p>
+</div>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>content</p></td>
-<td><p>Required content to replace current media content.
-Item type can be Image, Video, Map, Embed or Text.</p></td>
+<td><p>Required item that is a story content item.
+Item type for the media node can be: <a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a>,
+<a class="reference internal" href="#arcgis.apps.storymap.story_content.Video" title="arcgis.apps.storymap.story_content.Video"><code class="xref py py-class docutils literal notranslate"><span class="pre">Video</span></code></a>, <a class="reference internal" href="#arcgis.apps.storymap.story_content.Map" title="arcgis.apps.storymap.story_content.Map"><code class="xref py py-class docutils literal notranslate"><span class="pre">Map</span></code></a>
+<a class="reference internal" href="#arcgis.apps.storymap.story_content.Embed" title="arcgis.apps.storymap.story_content.Embed"><code class="xref py py-class docutils literal notranslate"><span class="pre">Embed</span></code></a>, <a class="reference internal" href="#arcgis.apps.storymap.story_content.Swipe" title="arcgis.apps.storymap.story_content.Swipe"><code class="xref py py-class docutils literal notranslate"><span class="pre">Swipe</span></code></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>slide_number</p></td>
 <td><p>Required Integer. The slide that will be edited. First slide is 1.</p></td>
@@ -2159,20 +2293,46 @@ Item type can be Image, Video, Map, Embed or Text.</p></td>
 </dd></dl>
 
 <dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.Sidecar.get">
+<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get method is used to get the node that will be edited. Use <cite>sidecar.properties</cite> to
+find all nodes associated with the sidecar.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>node_id</p></td>
+<td><p>Required String. The node id for the content that will be returned.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An class instance of the node type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Sidecar.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.properties" title="Permalink to this definition">¶</a></dt>
-<dd><p>List all slides and their children</p>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all slides and their children for a Sidecar node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>A list where the first item is the node id for the sidecar. Next
-items are dictionary of slides and their children.</p>
+items are slides with the dictionary their children.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Sidecar.remove_slide">
-<code class="sig-name descname">remove_slide</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">slide</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.remove_slide" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remove_slide</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slide</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Sidecar.remove_slide" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a slide from the sidecar.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -2180,7 +2340,7 @@ items are dictionary of slides and their children.</p>
 <col style="width: 82%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>slide</p></td>
@@ -2192,30 +2352,30 @@ items are dictionary of slides and their children.</p>
 
 </dd></dl>
 
-</section>
-<section id="timeline">
+</div>
+<div class="section" id="timeline">
 <h2>Timeline<a class="headerlink" href="#timeline" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="arcgis.apps.storymap.story_content.Timeline">
-<em class="property">class </em><code class="sig-prename descclassname">arcgis.apps.storymap.story_content.</code><code class="sig-name descname">Timeline</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">story</span></em>, <em class="sig-param"><span class="n">node</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Timeline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">story</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Create an Timeline object from a pre-existing <code class="docutils literal notranslate"><span class="pre">timeline</span></code> node.</p>
+<p>Create a Timeline object from a pre-existing <cite>timeline</cite> node.</p>
 <p>A timeline is composed of events.
 Events are composed of maximum three nodes: an image, a sub-heading text, and a paragraph text.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 15%" />
+<col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>node_id</p></td>
 <td><p>Required String. The node id for the timeline type.</p></td>
 </tr>
 <tr class="row-odd"><td><p>story</p></td>
-<td><p>Required StoryMap that the timeline belongs to.</p></td>
+<td><p>Required <a class="reference internal" href="#arcgis.apps.storymap.story.StoryMap" title="arcgis.apps.storymap.story.StoryMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">StoryMap</span></code></a> that the timeline belongs to.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2229,58 +2389,8 @@ Events are composed of maximum three nodes: an image, a sub-heading text, and a 
 </pre></div>
 </div>
 <dl class="py method">
-<dt id="arcgis.apps.storymap.story_content.Timeline.alt_text">
-<em class="property">property </em><code class="sig-name descname">alt_text</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.alt_text" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get/Set the alternte text property for the timeline.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 70%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
-<td><p><strong>Description</strong></p></td>
-</tr>
-<tr class="row-even"><td><p>alt_text</p></td>
-<td><p>String. The new alt_text for the Timeline.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The alternate text that is being used.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="arcgis.apps.storymap.story_content.Timeline.caption">
-<em class="property">property </em><code class="sig-name descname">caption</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.caption" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get/Set the caption property for the timeline.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
-<td><p><strong>Description</strong></p></td>
-</tr>
-<tr class="row-even"><td><p>caption</p></td>
-<td><p>String. The new caption for the Timeline.</p></td>
-</tr>
-</tbody>
-</table>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>The caption that is being used.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Timeline.delete">
-<code class="sig-name descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.delete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the node</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2291,20 +2401,20 @@ Events are composed of maximum three nodes: an image, a sub-heading text, and a 
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Timeline.edit">
-<code class="sig-name descname">edit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image">arcgis.apps.storymap.story_content.Image</a><span class="p">, </span><a class="reference internal" href="#arcgis.apps.storymap.story_content.Text" title="arcgis.apps.storymap.story_content.Text">arcgis.apps.storymap.story_content.Text</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.edit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">edit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.edit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Edit event text or image content.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 83%" />
+<col style="width: 11%" />
+<col style="width: 89%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>content</p></td>
 <td><p>Required content to replace current content.
-Item type can be Image or Text.</p>
+Item type can be <a class="reference internal" href="#arcgis.apps.storymap.story_content.Image" title="arcgis.apps.storymap.story_content.Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image</span></code></a> or <a class="reference internal" href="#arcgis.apps.storymap.story_content.Text" title="arcgis.apps.storymap.story_content.Text"><code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></a> .</p>
 <p>Text can only be of style TextStyles.SUBHEADING or TextStyles.PARAGRAPH</p>
 </td>
 </tr>
@@ -2317,7 +2427,7 @@ Item type can be Image or Text.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Timeline.properties">
-<em class="property">property </em><code class="sig-name descname">properties</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.properties" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">properties</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>List all events and their children</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -2329,7 +2439,7 @@ items are dictionary of events and their children.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Timeline.remove_event">
-<code class="sig-name descname">remove_event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.remove_event" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remove_event</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.remove_event" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove an event from the timeline.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -2337,7 +2447,7 @@ items are dictionary of events and their children.</p>
 <col style="width: 83%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>event</p></td>
@@ -2349,18 +2459,209 @@ items are dictionary of events and their children.</p>
 
 <dl class="py method">
 <dt id="arcgis.apps.storymap.story_content.Timeline.style">
-<em class="property">property </em><code class="sig-name descname">style</code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.style" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">style</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.Timeline.style" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get/Set the style of the timeline</p>
-<p><code class="docutils literal notranslate"><span class="pre">Values:</span> <span class="pre">&quot;waterfall&quot;</span> <span class="pre">|</span> <span class="pre">&quot;single-slide&quot;</span> <span class="pre">|</span> <span class="pre">&quot;condensed&quot;</span></code></p>
+<p>Values: <cite>waterfall</cite> | <cite>single-slide</cite> | <cite>condensed</cite></p>
 </dd></dl>
 
 </dd></dl>
 
-</section>
-<section id="module-arcgis.apps.storymap.storymap">
-<span id="arcgis-apps-storymap-storymap-module"></span><h2>arcgis.apps.storymap.storymap module<a class="headerlink" href="#module-arcgis.apps.storymap.storymap" title="Permalink to this headline">¶</a></h2>
-</section>
-</section>
+</div>
+<div class="section" id="scales">
+<h2>Scales<a class="headerlink" href="#scales" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="arcgis.apps.storymap.story_content.Scales">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">Scales</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>Represents the supported scales for the webmap view.</p>
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.BUILDING">
+<code class="sig-name descname"><span class="pre">BUILDING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">1250,</span> <span class="pre">'zoom':</span> <span class="pre">18}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.BUILDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.BUILDINGS">
+<code class="sig-name descname"><span class="pre">BUILDINGS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">2500,</span> <span class="pre">'zoom':</span> <span class="pre">17}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.BUILDINGS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.CITIES">
+<code class="sig-name descname"><span class="pre">CITIES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">160000,</span> <span class="pre">'zoom':</span> <span class="pre">11}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.CITIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.CITY">
+<code class="sig-name descname"><span class="pre">CITY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">80000,</span> <span class="pre">'zoom':</span> <span class="pre">12}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.CITY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.CONTINENT">
+<code class="sig-name descname"><span class="pre">CONTINENT</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">50000000,</span> <span class="pre">'zoom':</span> <span class="pre">3}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.CONTINENT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.COUNTIES">
+<code class="sig-name descname"><span class="pre">COUNTIES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">1500000,</span> <span class="pre">'zoom':</span> <span class="pre">8}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.COUNTIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.COUNTRIESLARGE">
+<code class="sig-name descname"><span class="pre">COUNTRIESLARGE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">25000000,</span> <span class="pre">'zoom':</span> <span class="pre">4}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.COUNTRIESLARGE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.COUNTRIESSMALL">
+<code class="sig-name descname"><span class="pre">COUNTRIESSMALL</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">12000000,</span> <span class="pre">'zoom':</span> <span class="pre">5}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.COUNTRIESSMALL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.COUNTY">
+<code class="sig-name descname"><span class="pre">COUNTY</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">750000,</span> <span class="pre">'zoom':</span> <span class="pre">9}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.COUNTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.METROPOLITAN">
+<code class="sig-name descname"><span class="pre">METROPOLITAN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">320000,</span> <span class="pre">'zoom':</span> <span class="pre">10}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.METROPOLITAN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.NEIGHBORHOOD">
+<code class="sig-name descname"><span class="pre">NEIGHBORHOOD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">2000,</span> <span class="pre">'zoom':</span> <span class="pre">14}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.NEIGHBORHOOD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.PROVINCE">
+<code class="sig-name descname"><span class="pre">PROVINCE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">3000000,</span> <span class="pre">'zoom':</span> <span class="pre">7}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.PROVINCE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.PROVINCES">
+<code class="sig-name descname"><span class="pre">PROVINCES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">6000000,</span> <span class="pre">'zoom':</span> <span class="pre">6}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.PROVINCES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.ROOM">
+<code class="sig-name descname"><span class="pre">ROOM</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">100,</span> <span class="pre">'zoom':</span> <span class="pre">22}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.ROOM" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.ROOMS">
+<code class="sig-name descname"><span class="pre">ROOMS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">400,</span> <span class="pre">'zoom':</span> <span class="pre">20}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.ROOMS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.SMALLBUILDING">
+<code class="sig-name descname"><span class="pre">SMALLBUILDING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">800,</span> <span class="pre">'zoom':</span> <span class="pre">19}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.SMALLBUILDING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.STATE">
+<code class="sig-name descname"><span class="pre">STATE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">3000000,</span> <span class="pre">'zoom':</span> <span class="pre">7}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.STATE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.STATES">
+<code class="sig-name descname"><span class="pre">STATES</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">6000000,</span> <span class="pre">'zoom':</span> <span class="pre">6}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.STATES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.STREET">
+<code class="sig-name descname"><span class="pre">STREET</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">5000,</span> <span class="pre">'zoom':</span> <span class="pre">16}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.STREET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.STREETS">
+<code class="sig-name descname"><span class="pre">STREETS</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">10000,</span> <span class="pre">'zoom':</span> <span class="pre">15}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.STREETS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.TOWN">
+<code class="sig-name descname"><span class="pre">TOWN</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">40000,</span> <span class="pre">'zoom':</span> <span class="pre">13}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.TOWN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="arcgis.apps.storymap.story_content.Scales.WORLD">
+<code class="sig-name descname"><span class="pre">WORLD</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'scale':</span> <span class="pre">147914382,</span> <span class="pre">'zoom':</span> <span class="pre">2}</span></em><a class="headerlink" href="#arcgis.apps.storymap.story_content.Scales.WORLD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="maptour">
+<h2>MapTour<a class="headerlink" href="#maptour" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="arcgis.apps.storymap.story_content.MapTour">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">arcgis.apps.storymap.story_content.</span></code><code class="sig-name descname"><span class="pre">MapTour</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">story</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.MapTour" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Create a MapTour object from a pre-existing <cite>maptour</cite> node.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>node_id</p></td>
+<td><p>Required String. The node id for the map tour type.</p></td>
+</tr>
+<tr class="row-odd"><td><p>story</p></td>
+<td><p>Required <a class="reference internal" href="#arcgis.apps.storymap.story.StoryMap" title="arcgis.apps.storymap.story.StoryMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">StoryMap</span></code></a> that the map tour belongs to.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_story</span><span class="o">.</span><span class="n">nodes</span> <span class="c1">#use to find map tour node id</span>
+
+<span class="go"># Method 1: Use the MapTour Class</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">maptour</span> <span class="o">=</span> <span class="n">MapTour</span><span class="p">(</span><span class="n">my_story</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">node_id</span><span class="o">&gt;</span><span class="p">)</span>
+
+<span class="go"># Method 2: Use the get method in story</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">maptour</span> <span class="o">=</span> <span class="n">my_story</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">node_id</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.MapTour.get">
+<code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.apps.storymap.story_content.MapTour.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>The get method is used to get the node that will be edited. Use <cite>maptour.properties</cite> to
+find all nodes associated with the sidecar.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>node_id</p></td>
+<td><p>Required String. The node id for the content that will be returned.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An class instance of the node type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.MapTour.places">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">places</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.MapTour.places" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all places on the map</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="arcgis.apps.storymap.story_content.MapTour.style">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">style</span></code><a class="headerlink" href="#arcgis.apps.storymap.story_content.MapTour.style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the type and subtype of the map tour</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
 
 
 
@@ -2398,12 +2699,12 @@ items are dictionary of events and their children.</p>
 
   </div>
   
-    Options v: 2.0.0
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.0
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -2411,6 +2712,14 @@ items are dictionary of events and their children.</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
+        
+          
+          <dd><a href="2.0.0/">2.0.0</a></dd>
+          
         
           
           <dd><a href="1.9.1/">1.9.1</a></dd>

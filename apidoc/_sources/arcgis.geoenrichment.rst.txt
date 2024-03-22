@@ -3,7 +3,6 @@ arcgis.geoenrichment module
 
 .. automodule:: arcgis.geoenrichment
 
-
 Country
 --------------
 .. autoclass:: arcgis.geoenrichment.Country
@@ -11,6 +10,12 @@ Country
     :members:
     :undoc-members:
 
+BufferStudyArea
+---------------
+.. autoclass:: arcgis.geoenrichment.BufferStudyArea
+    :inherited-members:
+    :members:
+    :undoc-members:
 
 get_countries
 ---------------

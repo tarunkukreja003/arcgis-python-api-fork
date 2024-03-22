@@ -4,11 +4,10 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>API Reference for the ArcGIS API for Python &mdash; arcgis 2.0.0 documentation</title>
+  <title>API Reference for the ArcGIS API for Python &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -36,7 +35,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -79,7 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.0
+                2.1.0
               </div>
             
           
@@ -104,18 +102,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.raster.toc.html">arcgis.raster module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.network.toc.html">arcgis.network module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.notebook.html">arcgis.notebook module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geocoding.html">arcgis.geocoding module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.graph.html">arcgis.graph module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.toc.html">arcgis.mapping module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.realtime.html">arcgis.realtime module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a></li>
@@ -193,15 +193,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section id="api-reference-for-the-arcgis-api-for-python">
+  <div class="section" id="api-reference-for-the-arcgis-api-for-python">
 <h1>API Reference for the ArcGIS API for Python<a class="headerlink" href="#api-reference-for-the-arcgis-api-for-python" title="Permalink to this headline">¶</a></h1>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
-<p><span class="caption-text">arcgis</span></p>
+<p class="caption"><span class="caption-text">arcgis</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#gis">GIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#item">Item</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#itemdependency">ItemDependency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#group">Group</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#datastore">Datastore</a></li>
@@ -222,10 +223,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#invitationmanager">InvitationManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#certificatemanager">CertificateManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#portaldatastore">PortalDataStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#statusjob">StatusJob</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#marketplacemanager">MarketPlaceManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#viewmanager">ViewManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#enumerations">Enumerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#itemtypeenum">ItemTypeEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#metadataformatenum">MetadataFormatEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#servicetypeenum">ServiceTypeEnum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#spatialrelationship">SpatialRelationship</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#dataclasses">Dataclasses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#itemproperties">ItemProperties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#createserviceparameter">CreateServiceParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#viewlayerdefparameter">ViewLayerDefParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.toc.html#spatialfilter">SpatialFilter</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.gis.toc.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.admin.html">arcgis.gis.admin module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#agoladminmanager">AGOLAdminManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#portaladminmanager">PortalAdminManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#kubernetesadmin">KubernetesAdmin</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#agolusagereports">AGOLUsageReports</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#bundle">Bundle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#categorymanager">CategoryManager</a></li>
@@ -259,6 +278,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#webadaptors">WebAdaptors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#webhookmanager">WebhookManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#webhook">Webhook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#socialproviders">SocialProviders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.admin.html#metadatamanager">MetadataManager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.server.html">arcgis.gis.server module</a><ul>
@@ -290,6 +311,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.server.html#jobmanager">JobManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.server.html#job">Job</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.server.html#mode">Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.agonb.html">arcgis.gis.agonb module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.agonb.html#agolnotebookmanager">AGOLNotebookManager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.gis.agoserver.html">arcgis.gis.agoserver module</a><ul>
@@ -358,6 +383,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.gis.tasks.html#run">Run</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.gis.sharing.html">arcgis.gis.sharing module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.sharing.html#userinvitationmanager">UserInvitationManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.sharing.html#invitation">Invitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.sharing.html#dependencymanager">DependencyManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.gis.sharing.html#marketplacemanager">MarketPlaceManager</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -376,6 +408,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#cell-size">cell_size</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#mask">mask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#parallel-processing-factor">parallel_processing_factor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#union-dimension">union_dimension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.env.html#match-variables">match_variables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.features.toc.html">arcgis.features module</a><ul>
@@ -471,10 +505,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#versionmanager">VersionManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#version">Version</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#parcelfabricmanager">ParcelFabricManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#topographicproductionmanager">TopographicProductionManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#topographicproductionjobmanager">TopographicProductionJobManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#traceconfiguration">TraceConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#tracenetworkmanager">TraceNetworkManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#utilitynetworkmanager">UtilityNetworkManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#validationmanager">ValidationManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#webhookservicemanager">WebHookServiceManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#webhook">WebHook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#webhookevents">WebHookEvents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#webhookscheduleinfo">WebHookScheduleInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#networkdiagrammanager">NetworkDiagramManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.features.managers.html#diagram">Diagram</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.features.summarize_data.html">arcgis.features.summarize_data module</a><ul>
@@ -554,6 +596,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#compute-change-raster">compute_change_raster</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#train-random-trees-regression-model">train_random_trees_regression_model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#summarize-categorical-raster">summarize_categorical_raster</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#export-to-tile-package">export_to_tile_package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.analytics.html#mosaic-image">mosaic_image</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.functions.html">arcgis.raster.functions module</a><ul>
@@ -629,6 +673,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#gemi">gemi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#generate-trend">generate_trend</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#geometric">geometric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#geometric-median">geometric_median</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#gndvi">gndvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#grayscale">grayscale</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#greater-than">greater_than</a></li>
@@ -673,7 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#ndsi">ndsi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#ndvi">ndvi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#ndvire">ndvire</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#id3">NDVI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#id9">NDVI</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#ndwi">ndwi</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#negate">negate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.functions.html#not-equal">not_equal</a></li>
@@ -796,6 +841,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.raster.utils.html">arcgis.raster.utils module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.utils.html#generate-direct-access-url">generate_direct_access_url</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.raster.utils.html#upload-imagery-to-agol-userstore">upload_imagery_to_agol_userstore</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.raster.utils.html#publish-hosted-imagery-layer">publish_hosted_imagery_layer</a></li>
 </ul>
 </li>
 </ul>
@@ -825,6 +871,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.notebook.html">arcgis.notebook module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.notebook.html#create-snapshot">create_snapshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.notebook.html#execute-notebook">execute_notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.notebook.html#list-runtimes">list_runtimes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.notebook.html#list-snapshots">list_snapshots</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.toc.html">arcgis.geoanalytics module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#define-output-datastore">define_output_datastore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.toc.html#get-datastores">get_datastores</a></li>
@@ -850,6 +903,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#find-dwell-locations">find_dwell_locations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#find-similar-locations">find_similar_locations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#geocode-locations">geocode_locations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#snap-tracks">snap_tracks</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a><ul>
@@ -897,6 +951,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoenrichment.html#country">Country</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoenrichment.html#bufferstudyarea">BufferStudyArea</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoenrichment.html#get-countries">get_countries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoenrichment.html#create-report">create_report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoenrichment.html#enrich">enrich</a></li>
@@ -990,6 +1045,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoprocessing.html#toolbox">Toolbox</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.graph.html">arcgis.graph module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.graph.html#knowledgegraph">KnowledgeGraph</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.toc.html">arcgis.mapping module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.toc.html#working-with-2d-maps">Working with 2D Maps</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#webmap">WebMap</a></li>
@@ -1007,6 +1066,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#object3dlayer">Object3DLayer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#point3dlayer">Point3DLayer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#pointcloudlayer">PointCloudLayer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#voxellayer">VoxelLayer</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.toc.html#working-with-map-service-layers">Working with Map Service Layers</a><ul>
@@ -1049,8 +1109,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.mapping.toc.html#utility-functions-for-mapping">Utility Functions for Mapping</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#export-map">export_map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#create-colormap">create_colormap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#get-layout-templates">get_layout_templates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#module-arcgis.mapping.symbol">Symbology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#generate-simple">generate_simple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#generate-heatmap">generate_heatmap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#generate-unique">generate_unique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#generate-classbreaks">generate_classbreaks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#generate-renderer">generate_renderer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.mapping.toc.html#visual-variables">visual_variables</a></li>
 </ul>
@@ -1089,6 +1154,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#websocket">WebSocket</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#noauth">NoAuth</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#saslplain">SASLPlain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#saslscramsha256">SaslScramSha256</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#saslscramsha512">SaslScramSha512</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#xyzgeometry">XYZGeometry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#singlefieldgeometry">SingleFieldGeometry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.realtime.velocity.feeds.html#timeinstant">TimeInstant</a></li>
@@ -1130,10 +1197,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.hub.html">arcgis.apps.hub module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#hub">Hub</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#initiative">Initiative</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#indicator">Indicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#site">Site</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#page">Page</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#event">Event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#initiativemanager">InitiativeManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#indicatormanager">IndicatorManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#sitemanager">SiteManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#pagemanager">PageManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.hub.html#eventmanager">EventManager</a></li>
 </ul>
 </li>
@@ -1144,6 +1213,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#gauge">Gauge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#header">Header</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#indicator">Indicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#indicatordata">IndicatorData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#referencedata">ReferenceData</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#list">List</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#maplegend">MapLegend</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.dashboard.html#piechart">PieChart</a></li>
@@ -1185,7 +1256,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#swipe">Swipe</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#sidecar">Sidecar</a></li>
 <li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#timeline">Timeline</a></li>
-<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#module-arcgis.apps.storymap.storymap">arcgis.apps.storymap.storymap module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#scales">Scales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="arcgis.apps.storymap.html#maptour">MapTour</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.apps.survey123.html">arcgis.apps.survey123 module</a><ul>
@@ -1231,6 +1303,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#singleshotdetector">SingleShotDetector</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#maskrcnn">MaskRCNN</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#mmdetection">MMDetection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#detreg">DETReg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#efficientdet">EfficientDet</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.learn.toc.html#pixel-classification-models">Pixel Classification Models</a><ul>
@@ -1257,6 +1331,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.learn.toc.html#d-models">3D Models</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#pointcnn">PointCNN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#randlanet">RandLANet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#sqnseg">SQNSeg</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.learn.toc.html#object-tracking-models">Object Tracking Models</a><ul>
@@ -1274,6 +1350,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#fullyconnectednetwork">FullyConnectedNetwork</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#mlmodel">MLModel</a></li>
 <li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#timeseriesmodel">TimeSeriesModel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="arcgis.learn.toc.html#psetae">PSETAE</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.learn.toc.html#unstructured-text-models">Unstructured Text Models</a><ul>
@@ -1329,14 +1406,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </li>
 </ul>
 </div>
-</section>
-<section id="indices-and-tables">
+</div>
+<div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 </ul>
-</section>
+</div>
 
 
 
@@ -1373,12 +1450,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
   
-    Options v: 2.0.0
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.0
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -1386,6 +1463,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
+        
+          
+          <dd><a href="2.0.0/">2.0.0</a></dd>
+          
         
           
           <dd><a href="1.9.1/">1.9.1</a></dd>

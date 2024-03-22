@@ -4,11 +4,10 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.features.manage_data module &mdash; arcgis 2.0.0 documentation</title>
+  <title>arcgis.features.manage_data module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -36,7 +35,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -80,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.0
+                2.1.0
               </div>
             
           
@@ -105,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -149,6 +147,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.graph.html">arcgis.graph module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.toc.html">arcgis.mapping module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.realtime.html">arcgis.realtime module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a></li>
@@ -228,7 +227,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section id="module-arcgis.features.manage_data">
+  <div class="section" id="module-arcgis.features.manage_data">
 <span id="arcgis-features-manage-data-module"></span><h1>arcgis.features.manage_data module<a class="headerlink" href="#module-arcgis.features.manage_data" title="Permalink to this headline">¶</a></h1>
 <p>These functions are used for both the day-to-day management of geographic data and for combining data prior to analysis.</p>
 <p>dissolve_boundaries merges together areas that share a common boundary and a common attribute value.
@@ -236,11 +235,11 @@ extract_data creates new datasets by extracting features from your existing data
 merge_layers copies all the features from two or more existing layers into a new layer.
 overlay_layers combines two or more layers into one single layer. You can think of overlay as peering through a stack of
 maps and creating a single map containing all the information found in the stack.</p>
-<section id="dissolve-boundaries">
+<div class="section" id="dissolve-boundaries">
 <h2>dissolve_boundaries<a class="headerlink" href="#dissolve-boundaries" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.features.manage_data.dissolve_boundaries">
-<code class="sig-prename descclassname">arcgis.features.manage_data.</code><code class="sig-name descname">dissolve_boundaries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_layer</span></em>, <em class="sig-param"><span class="n">dissolve_fields</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">summary_fields</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">output_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimate</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">multi_part_features</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">future</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.dissolve_boundaries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.manage_data.</span></code><code class="sig-name descname"><span class="pre">dissolve_boundaries</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dissolve_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary_fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multi_part_features</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.dissolve_boundaries" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/dissolve_boundaries.png" src="_images/dissolve_boundaries.png" />
 <p>The dissolve_boundaries method finds polygons that overlap or share a common boundary and merges them together to form a single polygon.</p>
 <p>You can control which boundaries are merged by specifying a field. For example, if you have a layer of counties, and each county
@@ -252,7 +251,7 @@ if they have the same value for State_Name. The end result is a layer of state b
 <col style="width: 81%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>input_layer</p></td>
@@ -270,14 +269,10 @@ state boundaries.If two or more fields are specified, the values in these fields
 </td>
 </tr>
 <tr class="row-even"><td><p>summary_fields</p></td>
-<td><div class="line-block">
-<div class="line">Optional list of strings.</div>
-</div>
-<p>A list of field names and statistical summary types that you
+<td><p>Optional list of strings.
+A list of field names and statistical summary types that you
 wish to calculate from the polygons that are dissolved together:</p>
-<div class="line-block">
-<div class="line"><em>[“fieldName summary type”, “fieldName2 summaryType”]</em></div>
-</div>
+<p><em>[“fieldName summary type”, “fieldName2 summaryType”]</em></p>
 <p><cite>fieldName</cite> is the name of one of the numeric fields found in the
 input_layer.
 <cite>summary type</cite> is one of the following:</p>
@@ -314,7 +309,7 @@ For calculate_density, there are three settings.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - a bounding box that defines the analysis area. Only those features in the input_layer that intersect the bounding box will be analyzed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - the output features will be projected into the output spatial reference referred to by the <cite>wkid</cite>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer. Available for ArcGIS Online or Enterprise 11+</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Usage</span>
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;extent&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;xmin&quot;</span><span class="p">:</span> <span class="mf">3164569.408035</span><span class="p">,</span>
@@ -341,26 +336,24 @@ For calculate_density, there are three settings.</p>
 <td><p>Optional boolean. Specifies whether multipart features (i.e. features which
 share a common attribute table but are not visibly connected) are allowed in
 the output feature class.</p>
-<div class="line-block">
-<div class="line">Choice list: [<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>]</div>
-</div>
-<blockquote>
-<div><ul class="simple">
+<p>Choice list: [<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>]</p>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: Specifies multipart features are allowed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: Specifies multipart features are not allowed. Instead of creating multipart features, individual features will be created for each part.</p></li>
 </ul>
-</div></blockquote>
 <p>The default value is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 </td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a <a class="reference internal" href="arcgis.geoprocessing.html#arcgis.geoprocessing.GPJob" title="arcgis.geoprocessing.GPJob"><code class="xref py py-class docutils literal notranslate"><span class="pre">GPJob</span></code></a> object and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>result_layer : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> if output_name is specified, else <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureCollection" title="arcgis.features.FeatureCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">Collection</span></code></a>.</p>
+<dd class="field-odd"><p>result_layer : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> if output_name is specified, else <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureCollection" title="arcgis.features.FeatureCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">Collection</span></code></a>.
+If <code class="docutils literal notranslate"><span class="pre">future</span> <span class="pre">=</span> <span class="pre">True</span></code>, then the result is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code> object. Call <code class="docutils literal notranslate"><span class="pre">result()</span></code> to get the response.</p>
 </dd>
 </dl>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">To</span> <span class="n">dissolve</span> <span class="n">boundaries</span> <span class="n">of</span> <span class="n">polygons</span> <span class="k">with</span> <span class="n">same</span> <span class="n">state</span> <span class="n">name</span><span class="o">.</span> <span class="n">The</span> <span class="n">dissolved</span> <span class="n">polygons</span> <span class="n">are</span> <span class="n">summarized</span> <span class="n">using</span> <span class="n">population</span> <span class="k">as</span> <span class="n">summary</span> <span class="n">field</span> <span class="ow">and</span> <span class="n">standard</span> <span class="n">deviation</span> <span class="k">as</span> <span class="n">summary</span> <span class="nb">type</span><span class="o">.</span>
@@ -372,12 +365,12 @@ the output feature class.</p>
 </div>
 </dd></dl>
 
-</section>
-<section id="extract-data">
+</div>
+<div class="section" id="extract-data">
 <h2>extract_data<a class="headerlink" href="#extract-data" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.features.manage_data.extract_data">
-<code class="sig-prename descclassname">arcgis.features.manage_data.</code><code class="sig-name descname">extract_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_layers</span></em>, <em class="sig-param"><span class="n">extent</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clip</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">data_format</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimate</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">future</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.extract_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.manage_data.</span></code><code class="sig-name descname"><span class="pre">extract_data</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.extract_data" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/extract_data.png" src="_images/extract_data.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">extract_data</span></code> method is used to extract data from one or more layers within a given extent.
 The extracted data format can be a file geodatabase, shapefiles, csv, or kml.
@@ -405,7 +398,7 @@ within the extent. By default, features are not clipped and all features interse
 </tr>
 <tr class="row-odd"><td><p>data_format</p></td>
 <td><p>Optional string. A keyword defining the output data format for your extracted data.</p>
-<p>Choice list: <code class="docutils literal notranslate"><span class="pre">['FileGeodatabase',</span> <span class="pre">'ShapeFile',</span> <span class="pre">'KML',</span> <span class="pre">'CSV']</span></code></p>
+<p>Choice list: [‘FileGeodatabase’, ‘ShapeFile’, ‘KML’, ‘CSV’]</p>
 <p>The default is ‘CSV’.</p>
 <p>If <em>FileGeodatase</em> is specified <em>and</em> the input layer has <a class="reference external" href="https://enterprise.arcgis.com/en/portal/latest/use/manage-hosted-layers.htm#ESRI_SECTION2_EF4F7A72F7B74E47B5CBCC1F343445E2">attachments:</a></p>
 <blockquote>
@@ -434,13 +427,14 @@ will be named by the value. Other item properties will receive default values.</
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>  on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>estimate</p></td>
 <td><p>Optional boolean. If True, the number of credits to run the operation will be returned.</p></td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a GPJob object and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -449,6 +443,7 @@ will be named by the value. Other item properties will receive default values.</
 <dd class="field-odd"><p>result_layer : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> if output_name is specified, else <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureCollection" title="arcgis.features.FeatureCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">Collection</span></code></a>.</p>
 </dd>
 </dl>
+<p>If <code class="docutils literal notranslate"><span class="pre">future</span> <span class="pre">=</span> <span class="pre">True</span></code>, then the result is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code> object. Call <code class="docutils literal notranslate"><span class="pre">result()</span></code> to get the response.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># USAGE EXAMPLE: To extract data from highways layer with the extent of a state boundary.</span>
 
 <span class="n">ext_state_highway</span> <span class="o">=</span> <span class="n">extract_data</span><span class="p">(</span><span class="n">input_layers</span><span class="o">=</span><span class="p">[</span><span class="n">highways</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span>
@@ -460,12 +455,12 @@ will be named by the value. Other item properties will receive default values.</
 </div>
 </dd></dl>
 
-</section>
-<section id="merge-layers">
+</div>
+<div class="section" id="merge-layers">
 <h2>merge_layers<a class="headerlink" href="#merge-layers" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.features.manage_data.merge_layers">
-<code class="sig-prename descclassname">arcgis.features.manage_data.</code><code class="sig-name descname">merge_layers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_layer</span></em>, <em class="sig-param"><span class="n">merge_layer</span></em>, <em class="sig-param"><span class="n">merging_attributes</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">output_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimate</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">future</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.merge_layers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.manage_data.</span></code><code class="sig-name descname"><span class="pre">merge_layers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merge_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">merging_attributes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.merge_layers" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/merge_layers.png" src="_images/merge_layers.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">merge_layers</span></code> method copies features from two layers into a new layer.
 The layers to be merged must all contain the same feature types (points, lines, or polygons).
@@ -476,8 +471,8 @@ You can control how the fields from the input layers are joined and copied. For 
 </ul>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 9%" />
-<col style="width: 91%" />
+<col style="width: 3%" />
+<col style="width: 97%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -491,9 +486,7 @@ You can control how the fields from the input layers are joined and copied. For 
 The <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> must contain the same feature type (point, line, or polygon) as the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code>. See <a class="reference internal" href="arcgis.features.analysis.html#featureinput"><span class="std std-ref">Feature Input</span></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p>merge_attributes</p></td>
-<td><p>Optional list. Defines how the fields in <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> will be
-modified. By default, all fields from both inputs will be
-included in the output layer.</p>
+<td><p>Optional list. Defines how the fields in <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> will be modified. By default, all fields from both inputs will be included in the output layer.</p>
 <p>If a field exists in one layer but not the other, the output
 layer will still contain the field. The output field will
 contain null values for the input features that did not have the
@@ -506,18 +499,8 @@ output layer using the following merge types that operate on a
 specified <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> field:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Remove</span></code> - The field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> will be removed from the output layer.</p></li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">Rename</span></code> - The field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> will be renamed in the output layer.</dt><dd><p>You cannot rename a field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> to a field in the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code>. If you want to make field names equivalent, use Match.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">Match</span></code> - A field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> is made equivalent to a field in the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> specified by merge value.</dt><dd><p>For example, the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> has a field named CODE and the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> has a field named STATUS.
-You can match STATUS to CODE, and the output will contain the CODE field with values of the STATUS field used for features copied from the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code>.
-Type casting is supported (for example, float to integer, integer to string) except for string to numeric.</p>
-</dd>
-</dl>
-</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Rename</span></code> - The field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> will be renamed in the output layer. You cannot rename a field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> to a field in the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code>. If you want to make field names equivalent, use Match.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Match</span></code> - A field in the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> is made equivalent to a field in the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> specified by merge value. For example, the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> has a field named CODE and the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code> has a field named STATUS. You can match STATUS to CODE, and the output will contain the CODE field with values of the STATUS field used for features copied from the <code class="docutils literal notranslate"><span class="pre">merge_layer</span></code>. Type casting is supported (for example, float to integer, integer to string) except for string to numeric.</p></li>
 </ul>
 </td>
 </tr>
@@ -533,7 +516,7 @@ For calculate_density, there are three settings.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - a bounding box that defines the analysis area. Only those features in the input_layer that intersect the bounding box will be analyzed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - the output features will be projected into the output spatial reference referred to by the <cite>wkid</cite>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer. Available for ArcGIS Online or Enterprise 10.9.1+</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Usage</span>
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;extent&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;xmin&quot;</span><span class="p">:</span> <span class="mf">3164569.408035</span><span class="p">,</span>
@@ -551,13 +534,14 @@ For calculate_density, there are three settings.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>  on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>estimate</p></td>
 <td><p>Optional boolean. If True, the estimated number of credits required to run the operation will be returned.</p></td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a GPJob object and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -566,6 +550,7 @@ For calculate_density, there are three settings.</p>
 <dd class="field-odd"><p>result_layer : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> if <code class="docutils literal notranslate"><span class="pre">output_name</span></code> is specified, else Feature Collection.</p>
 </dd>
 </dl>
+<p>If <code class="docutils literal notranslate"><span class="pre">future</span> <span class="pre">=</span> <span class="pre">True</span></code>, then the result is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code> object. Call <code class="docutils literal notranslate"><span class="pre">result()</span></code> to get the response.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#USAGE EXAMPLE: To merge two layers into a new layer using merge attributes.</span>
 <span class="n">merged</span> <span class="o">=</span> <span class="n">merge_layers</span><span class="p">(</span><span class="n">input_layer</span><span class="o">=</span><span class="n">esri_offices</span><span class="p">,</span>
                       <span class="n">merge_layer</span><span class="o">=</span><span class="n">satellite_soffice_lyr</span><span class="p">,</span>
@@ -575,12 +560,12 @@ For calculate_density, there are three settings.</p>
 </div>
 </dd></dl>
 
-</section>
-<section id="overlay-layers">
+</div>
+<div class="section" id="overlay-layers">
 <h2>overlay_layers<a class="headerlink" href="#overlay-layers" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.features.manage_data.overlay_layers">
-<code class="sig-prename descclassname">arcgis.features.manage_data.</code><code class="sig-name descname">overlay_layers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">input_layer</span></em>, <em class="sig-param"><span class="n">overlay_layer</span></em>, <em class="sig-param"><span class="n">overlay_type</span><span class="o">=</span><span class="default_value">'Intersect'</span></em>, <em class="sig-param"><span class="n">snap_to_input</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">output_type</span><span class="o">=</span><span class="default_value">'Input'</span></em>, <em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">output_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimate</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">future</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.overlay_layers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.manage_data.</span></code><code class="sig-name descname"><span class="pre">overlay_layers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overlay_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Intersect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snap_to_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Input'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.overlay_layers" title="Permalink to this definition">¶</a></dt>
 <dd><img alt="_images/overlay_layers.png" src="_images/overlay_layers.png" />
 <p>The <code class="docutils literal notranslate"><span class="pre">overlay_layers</span></code> method combines two or more layers into one single layer.
 You can think of overlay as peering through a stack of maps and creating a single map containing
@@ -597,8 +582,8 @@ Overlay is used to answer one of the most basic questions of geography, “what 
 </ul>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
+<col style="width: 6%" />
+<col style="width: 94%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Argument</strong></p></td>
@@ -648,17 +633,12 @@ layers can move to allow snapping to each other. When set to true, only features
 <td><p>Optional string. The type of intersection you want to find.
 This parameter is only valid when the <code class="docutils literal notranslate"><span class="pre">overlay_type</span></code> is Intersect.</p>
 <p>Choice list: [‘Input’, ‘Line’, ‘Point’]</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Input</span></code> - The features returned will be the same geometry type as</p></li>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Input</span></code> - The features returned will be the same geometry type as the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> or <code class="docutils literal notranslate"><span class="pre">overlay_layer</span></code> with the lowest dimension geometry.
+If all inputs are polygons, the output will contain polygons. If one or more of the inputs are lines and none of the inputs are points, the output will be line. If one or more of the inputs are points, the output will contain points. This is the default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Line</span></code> - Line intersections will be returned. This is only valid if none of the inputs are points.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Point</span></code> - Point intersections will be returned. If the inputs are line or polygon, the output will be a multipoint layer.</p></li>
 </ul>
-<p>the <code class="docutils literal notranslate"><span class="pre">input_layer</span></code> or <code class="docutils literal notranslate"><span class="pre">overlay_layer</span></code> with the lowest dimension geometry.
-If all inputs are polygons, the output will contain polygons. If one or more of
-the inputs are lines and none of the inputs are points, the output will be line.
-If one or more of the inputs are points, the output will contain points. This is the default.
-*  <code class="docutils literal notranslate"><span class="pre">Line</span></code> - Line intersections will be returned. This is only valid if none of the inputs are points.
-*  <code class="docutils literal notranslate"><span class="pre">Point</span></code> - Point intersections will be returned. If the inputs are line or polygon, the output will be a multipoint layer.</p>
-</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td><p>tolerance</p></td>
@@ -677,7 +657,7 @@ For calculate_density, there are three settings.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - a bounding box that defines the analysis area. Only those features in the input_layer that intersect the bounding box will be analyzed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - the output features will be projected into the output spatial reference referred to by the <cite>wkid</cite>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer. Available for ArcGIS Online or Enterprise 10.9.1+</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Usage</span>
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;extent&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;xmin&quot;</span><span class="p">:</span> <span class="mf">3164569.408035</span><span class="p">,</span>
@@ -695,10 +675,11 @@ For calculate_density, there are three settings.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>  on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a GPJob object and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -707,6 +688,7 @@ For calculate_density, there are three settings.</p>
 <dd class="field-odd"><p>result_layer : <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> if <code class="docutils literal notranslate"><span class="pre">output_name</span></code> is specified, else Feature Collection.</p>
 </dd>
 </dl>
+<p>If <code class="docutils literal notranslate"><span class="pre">future</span> <span class="pre">=</span> <span class="pre">True</span></code>, then the result is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code> object. Call <code class="docutils literal notranslate"><span class="pre">result()</span></code> to get the response.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#USAGE EXAMPLE: To clip a buffer in the shape of Capitol hill neighborhood.</span>
 <span class="n">cliped_buffer</span> <span class="o">=</span> <span class="n">overlay_layers</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span>
                                <span class="n">neighbourhood</span><span class="p">,</span>
@@ -715,12 +697,12 @@ For calculate_density, there are three settings.</p>
 </div>
 </dd></dl>
 
-</section>
-<section id="create-route-layers">
+</div>
+<div class="section" id="create-route-layers">
 <h2>create_route_layers<a class="headerlink" href="#create-route-layers" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.features.manage_data.create_route_layers">
-<code class="sig-prename descclassname">arcgis.features.manage_data.</code><code class="sig-name descname">create_route_layers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">route_data_item</span></em>, <em class="sig-param"><span class="n">delete_route_data_item</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">summary</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">route_name_prefix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">folder_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimate</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">future</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.create_route_layers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.manage_data.</span></code><code class="sig-name descname"><span class="pre">create_route_layers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">route_data_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_route_data_item</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">route_name_prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.create_route_layers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">create_route_layers</span></code> method creates route layer items on the portal from the input route data.</p>
 <p>A route layer includes all the information for a particular route such as the stops assigned to
 the route as well as the travel directions. Creating route layers is useful if you want to share
@@ -731,7 +713,7 @@ individual routes with other members in your organization.</p>
 <col style="width: 85%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>route_data</p></td>
@@ -767,21 +749,23 @@ If a folder with the specified name exists, the items will be created in the exi
 If a value for folder_name is not specified, the route layer items are created in the root folder of your online workspace.</p></td>
 </tr>
 <tr class="row-even"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>  on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-odd"><td><p>estimate</p></td>
 <td><p>Optional boolean. If True, the estimated number of credits required to run the operation will be returned.</p></td>
 </tr>
 <tr class="row-even"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a GPJob object and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>result_layer : A list (items) or an <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.Item" title="arcgis.gis.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a></p>
+<dd class="field-odd"><p>result_layer : A list (items) or an <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.Item" title="arcgis.gis.Item"><code class="xref py py-class docutils literal notranslate"><span class="pre">Item</span></code></a>.</p>
 </dd>
 </dl>
+<p>If <code class="docutils literal notranslate"><span class="pre">future</span> <span class="pre">=</span> <span class="pre">True</span></code>, then the result is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code> object. Call <code class="docutils literal notranslate"><span class="pre">result()</span></code> to get the response.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">USAGE</span> <span class="n">EXAMPLE</span><span class="p">:</span> <span class="n">To</span> <span class="n">create</span> <span class="n">route</span> <span class="n">layers</span> <span class="kn">from</span> <span class="nn">geodatabase</span> <span class="n">item</span><span class="o">.</span>
 <span class="n">route</span> <span class="o">=</span> <span class="n">create_route_layers</span><span class="p">(</span><span class="n">route_data_item</span><span class="o">=</span><span class="n">route_item</span><span class="p">,</span>
                     <span class="n">delete_route_data_item</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -793,12 +777,12 @@ If a value for folder_name is not specified, the route layer items are created i
 </div>
 </dd></dl>
 
-</section>
-<section id="generate-tessellation">
+</div>
+<div class="section" id="generate-tessellation">
 <h2>generate_tessellation<a class="headerlink" href="#generate-tessellation" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.features.manage_data.generate_tessellation">
-<code class="sig-prename descclassname">arcgis.features.manage_data.</code><code class="sig-name descname">generate_tessellation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">extent_layer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bin_size</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">bin_size_unit</span><span class="o">=</span><span class="default_value">'SquareKilometers'</span></em>, <em class="sig-param"><span class="n">bin_type</span><span class="o">=</span><span class="default_value">'SQUARE'</span></em>, <em class="sig-param"><span class="n">intersect_study_area</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">output_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimate</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">future</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.generate_tessellation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.features.manage_data.</span></code><code class="sig-name descname"><span class="pre">generate_tessellation</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extent_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_size_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SquareKilometers'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bin_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'SQUARE'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intersect_study_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">future</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.features.manage_data.generate_tessellation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a tessellated grid of regular polygons.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -806,7 +790,7 @@ If a value for folder_name is not specified, the route layer items are created i
 <col style="width: 81%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<tr class="row-odd"><td><p><strong>Argument</strong></p></td>
 <td><p><strong>Description</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>extent_layer</p></td>
@@ -842,7 +826,7 @@ For calculate_density, there are three settings.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">extent</span></code> - a bounding box that defines the analysis area. Only those features in the input_layer that intersect the bounding box will be analyzed.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">outSR</span></code> - the output features will be projected into the output spatial reference referred to by the <cite>wkid</cite>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">overwrite</span></code> - if True, then the feature layer in output_name will be overwritten with new feature layer. Available for ArcGIS Online or Enterprise 10.9.1+</p>
 <blockquote>
 <div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example Usage</span>
 <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;extent&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;xmin&quot;</span><span class="p">:</span> <span class="mf">3164569.408035</span><span class="p">,</span>
@@ -860,13 +844,14 @@ For calculate_density, there are three settings.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>gis</p></td>
-<td><p>Optional, the GIS on which this tool runs. If not specified, the active GIS is used.</p></td>
+<td><p>Optional, the <a class="reference internal" href="arcgis.gis.toc.html#arcgis.gis.GIS" title="arcgis.gis.GIS"><code class="xref py py-class docutils literal notranslate"><span class="pre">GIS</span></code></a>  on which this tool runs. If not specified, the active GIS is used.</p></td>
 </tr>
 <tr class="row-even"><td><p>estimate</p></td>
 <td><p>Optional Boolean. If True, the number of credits to run the operation will be returned.</p></td>
 </tr>
 <tr class="row-odd"><td><p>future</p></td>
-<td><p>Optional boolean. If True, the result will be a GPJob object and results will be returned asynchronously.</p></td>
+<td><p>Optional boolean. If True, a future object will be returned and the process
+will not wait for the task to complete. The default is False, which means wait for results.</p></td>
 </tr>
 </tbody>
 </table>
@@ -877,13 +862,14 @@ For calculate_density, there are three settings.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayer" title="arcgis.features.FeatureLayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayer</span></code></a> if out_put name specified or
-a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayerCollection" title="arcgis.features.FeatureLayerCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayerCollection</span></code></a></p>
+a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.FeatureLayerCollection" title="arcgis.features.FeatureLayerCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">FeatureLayerCollection</span></code></a>.
+If <code class="docutils literal notranslate"><span class="pre">future</span> <span class="pre">=</span> <span class="pre">True</span></code>, then the result is a <code class="xref py py-class docutils literal notranslate"><span class="pre">Future</span></code> object. Call <code class="docutils literal notranslate"><span class="pre">result()</span></code> to get the response.</p>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
-</section>
+</div>
+</div>
 
 
 
@@ -921,12 +907,12 @@ a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.F
 
   </div>
   
-    Options v: 2.0.0
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.0
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -934,6 +920,14 @@ a <a class="reference internal" href="arcgis.features.toc.html#arcgis.features.F
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
+        
+          
+          <dd><a href="2.0.0/">2.0.0</a></dd>
+          
         
           
           <dd><a href="1.9.1/">1.9.1</a></dd>

@@ -4,11 +4,10 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>arcgis.geoanalytics module &mdash; arcgis 2.0.0 documentation</title>
+  <title>arcgis.geoanalytics module &mdash; arcgis 2.1.0 documentation</title>
   
 
   
@@ -36,7 +35,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -80,7 +78,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             
             
               <div class="version">
-                2.0.0
+                2.1.0
               </div>
             
           
@@ -105,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               
             
             
-              <p><span class="caption-text">arcgis</span></p>
+              <p class="caption"><span class="caption-text">arcgis</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="arcgis.gis.toc.html">arcgis.gis module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.env.html">arcgis.env module</a></li>
@@ -131,6 +129,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoenrichment.html">arcgis.geoenrichment module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geometry.html">arcgis.geometry module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoprocessing.html">arcgis.geoprocessing module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arcgis.graph.html">arcgis.graph module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.mapping.toc.html">arcgis.mapping module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.realtime.html">arcgis.realtime module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.schematics.html">arcgis.schematics module</a></li>
@@ -208,7 +207,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJGGV5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section id="module-arcgis.geoanalytics">
+  <div class="section" id="module-arcgis.geoanalytics">
 <span id="arcgis-geoanalytics-module"></span><span id="gaxfeatureinput"></span><h1>arcgis.geoanalytics module<a class="headerlink" href="#module-arcgis.geoanalytics" title="Permalink to this headline">¶</a></h1>
 <p>The arcgis.geoanalytics module provides types and functions for distributed analysis of large datasets.
 These GeoAnalytics tools work with big data registered in the GISs datastores as well as with feature layers.</p>
@@ -250,11 +249,11 @@ These GeoAnalytics tools work with big data registered in the GISs datastores as
 <li><p>Python dict in the feature collection format</p></li>
 </ul>
 </div></blockquote>
-<section id="define-output-datastore">
+<div class="section" id="define-output-datastore">
 <h2>define_output_datastore<a class="headerlink" href="#define-output-datastore" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.geoanalytics.define_output_datastore">
-<code class="sig-prename descclassname">arcgis.geoanalytics.</code><code class="sig-name descname">define_output_datastore</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">datastore</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.define_output_datastore" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.</span></code><code class="sig-name descname"><span class="pre">define_output_datastore</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datastore</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.define_output_datastore" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the <cite>arcgis.env.output_datastore</cite> by providing the datastore and template name
 to this method. If datastore is None, the <cite>arcgis.env.output_datastore</cite> will reset
 to default.</p>
@@ -287,28 +286,28 @@ be written to a file in the big data file share.</p></td>
 </dl>
 </dd></dl>
 
-</section>
-<section id="get-datastores">
+</div>
+<div class="section" id="get-datastores">
 <h2>get_datastores<a class="headerlink" href="#get-datastores" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.geoanalytics.get_datastores">
-<code class="sig-prename descclassname">arcgis.geoanalytics.</code><code class="sig-name descname">get_datastores</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.get_datastores" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.</span></code><code class="sig-name descname"><span class="pre">get_datastores</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.get_datastores" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a helper object to manage geoanalytics datastores in the GIS.
 If a gis isn’t specified, returns datastore manager of arcgis.env.active_gis</p>
 </dd></dl>
 
-</section>
-<section id="is-supported">
+</div>
+<div class="section" id="is-supported">
 <h2>is_supported<a class="headerlink" href="#is-supported" title="Permalink to this headline">¶</a></h2>
 <dl class="py function">
 <dt id="arcgis.geoanalytics.is_supported">
-<code class="sig-prename descclassname">arcgis.geoanalytics.</code><code class="sig-name descname">is_supported</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gis</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.is_supported" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname"><span class="pre">arcgis.geoanalytics.</span></code><code class="sig-name descname"><span class="pre">is_supported</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#arcgis.geoanalytics.is_supported" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns True if the GIS supports geoanalytics. If a gis isn’t specified,
 checks if arcgis.env.active_gis supports geoanalytics</p>
 </dd></dl>
 
-</section>
-<section id="submodules">
+</div>
+<div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -332,6 +331,7 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#find-dwell-locations">find_dwell_locations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#find-similar-locations">find_similar_locations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#geocode-locations">geocode_locations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="arcgis.geoanalytics.find_locations.html#snap-tracks">snap_tracks</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="arcgis.geoanalytics.manage_data.html">arcgis.geoanalytics.manage_data module</a><ul>
@@ -364,8 +364,8 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
 </li>
 </ul>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
 
@@ -403,12 +403,12 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
 
   </div>
   
-    Options v: 2.0.0
+    Options v: 2.1.0
 
   <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       <span class="fa fa-book"> Pick an earlier version</span>
-      v: 2.0.0
+      v: 2.1.0
       <span class="fa fa-caret-down"></span>
     </span>
     <div class="rst-other-versions">
@@ -416,6 +416,14 @@ checks if arcgis.env.active_gis supports geoanalytics</p>
       
       <dl>
         <dt>Versions</dt>
+        
+          
+          <dd><a href="2.0.1/">2.0.1</a></dd>
+          
+        
+          
+          <dd><a href="2.0.0/">2.0.0</a></dd>
+          
         
           
           <dd><a href="1.9.1/">1.9.1</a></dd>
