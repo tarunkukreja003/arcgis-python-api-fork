@@ -174,7 +174,7 @@ class ItemsUploader:
                 runtime_stamp=runtime_stamp,
                 thumbnail=entry['thumbnail'])
             if share_after_upload:
-                item.share(everyone=True)
+                item.sharing.sharing_level = "EVERYONE"
             item.protect()
             if categories:
                 self._assign_categories_to_item(item, categories)
