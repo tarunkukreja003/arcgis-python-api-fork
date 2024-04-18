@@ -179,7 +179,7 @@ class ItemsUploader:
             if categories:
                 self._assign_categories_to_item(item, categories)
             self._apply_html_preview_to_item(item, nb_path)
-            log.info(f"    Uploaded succeded -> {item.homepage}")
+            log.info(f"    Uploaded succeeded -> {item.homepage}")
         except Exception as e:
             self.failed_uploads.append(entry['title'])
             log.warn(f"    Couldn't upload {entry['title']}: {e}")
@@ -275,5 +275,5 @@ if __name__ == "__main__":
         sys.exit(0)
     except Exception as e:
         log.exception(e)
-        log.info("Program did not succesfully complete (unhandled exception)")
+        log.info("Program did not successfully complete (unhandled exception)")
         sys.exit(1)
