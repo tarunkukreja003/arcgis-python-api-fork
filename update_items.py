@@ -12,19 +12,20 @@ conda install nbformat
 
 """
 
-import os
-import sys
 import argparse
-import traceback
 import json
-import re
 import logging
-log = logging.getLogger(__name__)
+import os
+import re
+import sys
+import traceback
 
-import yaml
 import nbformat
-from nbconvert import HTMLExporter
+import yaml
 from arcgis.gis import GIS
+from nbconvert import HTMLExporter
+
+log = logging.getLogger(__name__)
 
 ITEMS_METADATA_YAML_PATH = os.path.join(".", "items_metadata.yaml")
 THUMBNAILS_DIR = os.path.join(".", "static", "thumbnails")
