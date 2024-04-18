@@ -125,7 +125,7 @@ def _get_current_runtime(gis):
 
 def _read_items_metadata_yaml():
     """Returns the items_metadata.yaml file as a dict"""
-    with open(ITEMS_METADATA_YAML_PATH) as f:
+    with open(ITEMS_METADATA_YAML_PATH, encoding="utf-8") as f:
         return yaml.safe_load(f)
 
 
@@ -236,7 +236,7 @@ class ItemsUploader:
 
         json_file_name = "notebook_preview.json"
         json_file_path = os.path.join(".", json_file_name)
-        with open(json_file_path, 'w') as f:
+        with open(json_file_path, 'w', encoding="utf-8") as f:
             json.dump({"html": html_str}, f)
 
         if item.resources.list():
