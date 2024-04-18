@@ -21,6 +21,7 @@ import sys
 import traceback
 
 import nbformat
+import requests
 import yaml
 from arcgis.gis import GIS
 from nbconvert import HTMLExporter
@@ -55,6 +56,8 @@ def _main():
     if args.version:
         NB_ITEM_PROPERTIES_RUNTIME_STAMP_ADVANCED["notebookRuntimeVersion"] = args.version
         NB_ITEM_PROPERTIES_RUNTIME_STAMP_STANDARD["notebookRuntimeVersion"] = args.version
+    else:
+        _get_current_runtime(gis)
     items_metadata_yaml = _read_items_metadata_yaml()
     if args.replace_profiles:
         _replace_profiles()
@@ -108,6 +111,16 @@ def _setup_logging(args):
     log.addHandler(stdout_handler)
     log.info("Logging at level {}.".format(logging.getLevelName(log.level)))
     log.debug("args passed in => {}".format(args))
+
+
+def _get_current_runtime(gis):
+    ntbk_svr = gis.notebook_server[0]
+    rest = ntbk_svr._url.replace("/admin", "/rest")
+    rest_info = requests.get(f"{rest}/info?f=json", timeout=5, verify=False)
+    version = rest_info.json()["currentRuntimeVersion"]
+    NB_ITEM_PROPERTIES_RUNTIME_STAMP_ADVANCED["notebookRuntimeVersion"] = version
+    NB_ITEM_PROPERTIES_RUNTIME_STAMP_STANDARD["notebookRuntimeVersion"] = version
+    return version
 
 
 def _read_items_metadata_yaml():
