@@ -36,13 +36,13 @@ NB_PORTAL_TYPE = "Notebook"
 NB_PORTAL_TYPE_KEYWORDS = "Notebook, Python"
 NB_ITEM_PROPERTIES_RUNTIME_STAMP_ADVANCED = \
     {'notebookRuntimeName': 'ArcGIS Notebook Python 3 Advanced',
-     'notebookRuntimeVersion': '5.0'}
+     'notebookRuntimeVersion': ''}
 NB_ITEM_PROPERTIES_RUNTIME_STAMP_ADVANCED_GPU = \
     {'notebookRuntimeName': 'ArcGIS Notebook Python 3 Advanced with GPU support',
-     'notebookRuntimeVersion': '5.0'}
+     'notebookRuntimeVersion': ''}
 NB_ITEM_PROPERTIES_RUNTIME_STAMP_STANDARD = \
     {'notebookRuntimeName': 'ArcGIS Notebook Python 3 Standard',
-     'notebookRuntimeVersion': '5.0'}
+     'notebookRuntimeVersion': ''}
 NB_ITEM_FOLDER = "Notebook Samples"
 
 
@@ -52,6 +52,9 @@ def _main():
     _setup_logging(args)
     gis = GIS(args.portal_url, args.username,
               args.password, verify_cert=False)
+    if args.version:
+        NB_ITEM_PROPERTIES_RUNTIME_STAMP_ADVANCED["notebookRuntimeVersion"] = args.version
+        NB_ITEM_PROPERTIES_RUNTIME_STAMP_STANDARD["notebookRuntimeVersion"] = args.version
     items_metadata_yaml = _read_items_metadata_yaml()
     if args.replace_profiles:
         _replace_profiles()
@@ -73,8 +76,12 @@ def _parse_cmd_line_args():
     parser.add_argument("--password", "-p", type=str,
                         help="Required password for the portal/org")
     parser.add_argument("--portal-url", "-r", type=str,
-                        help="The portal to connect to (Default:geosaurus.maps.arcgis.com)",
+                        help="The portal to connect to (default: geosaurus.maps.arcgis.com)",
                         default="https://geosaurus.maps.arcgis.com/")
+    parser.add_argument("--version", "-ver", type=str,
+                        help="The version of notebook runtime to set on sample notebooks "
+                        "(default: the latest version)",
+                        default="")
     parser.add_argument("--verbose", "-v", action="store_true",
                         help="Print all DEBUG log messages instead of just INFO")
     parser.add_argument("--replace-profiles", "-c", action="store_true",
