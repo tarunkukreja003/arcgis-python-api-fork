@@ -1,5 +1,5 @@
 ARG python_version="3.9"
-FROM jupyter/base-notebook:python-${python_version}
+FROM quay.io/jupyter/base-notebook:python-${python_version}
 
 ARG python_version
 ARG arcgis_version="2.2.0"
