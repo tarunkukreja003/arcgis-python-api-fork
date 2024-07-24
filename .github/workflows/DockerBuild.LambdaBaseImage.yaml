@@ -1,5 +1,9 @@
 name: DockerBuild.LambdaImage
 
+permissions:
+  contents: read
+  packages: write
+
 on:
   # allow it to be run on-demand
   workflow_dispatch:
