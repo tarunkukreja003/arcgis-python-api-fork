@@ -10,6 +10,7 @@ LABEL org.opencontainers.image.source=https://github.com/esri/arcgis-python-api
 
 # install dependencies, then clean yum cache
 RUN apt-get update && apt-get install -y gcc libkrb5-dev krb5-config krb5-user && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN pip3 install azure-functions && rm -rf /home/.cache/pip
 # install arcgis
 ARG arcgis_version="2.3.1"
 # adding .* ensures the latest patch version is installed
