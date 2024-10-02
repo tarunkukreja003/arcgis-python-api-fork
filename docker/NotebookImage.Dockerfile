@@ -37,6 +37,9 @@ RUN mkdir /home/${NB_USER}/$githubfolder && \
            work/ \
            talks/ \
            environment.yml\
+    # remove .DS_Store and __MACOSX from home directory:
+    && find /home/${NB_USER} -name ".DS_Store" -delete \
+    && rm -rf /home/${NB_USER}/__MACOSX \
     && fix-permissions /home/${NB_USER}
 
 # See https://jupyter-docker-stacks.readthedocs.io/en/latest/using/recipes.html#add-a-custom-conda-environment-and-jupyter-kernel
